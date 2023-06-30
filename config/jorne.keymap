@@ -31,6 +31,8 @@
            &kp LALT  &kp Z  &kp X      &kp C            &kp V      &kp B      &kp N           &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp BSLH
                                    &lt 2 TAB  &mt LSHFT SPACE  &lt 1 RET  &lt 1 ESC  &mt RSHFT BSPC  &lt 2 DEL
             >;
+
+            label = "MAIN";
         };
 
         lower_layer {
