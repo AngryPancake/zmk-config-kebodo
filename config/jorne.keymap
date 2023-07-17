@@ -27,6 +27,7 @@
         game_mod_off {
             bindings = <&to 0>;
             key-positions = <2 27 31 6>;
+            layers = <4>;
         };
     };
 
