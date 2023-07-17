@@ -18,13 +18,13 @@
     combos {
         compatible = "zmk,combos";
 
-        new_combo {
+        game_mod_on {
             bindings = <&tog 4>;
             key-positions = <2 27 31 6>;
             layers = <0>;
         };
 
-        new_combo {
+        game_mod_off {
             bindings = <&to 0>;
             key-positions = <2 27 31 6>;
         };
