@@ -107,10 +107,10 @@
 
         w_layer {
             bindings = <
-&trans  &trans  &kp LC(PG_UP)       &trans  &kp LC(PG_DN)  &kp RET  &kp LS(LC(T))  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &kp LA(LEFT_ARROW)  &trans  &kp LA(RIGHT)  &trans   &trans         &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans              &trans  &kp LS(LC(W))  &trans   &trans         &trans  &trans  &trans  &trans  &trans  &trans
-                                            &trans         &trans   &kp RET        &trans  &trans  &trans
+&trans  &trans  &kp LC(PG_UP)       &trans  &kp LC(PG_DN)  &kp RET    &kp LS(LC(T))  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &kp LA(LEFT_ARROW)  &trans  &kp LA(RIGHT)  &kp LC(R)  &trans         &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans              &trans  &kp LS(LC(W))  &trans     &trans         &trans  &trans  &trans  &trans  &trans  &trans
+                                            &trans         &trans     &kp RET        &trans  &trans  &trans
             >;
         };
     };
