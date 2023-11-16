@@ -143,10 +143,10 @@
 
         S_layer {
             bindings = <
-&trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &slack_a  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans    &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
-                                  &trans  &trans  &kp RET  &trans  &trans  &trans
+&trans  &trans  &trans    &trans  &trans    &kp RET  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &slack_a  &trans  &trans    &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans    &trans  &slack_c  &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans    &trans   &kp RET  &trans  &trans  &trans
             >;
         };
     };
