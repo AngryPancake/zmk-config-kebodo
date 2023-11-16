@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEF 0
@@ -20,13 +21,13 @@
 
         game_mod_on {
             bindings = <&tog 4>;
-            key-positions = <2 27 31 6>;
+            key-positions = <6 5 39>;
             layers = <0>;
         };
 
         game_mod_off {
             bindings = <&to 0>;
-            key-positions = <2 27 31 6>;
+            key-positions = <6 5 40>;
             layers = <4>;
         };
     };
@@ -42,6 +43,19 @@
         };
     };
 
+    macros {
+        slack_a: slack_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kt RALT &kp DOT &kp DOT &kp A &kp SPACE &kt RALT>;
+
+            label = "SLACK_A";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -54,7 +68,7 @@
 
             bindings = <
 &kp LWIN  &tildesc   &kp Q  &lt 5 W  &kp E      &kp R            &kp T      &kp Y      &kp U           &kp I      &kp O    &kp P     &kp LBKT       &mt RWIN RBKT
-          &kp LCTRL  &kp A  &kp S    &kp D      &kp F            &kp G      &kp H      &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
+          &kp LCTRL  &kp A  &lt 6 S  &kp D      &kp F            &kp G      &kp H      &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
           &kp LALT   &kp Z  &kp X    &kp C      &kp V            &kp B      &kp N      &kp M           &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
                                      &lt 2 TAB  &mt LSHFT SPACE  &lt 1 RET  &lt 1 ESC  &mt RSHFT BSPC  &lt 2 DEL
             >;
@@ -122,6 +136,15 @@
         &trans  &kp LA(LEFT_ARROW)  &trans  &kp LA(RIGHT)  &kp LC(R)  &trans         &trans  &trans  &trans  &kp LC(L)  &trans  &trans
         &trans  &trans              &trans  &kp LC(W)      &trans     &trans         &trans  &trans  &trans  &trans     &trans  &trans
                                             &trans         &trans     &kp RET        &trans  &trans  &trans
+            >;
+        };
+
+        S_layer {
+            bindings = <
+&trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &slack_a  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans    &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans  &trans  &kp RET  &trans  &trans  &trans
             >;
         };
     };
