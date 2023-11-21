@@ -56,6 +56,27 @@
             bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(C) &kp SPACE>;
             label = "SLACK_C";
         };
+
+        to_bt0: to_bt0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 0>;
+            label = "TO_BT0";
+        };
+
+        to_bt1: to_bt1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1>;
+            label = "TO_BT1";
+        };
+
+        to_bt2: to_bt2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 2>;
+            label = "TO_BT2";
+        };
     };
 
     keymap {
@@ -69,7 +90,7 @@
             //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&kp LWIN  &tildesc            &kp Q    &lt 5 W  &kp E      &kp R            &kp T      &kp Y      &kp U           &kp I      &kp O    &kp P     &kp LBKT       &mt RWIN RBKT
+&kp LWIN  &tildesc            &kp Q    &lt 5 W  &kp E      &kp R            &lt 9 T    &kp Y      &kp U           &kp I      &kp O    &kp P     &kp LBKT       &mt RWIN RBKT
           &kp LCTRL           &lt 8 A  &lt 6 S  &kp D      &kp F            &kp G      &kp H      &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
           &mt LALT LG(SPACE)  &kp Z    &lt 7 X  &kp C      &kp V            &kp B      &kp N      &kp M           &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
                                                 &lt 2 TAB  &mt LSHFT SPACE  &lt 1 RET  &lt 1 ESC  &mt RSHFT BSPC  &lt 2 DEL
@@ -118,7 +139,7 @@
             bindings = <
 &sys_reset  &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none         &none         &none         &none         &none         &bootloader  &sys_reset
             &bootloader   &none         &none         &none         &none         &kp C_VOL_UP  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-            &out OUT_USB  &out OUT_BLE  &trans        &trans        &kp CAPSLOCK  &kp C_VOL_DN  &none         &none         &none         &none         &none         &none
+            &out OUT_USB  &out OUT_BLE  &to_bt0       &to_bt1       &to_bt2       &kp C_VOL_DN  &none         &none         &none         &none         &none         &none
                                                       &trans        &none         &trans        &trans        &none         &trans
             >;
         };
@@ -168,6 +189,15 @@
             >;
 
             label = "A";
+        };
+
+        T_layer {
+            bindings = <
+&sys_reset  &bootloader   &trans   &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans        &trans   &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &out OUT_USB  &to_bt0  &to_bt1  &to_bt2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                            &trans   &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
