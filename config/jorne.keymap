@@ -15,6 +15,70 @@
 #define ADJ 3
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        game_mod_on {
+            bindings = <&to 4>;
+            key-positions = <6 5 39>;
+            layers = <0>;
+        };
+
+        game_mod_off {
+            bindings = <&to 0>;
+            key-positions = <6 5 40>;
+            layers = <4>;
+        };
+    };
+
+    behaviors {
+        tildesc: tildesc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TILDESC";
+            bindings = <&kp GRAVE>, <&kp ESC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RGUI|MOD_LGUI)>;
+        };
+    };
+
+    macros {
+        slack_a: slack_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(A)>;
+            label = "SLACK_A";
+        };
+
+        slack_c: slack_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(C) &kp SPACE>;
+            label = "SLACK_C";
+        };
+
+        to_bt0: to_bt0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 0>;
+            label = "TO_BT0";
+        };
+
+        to_bt1: to_bt1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1>;
+            label = "TO_BT1";
+        };
+
+        to_bt2: to_bt2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 2>;
+            label = "TO_BT2";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -26,10 +90,12 @@
             //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&kp LWIN  &kp GRAVE  &kp Q  &kp W  &kp E      &kp R            &kp T      &kp Y      &kp U           &kp I      &kp O    &kp P     &kp LBKT       &mt RWIN RBKT
-          &kp LCTRL  &kp A  &kp S  &kp D      &kp F            &kp G      &kp H      &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
-          &kp LALT   &kp Z  &kp X  &kp C      &kp V            &kp B      &kp N      &kp M           &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                                   &lt 2 TAB  &mt LSHFT SPACE  &lt 1 RET  &lt 1 ESC  &mt RSHFT BSPC  &lt 2 DEL
+
+&kp LWIN  &tildesc            &kp Q    &lt 5 W  &kp E            &kp R            &lt 9 T    &kp Y      &kp U           &kp I      &kp O    &kp P     &kp LBKT       &mt RWIN RBKT
+          &kp LCTRL           &lt 8 A  &lt 6 S  &mt LEFT_META D  &kp F            &kp G      &kp H      &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
+          &mt LALT LG(SPACE)  &kp Z    &lt 7 X  &kp C            &kp V            &kp B      &kp N      &kp M           &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                                                &lt 2 TAB        &mt LSHFT SPACE  &lt 1 RET  &lt 1 ESC  &mt RSHFT BSPC  &lt 2 DEL
+
             >;
 
             label = "MAIN";
@@ -43,10 +109,12 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp UNDER       &kp F1    &kp F2  &kp F3     &kp F4    &kp F5     &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11          &mt RGUI F12
-        &mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-        &mt LALT EQUAL  &kp N1    &kp N2  &kp N3     &kp N4    &kp N5     &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
-                                          &lt 3 TAB  &trans    &trans     &trans     &trans    &lt 3 DEL
+
+&trans  &kp UNDER       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5     &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11          &mt RGUI F12
+        &mt LCTRL PLUS  &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT  &kp CARET  &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &mt RCTRL MINUS
+        &mt LALT EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5     &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
+                                                    &lt 3 TAB     &trans        &trans     &trans     &trans    &lt 3 DEL
+
             >;
         };
 
@@ -58,10 +126,12 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&kp ESC  &kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS         &trans
-         &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
-         &kp BACKSPACE    &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
-                                                      &trans     &trans     &lt 3 RET     &lt 3 ESC     &trans    &trans
+
+&kp ESC  &kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &kp C_VOL_DN          &kp C_VOL_UP          &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS         &trans
+         &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp UP     &trans     &kp INS          &mt RCTRL K_APP
+         &kp BACKSPACE    &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &kp C_VOL_DN          &kp LEFT              &kp DOWN   &kp RIGHT  &kp PAUSE_BREAK  &trans
+                                                      &trans     &trans     &lt 3 RET     &lt 3 ESC             &trans                &trans
+
             >;
         };
 
@@ -74,18 +144,67 @@
 
             bindings = <
 &sys_reset  &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none         &none         &none         &none         &none         &bootloader  &sys_reset
-            &bootloader   &none         &none         &none         &none         &kp C_VOL_UP  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-            &out OUT_USB  &out OUT_BLE  &kp LCAPS     &kp CAPS      &kp CAPSLOCK  &kp C_VOL_DN  &none         &none         &none         &none         &none         &none
+            &bootloader   &none         &none         &none         &none         &trans        &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
+            &out OUT_USB  &out OUT_BLE  &to_bt0       &to_bt1       &to_bt2       &trans        &none         &none         &none         &none         &none         &none
+
                                                       &trans        &none         &trans        &trans        &none         &trans
+            >;
+        };
+
+        game_layer {
+            bindings = <
+&gresc  &kp TAB    &kp Q  &kp W  &kp E     &kp R       &kp T      &trans  &trans    &kp UP    &trans     &trans  &trans  &kp LEFT_META
+        &kp LCTRL  &kp A  &kp S  &kp D     &kp F       &kp G      &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+        &kp LALT   &kp Z  &kp X  &kp C     &kp V       &kp B      &trans  &trans    &trans    &trans     &trans  &trans
+                                 &kp LALT  &kp LSHIFT  &kp SPACE  &trans  &trans    &trans
             >;
         };
 
         w_layer {
             bindings = <
-&trans  &trans  &kp LC(PAGE_UP)     &trans     &kp LC(PAGE_DOWN)  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &kp LA(LEFT_ARROW)  &trans     &kp LA(RIGHT)      &kp LC(W)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans              &kp LC(W)  &kp LC(W)          &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                               &trans             &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &kp LC(PG_UP)       &trans  &kp LC(PG_DN)  &kp RET    &kp LC(T)  &trans  &trans  &trans  &trans     &trans  &trans  &trans
+        &trans  &kp LA(LEFT_ARROW)  &trans  &kp LA(RIGHT)  &kp LC(R)  &trans     &trans  &trans  &trans  &kp LC(L)  &trans  &trans
+        &trans  &trans              &trans  &kp LC(W)      &kp LC(W)  &trans     &trans  &trans  &trans  &trans     &trans  &trans
+                                            &trans         &trans     &kp RET    &trans  &trans  &trans
+            >;
+        };
+
+        S_layer {
+            bindings = <
+&trans  &trans  &trans    &trans  &trans    &kp RET  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &slack_a  &trans  &trans    &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans    &trans  &slack_c  &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans    &trans   &kp RET  &trans  &trans  &trans
+            >;
+        };
+
+        X_layer {
+            bindings = <
+&trans  &trans  &kp PG_UP  &kp UP    &kp PG_DN  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans     &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                     &trans     &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        A_layer {
+            bindings = <
+&trans  &trans  &trans  &trans     &trans       &kp RET      &kp LC(T)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans     &trans       &kp LC(F)    &trans     &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                                   &trans       &trans       &trans     &trans  &trans  &trans
+            >;
+
+            label = "A";
+        };
+
+        T_layer {
+            bindings = <
+&sys_reset  &bootloader   &trans   &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans        &trans   &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &out OUT_USB  &to_bt0  &to_bt1  &to_bt2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                            &trans   &trans  &trans  &trans  &trans  &trans
+
             >;
         };
     };
