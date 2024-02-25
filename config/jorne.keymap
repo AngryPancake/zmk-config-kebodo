@@ -56,6 +56,13 @@
 
             tapping-term-ms = <3000>;
         };
+
+        b_g: b_g {
+            compatible = "zmk,behavior-send-string";
+            label = "B_G";
+            #binding-cells = <0>;
+            text = "grep "dsa', "\|";
+        };
     };
 
     macros {
