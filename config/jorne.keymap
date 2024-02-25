@@ -47,6 +47,15 @@
             #binding-cells = <0>;
             bindings = <&lt 1 BACKSPACE>, <&kp BACKSPACE>;
         };
+
+        test_behav: test_behav {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TEST_BEHAV";
+            #binding-cells = <0>;
+            bindings = <&to_bt0>, <&bt BT_DISC 0>;
+
+            tapping-term-ms = <3000>;
+        };
     };
 
     macros {
