@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-send-string";
             label = "B_G";
             #binding-cells = <0>;
-            text = "grep 'dsa\\\\\|'";
+            text = "grep 'dsa\|'";
         };
     };
 
