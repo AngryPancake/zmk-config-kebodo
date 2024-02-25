@@ -57,11 +57,18 @@
             tapping-term-ms = <3000>;
         };
 
-        b_g: b_g {
+        ben_grep: ben_grep {
             compatible = "zmk,behavior-send-string";
-            label = "B_G";
+            label = "bender_grep";
             #binding-cells = <0>;
-            text = "grep 'dsa\|'";
+            text = " grep -i 'error\|fatal\|warn\|stopped\|started\|gracefully' | less -S ";
+        };
+        
+        s_a: s_a {
+            compatible = "zmk,behavior-send-string";
+            label = "slack_a";
+            #binding-cells = <0>;
+            text = "..a";
         };
     };
 
