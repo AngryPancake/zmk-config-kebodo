@@ -31,6 +31,11 @@
             key-positions = <6 5 40>;
             layers = <4>;
         };
+
+        Esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
+        };
     };
 
     behaviors {
