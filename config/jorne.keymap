@@ -36,11 +36,6 @@
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
         };
-
-        bg {
-            bindings = <&ben_grep>;
-            key-positions = <31 19>;
-        };
     };
 
     behaviors {
