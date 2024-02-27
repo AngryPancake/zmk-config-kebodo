@@ -120,6 +120,27 @@
             bindings = <&out OUT_BLE &bt BT_SEL 2>;
             label = "TO_BT2";
         };
+
+        slack_vc: slack_vc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(V) &kp RA(C) &kp RA(SPACE) &kp RA(D) &kp RA(O) &kp RA(N) &kp RA(E)>;
+            label = "SLACK_VC";
+        };
+
+        slack_assignee: slack_assignee {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(A) &kp RA(S) &kp RA(S) &kp RA(I) &kp RA(G) &kp RA(N) &kp RA(E) &kp RA(E) &kp SPACE>;
+            label = "SLACK_ASSIGNEE";
+        };
+
+        slack_inpro: slack_inpro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(I) &kp RA(N) &kp RA(UNDER) &kp RA(P) &kp RA(R) &kp RA(O) &kp RA(G) &kp RA(E) &kp RA(S) &kp RA(S)>;
+            label = "SLACK_INPRO";
+        };
     };
 
     keymap {
@@ -207,10 +228,10 @@
 
         S_layer {
             bindings = <
-&trans  &trans  &trans    &trans  &trans    &kp RET  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &slack_a  &trans  &trans    &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans    &trans  &slack_c  &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans
-                                  &trans    &trans   &kp RET  &trans  &trans  &trans
+&trans  &none   &slack_vc  &trans  &trans    &kp RET  &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &slack_a   &trans  &trans    &trans   &slack_assignee  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans     &trans  &slack_c  &trans   &slack_inpro     &trans  &trans  &trans  &trans  &trans  &trans
+                                   &trans    &trans   &kp RET          &trans  &trans  &trans
             >;
         };
 
