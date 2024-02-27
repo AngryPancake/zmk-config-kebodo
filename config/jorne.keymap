@@ -41,6 +41,11 @@
             bindings = <&kp INS>;
             key-positions = <7 20>;
         };
+
+        Dot {
+            bindings = <&kp RA(DOT)>;
+            key-positions = <5 6>;
+        };
     };
 
     behaviors {
