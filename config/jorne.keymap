@@ -141,6 +141,13 @@
             bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(I) &kp RA(N) &kp RA(UNDER) &kp RA(P) &kp RA(R) &kp RA(O) &kp RA(G) &kp RA(E) &kp RA(S) &kp RA(S)>;
             label = "SLACK_INPRO";
         };
+
+        sudo_i: sudo_i {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(S) &kp RA(U) &kp RA(D) &kp RA(O) &kp SPACE &kp RA(MINUS) &kp RA(I) &kp RET>;
+            label = "SUDO_I";
+        };
     };
 
     keymap {
@@ -228,10 +235,10 @@
 
         S_layer {
             bindings = <
-&trans  &none   &slack_vc  &trans  &trans    &kp RET  &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &slack_a   &trans  &trans    &trans   &slack_assignee  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans     &trans  &slack_c  &trans   &slack_inpro     &trans  &trans  &trans  &trans  &trans  &trans
-                                   &trans    &trans   &kp RET          &trans  &trans  &trans
+&trans  &none    &slack_vc  &trans  &trans    &kp RET  &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &sudo_i  &slack_a   &trans  &trans    &trans   &slack_assignee  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans   &trans     &trans  &slack_c  &trans   &slack_inpro     &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans    &trans   &kp RET          &trans  &trans  &trans
             >;
         };
 
