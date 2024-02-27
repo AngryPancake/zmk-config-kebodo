@@ -146,7 +146,7 @@
         grep_ben: grep_ben {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &kp RA(G) &kp RA(R) &kp RA(E) &kp RA(P) &kp SPACE &kp MINUS &kp RA(I) &kp SPACE &kp RA(DQT) &kp RA(E) &kp RA(R) &kp RA(R) &kp RA(O) &kp RA(R) &kp RA(BSLH) &kp RA(PIPE) &kp RA(F) &kp RA(A) &kp RA(T) &kp RA(A) &kp RA(L) &kp RA(BSLH) &kp RA(PIPE) &kp RA(W) &kp RA(A) &kp RA(R) &kp RA(N) &kp RA(BSLH) &kp RA(PIPE) &kp RA(S) &kp RA(T) &kp RA(O) &kp RA(P) &kp RA(P) &kp RA(E) &kp RA(D) &kp BSLH &kp PIPE &kp G &kp R &kp A &kp C &kp E &kp F &kp U &kp L &kp DQT &kp SPACE &kp PIPE &kp L &kp E &kp S &kp S &kp SPACE &kp MINUS &kp LS(S)>;
+            bindings = <&kp SPACE &kp RA(G) &kp RA(R) &kp RA(E) &kp RA(P) &kp SPACE &kp MINUS &kp RA(I) &kp SPACE &kp RA(DQT) &kp RA(E) &kp RA(R) &kp RA(R) &kp RA(O) &kp RA(R) &kp RA(BSLH) &kp RA(PIPE) &kp RA(F) &kp RA(A) &kp RA(T) &kp RA(A) &kp RA(L) &kp RA(BSLH) &kp RA(PIPE) &kp RA(W) &kp RA(A) &kp RA(R) &kp RA(N) &kp RA(BSLH) &kp RA(PIPE) &kp RA(S) &kp RA(T) &kp RA(O) &kp RA(P) &kp RA(P) &kp RA(E) &kp RA(D) &kp RA(BSLH) &kp RA(PIPE) &kp RA(G) &kp RA(R) &kp RA(A) &kp RA(C) &kp RA(E) &kp RA(F) &kp RA(U) &kp RA(L) &kp RA(DQT) &kp SPACE &kp RA(PIPE) &kp RA(L) &kp RA(E) &kp RA(S) &kp RA(S) &kp SPACE &kp RA(MINUS) &kp LS(RA(S))>;
             label = "GREP_BEN";
         };
     };
