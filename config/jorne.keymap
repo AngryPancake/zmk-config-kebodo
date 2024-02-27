@@ -36,6 +36,11 @@
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
         };
+
+        bgreper {
+            bindings = <&bgrep>;
+            key-positions = <31 19>;
+        };
     };
 
     behaviors {
