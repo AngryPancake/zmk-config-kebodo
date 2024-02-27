@@ -142,13 +142,6 @@
             bindings = <&kp RA(S) &kp RA(U) &kp RA(D) &kp RA(O) &kp SPACE &kp RA(MINUS) &kp RA(I) &kp RET>;
             label = "SUDO_I";
         };
-
-        bgrep: bgrep {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE &kp RA(G) &kp RA(R) &kp RA(E) &kp RA(P) &kp SPACE &kp RA(MINUS) &kp RA(I) &kp SPACE &kp RA(DQT) &kp RA(E) &kp RA(R) &kp RA(R) &kp RA(O) &kp RA(R) &kp RA(BSLH) &kp RA(DOT) PIPE &kp RA(F) &kp RA(DOT) A &kp RA(T) &kp RA(A) &kp RA(L) &kp RA(BSLH) &kp RA(PIPE) &kp RA(W) &kp RA(A) &kp RA(R) &kp RA(DOT) N &kp RA(BSLH) &kp RA(PIPE) &kp RA(S) &kp RA(T) &kp RA(O) &kp RA(P) &kp RA(P) &kp RA(E) &kp RA(D) &kp RA(BSLH) &kp RA(PIPE) &kp RA(G) &kp RA(R) &kp RA(A) &kp RA(C) &kp RA(E) &kp RA(F) &kp RA(U) &kp RA(L) &kp RA(L) &kp RA(Y) &kp RA(DQT) &kp SPACE &kp RA(PIPE) &kp SPACE &kp RA(L) &kp RA(E) &kp RA(S) &kp RA(S) &kp SPACE &kp RA(MINUS) &kp LS(RA(S))>;
-            label = "BGREP";
-        };
     };
 
     keymap {
