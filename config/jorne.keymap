@@ -64,16 +64,16 @@
             tapping-term-ms = <3000>;
         };
 
-        ben_grep: ben_grep {
+        beh_ben_grep: beh_ben_grep {
             compatible = "zmk,behavior-send-string";
-            label = "bender_grep";
+            label = "beh_bender_grep";
             #binding-cells = <0>;
             text = " grep -i 'error\|fatal\|warn\|stopped\|started\|gracefully' | less -S ";
         };
 
-        s_a: s_a {
+        beh_s_a: beh_s_a {
             compatible = "zmk,behavior-send-string";
-            label = "slack_a";
+            label = "beh_slack_a";
             #binding-cells = <0>;
             text = "..a";
         };
@@ -143,20 +143,11 @@
             label = "SUDO_I";
         };
 
-        grep_ben: grep_ben {
+        bengrep: bengrep {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RALT>,
-                <&macro_tap>,
-                <&kp SPACE &kp G &kp R &kp E &kp P &kp SPACE &kp MINUS &kp I &kp SPACE &kp DQT &kp E &kp R &kp R &kp O &kp R &kp BSLH &kp PIPE &kp F &kp A &kp T &kp A &kp L &kp BSLH &kp PIPE &kp W &kp A &kp R &kp N &kp BSLH &kp PIPE &kp S &kp T &kp O &kp P &kp P &kp E &kp D &kp BSLH &kp PIPE &kp G &kp R &kp A &kp C &kp E &kp F &kp U &kp L &kp L &kp Y &kp DQT &kp SPACE &kp PIPE &kp SPACE &kp L &kp E &kp S &kp S &kp SPACE &kp MINUS &kp LS(S)>,
-                <&macro_release>,
-                <&kp RALT>;
-
-            , <&macro_release &kp RALT>;
-
-            label = "GREP_BEN";
+            bindings = <&sk RALT &kp SPACE &kp G &kp R &kp E &kp P &kp SPACE &kp MINUS &kp I &kp SPACE &kp DQT &kp E &kp R &kp R &kp R &kp BSLH &kp PIPE &kp F &kp A &kp T &kp A &kp L &kp BSLH &kp PIPE &kp W &kp A &kp R &kp N &kp BSLH &kp PIPE &kp S &kp T &kp P &kp P &kp E &kp D &kp BSLH &kp PIPE &kp G &kp R &kp A &kp C &kp E &kp F &kp U &kp L &kp L &kp Y &kp DQT &kp SPACE &kp PIPE &kp SPACE &kp L &kp E &kp S &kp S &kp SPACE &kp MINUS &kp LS(S) &kp RALT>;
+            label = "BENGREP";
         };
     };
 
@@ -305,10 +296,10 @@
 
         B_Layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &grep_ben  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &bengrep  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
