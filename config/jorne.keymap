@@ -40,7 +40,6 @@
         bg {
             bindings = <&ben_grep>;
             key-positions = <31 19>;
-            layers = <0>;
         };
     };
 
