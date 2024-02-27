@@ -148,7 +148,7 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp RALT>
             , <&kp SPACE &kp G &kp R &kp E &kp P &kp SPACE &kp MINUS &kp I &kp SPACE &kp DQT &kp E &kp R &kp R &kp O &kp R &kp BSLH &kp PIPE &kp F &kp A &kp T &kp A &kp L &kp BSLH &kp PIPE &kp W &kp A &kp R &kp N &kp BSLH &kp PIPE &kp S &kp T &kp O &kp P &kp P &kp E &kp D &kp BSLH &kp PIPE &kp G &kp R &kp A &kp C &kp E &kp F &kp U &kp L &kp L &kp Y &kp DQT &kp SPACE &kp PIPE &kp SPACE &kp L &kp E &kp S &kp S &kp SPACE &kp MINUS &kp LS(S)>;
-            , <&macro_release &kp RALT>
+            , <&macro_release &kp RALT>;
             label = "GREP_BEN";
         };
     };
