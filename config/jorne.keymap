@@ -36,6 +36,11 @@
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
         };
+
+        ins {
+            bindings = <&kp INS>;
+            key-positions = <7 20>;
+        };
     };
 
     behaviors {
@@ -194,10 +199,10 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&kp ESC  &kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &trans     &kp PG_DN  &kp UP_ARROW    &kp PG_UP  &kp SLCK         &kp CAPS         &trans
-         &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &trans     &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp INS          &mt RCTRL K_APP
-         &kp BACKSPACE    &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &trans     &trans     &trans          &trans     &kp PAUSE_BREAK  &trans
-                                                      &trans     &trans     &lt 3 RET     &lt 3 ESC  &trans     &trans
+&kp ESC  &kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &kp PRINTSCREEN  &kp PG_DN  &kp UP_ARROW    &kp PG_UP  &kp SLCK         &kp CAPS         &trans
+         &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &trans           &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp INS          &mt RCTRL K_APP
+         &kp BACKSPACE    &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &trans           &kp HOME   &trans          &kp END    &kp PAUSE_BREAK  &trans
+                                                      &trans     &trans     &lt 3 RET     &lt 3 ESC        &trans     &trans
             >;
         };
 
