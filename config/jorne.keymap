@@ -132,7 +132,7 @@
         slack_inpro: slack_inpro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(I) &kp RA(N) &kp RA(UNDER) &kp RA(P) &kp RA(R) &kp RA(O) &kp RA(G) &kp RA(E) &kp RA(S) &kp RA(S)>;
+            bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(I) &kp RA(N) &kp RA(UNDER) &kp RA(P) &kp RA(R) &kp RA(O) &kp RA(G) &kp RA(E) &kp RA(S) &kp RA(S) &kp RA(R)>;
             label = "SLACK_INPRO";
         };
 
