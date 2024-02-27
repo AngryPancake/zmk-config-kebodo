@@ -142,6 +142,13 @@
             bindings = <&kp RA(S) &kp RA(U) &kp RA(D) &kp RA(O) &kp SPACE &kp RA(MINUS) &kp RA(I) &kp RET>;
             label = "SUDO_I";
         };
+
+        grep_ben: grep_ben {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp RA(G) &kp RA(R) &kp RA(E) &kp RA(P) &kp SPACE &kp MINUS &kp RA(I) &kp SPACE &kp RA(DQT) &kp RA(E) &kp RA(R) &kp RA(R) &kp RA(O) &kp RA(R) &kp RA(BSLH) &kp RA(PIPE) &kp RA(F) &kp RA(A) &kp RA(T) &kp RA(A) &kp RA(L) &kp RA(BSLH) &kp RA(PIPE) &kp RA(W) &kp RA(A) &kp RA(R) &kp RA(N) &kp RA(BSLH) &kp RA(PIPE) &kp RA(S) &kp RA(T) &kp RA(O) &kp RA(P) &kp RA(P) &kp RA(E) &kp RA(D) &kp BSLH &kp PIPE &kp G &kp R &kp A &kp C &kp E &kp F &kp U &kp L &kp DQT &kp SPACE &kp PIPE &kp L &kp E &kp S &kp S &kp SPACE &kp MINUS &kp LS(S)>;
+            label = "GREP_BEN";
+        };
     };
 
     keymap {
