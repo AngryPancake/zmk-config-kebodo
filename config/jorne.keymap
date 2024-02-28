@@ -164,6 +164,20 @@
             bindings = <&sk RALT &kp SPACE &kp G &kp R &kp E &kp P &kp SPACE &kp MINUS &kp I &kp SPACE &kp DQT &kp E &kp R &kp R &kp R &kp BSLH &kp PIPE &kp F &kp A &kp T &kp A &kp L &kp BSLH &kp PIPE &kp W &kp A &kp R &kp N &kp BSLH &kp PIPE &kp S &kp T &kp P &kp P &kp E &kp D &kp BSLH &kp PIPE &kp G &kp R &kp A &kp C &kp E &kp F &kp U &kp L &kp L &kp Y &kp DQT &kp SPACE &kp PIPE &kp SPACE &kp L &kp E &kp S &kp S &kp SPACE &kp MINUS &kp LS(S) &kp RALT>;
             label = "BENGREP";
         };
+
+        alt_tab: alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_ALT &kp TAB>;
+            label = "ALT_TAB";
+        };
+
+        alt_tab2: alt_tab2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_ALT &kp TAB &sk LEFT_ALT>;
+            label = "ALT_TAB2";
+        };
     };
 
     keymap {
@@ -245,7 +259,7 @@
 &trans  &trans  &kp LC(PG_UP)       &trans  &kp LC(PG_DN)  &kp RET    &kp LC(T)  &trans  &trans  &trans  &trans     &trans  &trans  &trans
         &trans  &kp LA(LEFT_ARROW)  &trans  &kp LA(RIGHT)  &kp LC(R)  &trans     &trans  &trans  &trans  &kp LC(L)  &trans  &trans
         &trans  &trans              &trans  &kp LC(W)      &kp LC(W)  &trans     &trans  &trans  &trans  &trans     &trans  &trans
-                                            &trans         &trans     &kp RET    &trans  &trans  &trans
+                                            &kp LA(TAB)    &trans     &kp RET    &trans  &trans  &trans
             >;
         };
 
@@ -311,10 +325,10 @@
 
         E_layer {
             bindings = <
-&trans  &trans  &trans  &kp LC(PG_UP)       &trans  &kp LC(PG_DN)  &kp LC(T)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &kp LA(LEFT_ARROW)  &trans  &kp LA(RIGHT)  &kp LC(R)  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans              &trans  &kp LC(W)      &kp LC(W)  &trans  &trans  &trans  &trans  &trans  &trans
-                                            &trans  &trans         &kp RET    &trans  &trans  &trans
+&trans  &trans  &trans  &kp LC(PG_UP)       &trans    &kp LC(PG_DN)  &kp LC(T)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &kp LA(LEFT_ARROW)  &trans    &kp LA(RIGHT)  &kp LC(R)  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans              &trans    &kp LC(W)      &kp LC(W)  &trans  &trans  &trans  &trans  &trans  &trans
+                                            &alt_tab  &alt_tab2      &kp RET    &trans  &trans  &trans
             >;
         };
     };
