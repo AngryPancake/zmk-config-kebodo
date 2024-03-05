@@ -164,28 +164,6 @@
             bindings = <&sk RALT &kp SPACE &kp G &kp R &kp E &kp P &kp SPACE &kp MINUS &kp I &kp SPACE &kp DQT &kp E &kp R &kp R &kp R &kp BSLH &kp PIPE &kp F &kp A &kp T &kp A &kp L &kp BSLH &kp PIPE &kp W &kp A &kp R &kp N &kp BSLH &kp PIPE &kp S &kp T &kp P &kp P &kp E &kp D &kp BSLH &kp PIPE &kp G &kp R &kp A &kp C &kp E &kp F &kp U &kp L &kp L &kp Y &kp DQT &kp SPACE &kp PIPE &kp SPACE &kp L &kp E &kp S &kp S &kp SPACE &kp MINUS &kp LS(S) &kp RALT>;
             label = "BENGREP";
         };
-
-        alt_tab: alt_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_ALT &kp TAB>;
-            label = "ALT_TAB";
-        };
-
-        alt_tab2: alt_tab2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT &kp TAB>,
-                <&macro_release>,
-                <&kp TAB>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_TAB2";
-        };
     };
 
     keymap {
