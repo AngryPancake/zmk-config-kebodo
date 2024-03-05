@@ -175,7 +175,11 @@
         alt_tab2: alt_tab2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LEFT_ALT &kp TAB &sk LEFT_ALT>;
+            bindings = 
+                <&macro_press &kp LEFT_ALT &kp TAB>,
+                <&macro_release &kp TAB>,
+                <&macro_pause_for_release>,
+                <&macro_release &kp LEFT_ALT>;
             label = "ALT_TAB2";
         };
     };
