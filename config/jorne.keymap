@@ -51,6 +51,16 @@
             bindings = <&kp RA(SLASH)>;
             key-positions = <6 19>;
         };
+
+        less {
+            bindings = <&tp_less>;
+            key-positions = <4 16 23>;
+        };
+
+        grep {
+            bindings = <&tp_grep>;
+            key-positions = <19 5>;
+        };
     };
 
     behaviors {
@@ -159,11 +169,18 @@
             label = "SUDO_I";
         };
 
-        bengrep: bengrep {
+        tp_less: tp_less {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk RALT &kp SPACE &kp G &kp R &kp E &kp P &kp SPACE &kp MINUS &kp I &kp SPACE &kp DQT &kp E &kp R &kp R &kp R &kp BSLH &kp PIPE &kp F &kp A &kp T &kp A &kp L &kp BSLH &kp PIPE &kp W &kp A &kp R &kp N &kp BSLH &kp PIPE &kp S &kp T &kp P &kp P &kp E &kp D &kp BSLH &kp PIPE &kp G &kp R &kp A &kp C &kp E &kp F &kp U &kp L &kp L &kp Y &kp DQT &kp SPACE &kp PIPE &kp SPACE &kp L &kp E &kp S &kp S &kp SPACE &kp MINUS &kp LS(S) &kp RALT>;
-            label = "BENGREP";
+            bindings = <&kp RA(L) &kp RA(E) &kp RA(S) &kp RA(S) &kp SPACE>;
+            label = "TP_LESS";
+        };
+
+        tp_grep: tp_grep {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp G &kp R &kp E &kp P &kp SPACE>;
+            label = "TP_GREP";
         };
     };
 
