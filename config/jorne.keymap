@@ -227,10 +227,10 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&kp LA(TAB)  &kp BSPC   &kp DEL    &kp PG_UP  &kp UP     &kp PG_DN  &kp HOME    &kp PRINTSCREEN  &kp PG_DN  &kp UP_ARROW    &kp PG_UP  &kp SLCK         &kp CAPS         &kp LC(LA(BACKSPACE))
-             &kp LSHFT  &kp LC(Z)  &kp LEFT   &kp DOWN   &kp RIGHT  &kp END     &trans           &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp INS          &mt RCTRL K_APP
-             &kp LCTRL  &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT  &trans           &kp HOME   &trans          &kp END    &kp PAUSE_BREAK  &trans
-                                              &trans     &trans     &lt 3 RET   &lt 3 ESC        &trans     &trans
+&kp LA(TAB)  &kp BSPC   &kp DEL  &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME   &trans     &trans  &trans  &trans  &trans  &trans  &kp LC(LA(BACKSPACE))
+             &kp LSHFT  &trans   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END    &trans     &trans  &trans  &trans  &trans  &trans
+             &kp LCTRL  &trans   &trans     &trans    &trans     &trans     &trans     &trans  &trans  &trans  &trans  &trans
+                                            &trans    &trans     &lt 3 RET  &lt 3 ESC  &trans  &trans
             >;
         };
 
