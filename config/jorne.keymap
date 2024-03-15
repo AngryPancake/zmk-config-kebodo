@@ -195,9 +195,9 @@
             //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&kp LWIN  &tilde_tab           &kp Q    &lt 5 W  &lt 12 E          &kp R        &lt 9 T    &lt 10 Y         &lt 11 U         &kp I      &kp O    &kp P     &kp LBKT             &mt RWIN RBKT
-          &kp LSHIFT           &lt 8 A  &lt 6 S  &mt LEFT_META D   &mt LSHFT F  &kp G      &lt 10 H         &lt 11 J         &kp K      &kp L    &kp SEMI  &mt RSHIFT SQT
-          &mt LCTRL LG(SPACE)  &kp Z    &lt 7 X  &kp C             &kp V        &kp B      &kp N            &kp M            &kp COMMA  &kp DOT  &kp FSLH  &mt RCTRL BACKSLASH
+&kp LWIN  &tilde_tab           &kp Q    &kp W    &lt 10 E          &kp R        &lt 7 T    &lt 8 Y          &lt 9 U          &kp I      &kp O    &kp P     &kp LBKT             &mt RWIN RBKT
+          &kp LSHIFT           &lt 6 A  &lt 5 S  &mt LEFT_META D   &mt LSHFT F  &kp G      &lt 8 H          &lt 9 J          &kp K      &kp L    &kp SEMI  &mt RSHIFT SQT
+          &mt LCTRL LG(SPACE)  &kp Z    &kp X    &kp C             &kp V        &kp B      &kp N            &kp M            &kp COMMA  &kp DOT  &kp FSLH  &mt RCTRL BACKSLASH
                                                  &mt LEFT_ALT TAB  &lt 2 SPACE  &lt 1 RET  &lt 1 BACKSPACE  &mt RSHFT SPACE  &lt 2 DEL
             >;
 
@@ -258,30 +258,12 @@
             >;
         };
 
-        w_layer {
-            bindings = <
-&trans  &trans  &kp LC(PG_UP)       &trans  &kp LC(PG_DN)  &kp RET    &kp LC(T)  &trans  &trans  &trans  &trans     &trans  &trans  &trans
-        &trans  &kp LA(LEFT_ARROW)  &trans  &kp LA(RIGHT)  &kp LC(R)  &trans     &trans  &trans  &trans  &kp LC(L)  &trans  &trans
-        &trans  &trans              &trans  &kp LC(W)      &kp LC(W)  &trans     &trans  &trans  &trans  &trans     &trans  &trans
-                                            &kp LA(TAB)    &trans     &kp RET    &trans  &trans  &trans
-            >;
-        };
-
         S_layer {
             bindings = <
-&trans  &none    &slack_vc  &trans  &trans    &kp RET  &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &sudo_i  &slack_a   &trans  &trans    &trans   &slack_assignee  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans   &trans     &trans  &slack_c  &trans   &slack_inpro     &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans    &trans   &kp RET          &trans  &trans  &trans
-            >;
-        };
-
-        X_layer {
-            bindings = <
-&trans  &trans  &kp PG_UP  &kp UP    &kp PG_DN  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans     &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                     &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &none      &slack_vc  &trans  &trans    &kp RET  &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &sudo_i    &slack_a   &trans  &trans    &trans   &slack_assignee  &trans  &trans  &trans  &trans  &trans  &trans
+        &kp LC(A)  &trans     &trans  &slack_c  &trans   &slack_inpro     &trans  &trans  &trans  &trans  &trans  &trans
+                                      &trans    &trans   &kp RET          &trans  &trans  &trans
             >;
         };
 
@@ -298,10 +280,10 @@
 
         T_layer {
             bindings = <
-&sys_reset  &bootloader   &trans   &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            &trans        &trans   &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            &out OUT_USB  &to_bt0  &to_bt1  &to_bt2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                            &trans   &trans  &trans  &trans  &trans  &trans
+&none  &none         &none    &none    &none    &none  &none  &none  &none  &none  &none  &none  &none  &none
+       &none         &none    &none    &none    &none  &none  &none  &none  &none  &none  &none  &none
+       &out OUT_USB  &to_bt0  &to_bt1  &to_bt2  &none  &none  &none  &none  &none  &none  &none  &none
+                                       &none    &none  &none  &none  &none  &none
             >;
         };
 
