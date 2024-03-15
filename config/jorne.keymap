@@ -66,6 +66,16 @@
             bindings = <&tp_trade>;
             key-positions = <6 5 17>;
         };
+
+        CapsWord {
+            bindings = <&caps_word>;
+            key-positions = <18 21>;
+        };
+
+        Pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <5 18>;
+        };
     };
 
     behaviors {
