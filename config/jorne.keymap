@@ -94,7 +94,10 @@
             compatible = "zmk,behavior-send-string";
             label = "beh_slack_a";
             #binding-cells = <0>;
-            text = "..a";
+            text =
+                " cd /home/bender/bender2-  grep -i "error\|fatal\|warn\|stopped\|gracefully,
+                " ";
+
             charmap = <&charmap_us>;
         };
     };
