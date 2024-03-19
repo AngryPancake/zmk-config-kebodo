@@ -95,6 +95,7 @@
             label = "beh_slack_a";
             #binding-cells = <0>;
             text = "..a";
+            charmap = &charmap_us;
         };
     };
 
