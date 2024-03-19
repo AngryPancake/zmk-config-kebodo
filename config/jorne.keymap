@@ -90,13 +90,6 @@
             tapping-term-ms = <3000>;
         };
 
-        beh_ben_grep: beh_ben_grep {
-            compatible = "zmk,behavior-send-string";
-            label = "beh_bender_grep";
-            #binding-cells = <0>;
-            text = " grep -i 'error\|fatal\|warn\|stopped\|started\|gracefully' | less -S ";
-        };
-
         beh_s_a: beh_s_a {
             compatible = "zmk,behavior-send-string";
             label = "beh_slack_a";
