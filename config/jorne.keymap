@@ -95,8 +95,7 @@
             label = "beh_slack_a";
             #binding-cells = <0>;
             text =
-                "  grep -i "error\|fatal\|warn\|stopped\|gracefully,
-                "drrdgdrgdrgdr22222222 ";
+                "  grep -i "error\|fatal\|warn\|stopped\|gracefully" | less -S ";
 
             charmap = <&charmap_us>;
         };
