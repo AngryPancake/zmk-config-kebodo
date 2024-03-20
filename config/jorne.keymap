@@ -198,6 +198,13 @@
             bindings = <&kp RA(T) &kp RA(R) &kp RA(A) &kp RA(D) &kp RA(E)>;
             label = "TP_TRADE";
         };
+
+        bender_gre0: bender_gre0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&w_ben_grep>;
+            label = "BENDER_GRE0";
+        };
     };
 
     keymap {
