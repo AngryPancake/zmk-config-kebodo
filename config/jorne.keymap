@@ -208,12 +208,12 @@
             label = "TP_TRADE";
         };
 
-        bender_gre0: bender_gre0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kt RALT &w_ben_grep &kp RALT>;
-            label = "BENDER_GRE0";
-        };
+//        bender_gre0: bender_gre0 {
+//            compatible = "zmk,behavior-macro";
+//            #binding-cells = <0>;
+//            bindings = <&kt RALT &w_ben_grep &kp RALT>;
+//            label = "BENDER_GRE0";
+//        };
     };
 
     keymap {
