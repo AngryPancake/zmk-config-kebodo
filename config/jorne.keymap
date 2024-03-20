@@ -112,14 +112,6 @@
             text = " grep -i 'error\|fatal\|warn\|stopped\|started\|gracefully' | less -S ";
             charmap = <&charmap_us>;
         };
-
-        beh_s_a: beh_s_a {
-            compatible = "zmk,behavior-send-string";
-            label = "beh_slack_a";
-            #binding-cells = <0>;
-            text = "..a";
-            charmap = <&charmap_us>;
-        };
     };
 
     macros {
@@ -213,13 +205,6 @@
             bindings = <&w_ben_grep>;
             label = "BENDER_GRE0";
         };
-
-        //        bender_gre0: bender_gre0 {
-        //            compatible = "zmk,behavior-macro";
-        //            #binding-cells = <0>;
-        //            bindings = <&kt RALT &w_ben_grep &kp RALT>;
-        //            label = "BENDER_GRE0";
-        //        };
     };
 
     keymap {
