@@ -20,11 +20,7 @@
     combos {
         compatible = "zmk,combos";
 
-        game_mod_on {
-            bindings = <&to 4>;
-            key-positions = <6 5 39>;
-            layers = <0>;
-        };
+        game_mod_on { bindings = <&to 4>; key-positions = <6 5 39>; layers = <0>; };
 
         game_mod_off {
             bindings = <&to 0>;
