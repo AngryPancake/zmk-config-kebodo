@@ -20,63 +20,29 @@
     combos {
         compatible = "zmk,combos";
 
-        game_mod_on { bindings = <&to 4>; key-positions = <6 5 39>; layers = <0>; };
+        game_mod_on  { bindings = <&to 4>; key-positions = <6 5 39>; layers = <0>;  };
 
-        game_mod_off {
-            bindings = <&to 0>;
-            key-positions = <6 5 40>;
-            layers = <4>;
-        };
+        game_mod_off { bindings = <&to 0>; key-positions = <6 5 40>; layers = <4>;  };
 
-        Esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
-        };
+        Esc { bindings = <&kp ESCAPE>; key-positions = <1 2>;                       };
 
-        ins {
-            bindings = <&kp INS>;
-            key-positions = <7 20>;
-        };
+        ins { bindings = <&kp INS>; key-positions = <7 20>;                         };
 
-        Dot {
-            bindings = <&kp RA(DOT)>;
-            key-positions = <5 6>;
-        };
+        Dot { bindings = <&kp RA(DOT)>; key-positions = <5 6>;                      };
 
-        slash {
-            bindings = <&kp RA(SLASH)>;
-            key-positions = <6 19>;
-        };
+        slash { bindings = <&kp RA(SLASH)>; key-positions = <6 19>;                 };
 
-        less {
-            bindings = <&tp_less>;
-            key-positions = <4 16 23>;
-        };
+        less { bindings = <&tp_less>; key-positions = <4 16 23>;                    };
 
-        grep {
-            bindings = <&tp_grep>;
-            key-positions = <19 5>;
-        };
+        grep { bindings = <&tp_grep>; key-positions = <19 5>;                       };
 
-        trade {
-            bindings = <&tp_trade>;
-            key-positions = <6 5 17>;
-        };
+        trade { bindings = <&tp_trade>; key-positions = <6 5 17>;                   };
 
-        CapsWord {
-            bindings = <&caps_word>;
-            key-positions = <18 21>;
-        };
+        CapsWord { bindings = <&caps_word>; key-positions = <18 21>;                };
 
-        Pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <30 31>;
-        };
+        Pipe {bindings = <&kp PIPE>; key-positions = <30 31>;                       };
 
-        LMeta {
-            bindings = <&kp LGUI>;
-            key-positions = <0 14>;
-        };
+        LMeta {bindings = <&kp LGUI>; key-positions = <0 14>;                       };
     };
 
     behaviors {
