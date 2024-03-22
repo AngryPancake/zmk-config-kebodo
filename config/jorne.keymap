@@ -151,7 +151,7 @@
         };
 
         new_bt: new_bt {
-            compatible = "zmk,behavior-macro-two-param";
+            compatible = "zmk,behavior-macro-one-param";
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <2>;
