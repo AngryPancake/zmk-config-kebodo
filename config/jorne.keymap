@@ -156,11 +156,12 @@
             tap-ms = <0>;
             #binding-cells = <2>;
             bindings
-                = <&macro_param_1to1>, 
-                <&out OUT_BLE &bt BT_SEL MACRO_PLACEHOLDER>;
+                = <&out OUT_BLE>,
+                  <&macro_param_1to1>, 
+                  <&bt BT_SEL MACRO_PLACEHOLDER>;
             };
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
