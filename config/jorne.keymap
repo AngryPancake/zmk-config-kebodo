@@ -215,8 +215,8 @@
         to_bt_param: to_bt_param {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <0>;
-            bindings = <&macro_param_1to2>,
-            <&macro_press &kp MACRO_PLACEHOLDER>;
+            bindings = <&macro_param_1to2>, 
+            <&macro_press &bt BT_SEL MACRO_PLACEHOLDER>;
             label = "TO_BT_PARAM";
         };
     };
