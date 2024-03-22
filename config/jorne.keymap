@@ -102,14 +102,14 @@
             charmap = <&charmap_us>;
         };
 
-        // bt_behavior: bt_behavior {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "BT_BEHAVIOR";
-        //     bindings = <&clr_bt_param>, <&to_bt_param>;
+        bt_behavior: bt_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT_BEHAVIOR";
+            bindings = <&clr_bt_param>, <&to_bt_param>;
 
-        //     #binding-cells = <2>;
-        //     tapping-term-ms = <5000>;
-        // };
+            #binding-cells = <2>;
+            tapping-term-ms = <5000>;
+        };
     };
 
     macros {
