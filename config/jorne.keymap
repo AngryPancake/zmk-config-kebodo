@@ -158,7 +158,7 @@
             bindings
                 = <&macro_press &out OUT_BLE>,
                   <&macro_param_1to2>, 
-                  <&macro_press &bt BT_SEL MACRO_PLACEHOLDER>;
+                  <&macro_press &bt BT_SEL MACRO_PLACEHOLDER>,
                   <&macro_press &bt BT_CLR MACRO_PLACEHOLDER>;
             };
     };
