@@ -156,9 +156,9 @@
             tap-ms = <0>;
             #binding-cells = <2>;
             bindings
-                = <&out OUT_BLE>,
+                = <&macro_press &out OUT_BLE>,
                   <&macro_param_1to1>, 
-                  <&bt BT_SEL MACRO_PLACEHOLDER>;
+                  <&macro_press &bt BT_SEL MACRO_PLACEHOLDER>;
             };
     };
 
