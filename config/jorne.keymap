@@ -102,14 +102,14 @@
             charmap = <&charmap_us>;
         };
 
-        bt_behavior: bt_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BT_BEHAVIOR";
-            bindings = <&clr_bt_param>, <&to_bt_param>;
+        // bt_behavior: bt_behavior {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "BT_BEHAVIOR";
+        //     bindings = <&clr_bt_param>, <&to_bt_param>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <5000>;
-        };
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <5000>;
+        // };
     };
 
     macros {
@@ -199,25 +199,25 @@
             label = "TP_TRADE";
         };
 
-        clr_bt_param: clr_bt_param {
-            compatible = "zmk,behavior-macro-one-param";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <2>;
-            bindings =
-                <&macro_press>,
-                <&out OUT_BLE>,
-                <&macro_param_1to2>,
-                <&bt BT_SEL MACRO_PLACEHOLDER>,
-                <&bt BT_CLR>;
-        };
+        // clr_bt_param: clr_bt_param {
+        //     compatible = "zmk,behavior-macro-one-param";
+        //     wait-ms = <0>;
+        //     tap-ms = <0>;
+        //     #binding-cells = <2>;
+        //     bindings =
+        //         <&macro_press>,
+        //         <&out OUT_BLE>,
+        //         <&macro_param_1to2>,
+        //         <&bt BT_SEL MACRO_PLACEHOLDER>,
+        //         <&bt BT_CLR>;
+        // };
 
         to_bt_param: to_bt_param {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <0>;
             bindings = <&out OUT_BLE>,
             <&macro_param_1to2>,
-            <&bt BT_SEL MACRO_PLACEHOLDER>;
+            <&macro_press &bt BT_SEL MACRO_PLACEHOLDER>;
             label = "TO_BT_PARAM";
         };
     };
