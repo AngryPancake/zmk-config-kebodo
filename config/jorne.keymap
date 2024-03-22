@@ -113,28 +113,28 @@
     };
 
     macros {
-        slack_a: slack_a {
+        slk_a: slk_a {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(A)>;
             label = "SLACK_A";
         };
 
-        slack_c: slack_c {
+        slk_c: slk_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(C) &kp SPACE>;
             label = "SLACK_C";
         };
 
-        slack_vc: slack_vc {
+        slk_vc: slk_vc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(V) &kp RA(C) &kp RA(SPACE) &kp RA(D) &kp RA(O) &kp RA(N) &kp RA(E)>;
             label = "SLACK_VC";
         };
 
-        slack_assignee: slack_assignee {
+        slk_assignee: slk_assignee {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(A) &kp RA(S) &kp RA(S) &kp RA(I) &kp RA(G) &kp RA(N) &kp RA(E) &kp RA(E) &kp SPACE>;
@@ -143,17 +143,19 @@
             tap-ms = <40>;
         };
 
-        slack_inpro: slack_inpro {
+        slk_inpro: slk_inpro {
             compatible = "zmk,behavior-macro";
-            wait-ms = <30>;
-            tap-ms = <40>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             #binding-cells = <0>;
             bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(I) &kp RA(N) &kp RA(UNDER) &kp RA(P) &kp RA(R) &kp RA(O) &kp RA(G) &kp RA(R) &kp RA(E) &kp RA(S) &kp RA(S)>;
             label = "SLACK_INPRO";
         };
 
-        sudo_i: sudo_i {
+        tp_sudo_i: tp_sudo_i {
             compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
             #binding-cells = <0>;
             bindings = <&kp RA(S) &kp RA(U) &kp RA(D) &kp RA(O) &kp SPACE &kp RA(MINUS) &kp RA(I) &kp RET>;
             label = "SUDO_I";
@@ -283,9 +285,9 @@
 
         S_layer {
             bindings = <
-&trans  &none      &slack_vc  &trans  &trans    &kp RET  &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &sudo_i    &slack_a   &trans  &trans    &trans   &slack_assignee    &trans  &trans  &trans  &trans  &trans  &trans
-        &kp LC(A)  &trans     &trans  &slack_c  &trans   &slack_inpro       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none      &slk_vc  &trans  &trans    &kp RET  &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &tp_sudo_i    &slk_a   &trans  &trans    &trans   &slk_assignee    &trans  &trans  &trans  &trans  &trans  &trans
+        &kp LC(A)  &trans     &trans  &slk_c  &trans   &slk_inpro       &trans  &trans  &trans  &trans  &trans  &trans
                                       &trans    &trans   &kp RET            &trans  &trans  &trans
             >;
         };
