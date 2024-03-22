@@ -225,8 +225,8 @@
             #binding-cells = <1>;
             bindings = <&macro_press &out OUT_BLE>,
             <&macro_param_1to2>, 
-            <&macro_press &bt BT_SEL MACRO_PLACEHOLDER>;
-            <&macro_press &bt BT_CLR>
+            <&macro_press &bt BT_SEL MACRO_PLACEHOLDER>,
+            <&macro_press &bt BT_CLR>;
             label = "CLR_BT_PARAM";
         };
     };
