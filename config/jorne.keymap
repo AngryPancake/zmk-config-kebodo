@@ -20,29 +20,67 @@
     combos {
         compatible = "zmk,combos";
 
-        game_mod_on  { bindings = <&to 4>; key-positions = <6 5 39>; layers = <0>;  };
+        game_mod_on {
+            bindings = <&to 4>;
+            key-positions = <6 5 39>;
+            layers = <0>;
+        };
 
-        game_mod_off { bindings = <&to 0>; key-positions = <6 5 40>; layers = <4>;  };
+        game_mod_off {
+            bindings = <&to 0>;
+            key-positions = <6 5 40>;
+            layers = <4>;
+        };
 
-        Esc { bindings = <&kp ESCAPE>; key-positions = <1 2>;                       };
+        Esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
+        };
 
-        ins { bindings = <&kp INS>; key-positions = <7 20>;                         };
+        ins {
+            bindings = <&kp INS>;
+            key-positions = <7 20>;
+        };
 
-        Dot { bindings = <&kp RA(DOT)>; key-positions = <5 6>;                      };
+        Dot {
+            bindings = <&kp RA(DOT)>;
+            key-positions = <5 6>;
+        };
 
-        slash { bindings = <&kp RA(SLASH)>; key-positions = <6 19>;                 };
+        slash {
+            bindings = <&kp RA(SLASH)>;
+            key-positions = <6 19>;
+        };
 
-        less { bindings = <&tp_less>; key-positions = <4 16 23>;                    };
+        less {
+            bindings = <&tp_less>;
+            key-positions = <4 16 23>;
+        };
 
-        grep { bindings = <&tp_grep>; key-positions = <19 5>;                       };
+        grep {
+            bindings = <&tp_grep>;
+            key-positions = <19 5>;
+        };
 
-        trade { bindings = <&tp_trade>; key-positions = <6 5 17>;                   };
+        trade {
+            bindings = <&tp_trade>;
+            key-positions = <6 5 17>;
+        };
 
-        CapsWord { bindings = <&caps_word>; key-positions = <18 21>;                };
+        CapsWord {
+            bindings = <&caps_word>;
+            key-positions = <18 21>;
+        };
 
-        Pipe {bindings = <&kp PIPE>; key-positions = <30 31>;                       };
+        Pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <30 31>;
+        };
 
-        LMeta {bindings = <&kp LGUI>; key-positions = <0 14>;                       };
+        LMeta {
+            bindings = <&kp LGUI>;
+            key-positions = <0 14>;
+        };
     };
 
     behaviors {
@@ -62,6 +100,15 @@
             #binding-cells = <0>;
             text = " grep -i 'error\|fatal\|warn\|stopped\|started\|gracefully' | less -S ";
             charmap = <&charmap_us>;
+        };
+
+        bt_behavior: bt_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT_BEHAVIOR";
+            bindings = <&new_bt>, <&to_bt1>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <5000>;
         };
     };
 
@@ -155,12 +202,14 @@
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <2>;
-            bindings
-                = <&macro_press &out OUT_BLE>,
-                  <&macro_param_1to2>, 
-                  <&macro_press &bt BT_SEL MACRO_PLACEHOLDER>,
-                  <&macro_press &bt BT_CLR MACRO_PLACEHOLDER>;
-            };
+            bindings =
+                <&macro_press>,
+                <&out OUT_BLE &macro_param_1to2>,
+                <&macro_press>,
+                <&bt BT_SEL MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&bt BT_CLR MACRO_PLACEHOLDER>;
+        };
     };
 
     keymap {
