@@ -158,7 +158,7 @@
             bindings
                 = <&out OUT_BLE>,
                   <&macro_param_1to1>, 
-                  <&bt BT_SEL MACRO_PLACEHOLDER>;
+                  <&bt BT_SEL>;
             };
     };
 
