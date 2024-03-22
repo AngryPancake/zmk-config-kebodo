@@ -102,9 +102,9 @@
             charmap = <&charmap_us>;
         };
 
-        bt_behavior: bt_behavior {
+        bt_mt: bt_mt {
             compatible = "zmk,behavior-hold-tap";
-            label = "BT_BEHAVIOR";
+            label = "tap:select,hold:clear";
             bindings = <&clr_bt_param>, <&to_bt_param>;
 
             #binding-cells = <2>;
@@ -198,19 +198,6 @@
             bindings = <&kp RA(T) &kp RA(R) &kp RA(A) &kp RA(D) &kp RA(E)>;
             label = "TP_TRADE";
         };
-
-        // clr_bt_param: clr_bt_param {
-        //     compatible = "zmk,behavior-macro-one-param";
-        //     wait-ms = <0>;
-        //     tap-ms = <0>;
-        //     #binding-cells = <2>;
-        //     bindings =
-        //         <&macro_press>,
-        //         <&out OUT_BLE>,
-        //         <&macro_param_1to2>,
-        //         <&bt BT_SEL MACRO_PLACEHOLDER>,
-        //         <&bt BT_CLR>;
-        // };
 
         to_bt_param: to_bt_param {
             compatible = "zmk,behavior-macro-one-param";
