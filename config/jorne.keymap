@@ -105,7 +105,7 @@
         bt_behavior: bt_behavior {
             compatible = "zmk,behavior-hold-tap";
             label = "BT_BEHAVIOR";
-            bindings = <&new_bt>, <&to_bt1>;
+            bindings = <&clr_bt_param>, <&to_bt_param>;
 
             #binding-cells = <2>;
             tapping-term-ms = <5000>;
