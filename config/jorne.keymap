@@ -164,6 +164,8 @@
 
         slack_inpro: slack_inpro {
             compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
             #binding-cells = <0>;
             bindings = <&kp RA(DOT) &kp RA(DOT) &kp RA(I) &kp RA(N) &kp RA(UNDER) &kp RA(P) &kp RA(R) &kp RA(O) &kp RA(G) &kp RA(R) &kp RA(E) &kp RA(S) &kp RA(S)>;
             label = "SLACK_INPRO";
@@ -197,18 +199,25 @@
             label = "TP_TRADE";
         };
 
-        new_bt: new_bt {
+        clr_bt_param: clr_bt_param {
             compatible = "zmk,behavior-macro-one-param";
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <2>;
             bindings =
                 <&macro_press>,
-                <&out OUT_BLE &macro_param_1to2>,
-                <&macro_press>,
+                <&out OUT_BLE>,
+                <&macro_param_1to1>,
                 <&bt BT_SEL MACRO_PLACEHOLDER>,
-                <&macro_press>,
+                <&macro_param_1to1>,
                 <&bt BT_CLR MACRO_PLACEHOLDER>;
+        };
+
+        to_bt_param: to_bt_param {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL MACRO_PLACEHOLDER>;
+            label = "TO_BT_PARAM";
         };
     };
 
