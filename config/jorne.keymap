@@ -81,6 +81,16 @@
             bindings = <&kp LGUI>;
             key-positions = <0 14>;
         };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <11 12>;
+        };
+
+        pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <24 25>;
+        };
     };
 
     behaviors {
@@ -220,7 +230,7 @@
             //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&mt LGUI LG(SPACE)  &tilde_tab  &kp Q       &kp W    &lt 7 E           &kp R        &lt 3 T      &kp Y            &kp U        &kp I              &kp O    &kp P     &kp LBKT             &mt RWIN RBKT
+&mt LGUI LG(SPACE)  &tilde_tab  &kp Q       &kp W    &lt 7 E           &kp R        &kp T        &kp Y            &kp U        &kp I              &kp O    &kp P     &kp LBKT             &mt LMETA RBKT
                     &sk LSHIFT  &lt 6 A     &lt 5 S  &mt LEFT_META D   &mt LSHFT F  &kp G        &kp H            &mt RSHFT J  &kp K              &kp L    &kp SEMI  &mt RSHIFT SQT
                     &kp LCTRL   &mt LGUI Z  &kp X    &kp C             &kp V        &kp B        &kp N            &kp M        &kp COMMA          &kp DOT  &kp FSLH  &mt RCTRL BACKSLASH
                                                      &mt LEFT_ALT TAB  &lt 2 SPACE  &lt 1 RET    &lt 1 BACKSPACE  &lt 2 SPACE  &mt RSHIFT DELETE
@@ -309,15 +319,6 @@
         &trans  &trans  &kp LA(LEFT_ARROW)  &trans  &kp LA(RIGHT)  &kp LC(R)    &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans              &trans  &kp LC(W)      &kp LC(W)    &trans  &trans  &trans  &trans  &trans  &trans
                                             &trans  &trans         &kp RET      &trans  &trans  &trans
-            >;
-        };
-
-        B_Layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &w_ben_grep    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans         &trans  &trans  &trans
             >;
         };
     };
