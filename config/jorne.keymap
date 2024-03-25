@@ -87,7 +87,7 @@
             key-positions = <11 12>;
         };
 
-        pipe {
+        pipeR {
             bindings = <&kp PIPE>;
             key-positions = <24 25>;
         };
@@ -102,14 +102,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
             keep-mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
-        w_ben_grep: w_ben_grep {
-            compatible = "zmk,behavior-send-string";
-            label = "word_bender_grep";
-            #binding-cells = <0>;
-            text = " grep -i 'error\|fatal\|warn\|stopped\|started\|gracefully' | less -S ";
-            charmap = <&charmap_us>;
         };
 
         bt_mt: bt_mt {
