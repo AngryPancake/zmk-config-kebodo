@@ -88,8 +88,13 @@
         };
 
         pipeR {
-            bindings = <&kp PIPE>;
+            bindings = <&kp RA(PIPE)>;
             key-positions = <24 25>;
+        };
+
+        pipeR2 {
+            bindings = <&kp RA(PIPE)>;
+            key-positions = <36 37>;
         };
     };
 
