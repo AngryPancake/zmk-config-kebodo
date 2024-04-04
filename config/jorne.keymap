@@ -101,6 +101,11 @@
             bindings = <&kp RA(SLASH)>;
             key-positions = <2 3>;
         };
+
+        softoff {
+            bindings = <&kp A>;
+            key-positions = <28 29 30 31 32 33 34 35>;
+        };
     };
 
     behaviors {
