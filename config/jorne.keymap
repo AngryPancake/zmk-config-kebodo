@@ -252,7 +252,7 @@
 &trans  &trans     &mt EXCLAMATION N1  &mt AT_SIGN N2    &mt HASH N3      &mt DOLLAR N4            &mt PERCENT N5              &kp F1           &kp F2       &kp F3   &kp F4   &trans  &trans      &trans
         &sk LSHFT  &mt CARET N6        &mt AMPERSAND N7  &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0    &kp F5           &kp F6       &kp F7   &kp F8   &trans  &kp RSHIFT
         &kp LCTRL  &trans              &kp RA(DOT)       &kp RA(COMMA)    &mt UNDERSCORE MINUS     &mt PLUS EQUAL              &kp F9           &kp F10      &kp F11  &kp F12  &trans  &kp RCTRL
-                                                         &trans           &lt 3 SPACE              &trans                      &lt 1 BACKSPACE  &lt 3 SPACE  &trans
+                                                         &trans           &trans                   &trans                      &lt 1 BACKSPACE  &lt 3 SPACE  &trans
             >;
         };
 
@@ -264,10 +264,10 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&trans  &kp BSPC    &kp DEL  &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC      &mt AMPERSAND N7    &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &trans  &trans
-        &sk LSHIFT  &trans   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END      &kp C_VOL_DN          &kp C_VOL_UP              &mt DOLLAR N4       &mt PERCENT N5   &mt CARET N6             &trans
-        &kp LCTRL   &trans   &trans     &trans    &trans     &trans       &kp RA(PERIOD)        &mt RIGHT_PARENTHESIS N0  &mt EXCLAMATION N1  &mt AT_SIGN N2   &mt HASH N3              &trans
-                                        &trans    &trans     &lt 3 RET    &lt 3 BACKSPACE       &trans                    &trans
+&trans  &kp BSPC    &kp DEL  &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC      &mt AMPERSAND N7    &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &trans  &trans
+        &sk LSHIFT  &trans   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END     &kp C_VOL_DN          &kp C_VOL_UP              &mt DOLLAR N4       &mt PERCENT N5   &mt CARET N6             &trans
+        &kp LCTRL   &trans   &trans     &trans    &trans     &trans      &kp RA(PERIOD)        &mt RIGHT_PARENTHESIS N0  &mt EXCLAMATION N1  &mt AT_SIGN N2   &mt HASH N3              &trans
+                                        &trans    &trans     &trans      &lt 3 BACKSPACE       &trans                    &trans
             >;
         };
 
@@ -322,6 +322,15 @@
         &trans  &trans  &trans              &trans  &kp LC(W)      &kp LC(W)    &trans  &trans  &trans  &trans  &trans  &trans
                                             &trans  &trans         &kp RET      &trans  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        adjust {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
