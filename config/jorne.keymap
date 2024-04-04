@@ -106,6 +106,16 @@
             bindings = <&kp A>;
             key-positions = <28 29 30 31 32 33 34 35>;
         };
+
+        Copy {
+            bindings = <&kp LC(INS)>;
+            key-positions = <28 29>;
+        };
+
+        Paste {
+            bindings = <&kp LS(INS)>;
+            key-positions = <29 30>;
+        };
     };
 
     behaviors {
@@ -311,10 +321,10 @@
 
         A_layer {
             bindings = <
-&trans  &trans     &trans  &trans     &trans       &kp RET      &kp LC(T)    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans     &trans  &trans     &trans       &kp LC(F)    &trans       &trans  &trans  &trans  &trans  &trans  &trans
-        &kp LC(A)  &trans  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                      &trans       &trans       &trans       &trans  &trans  &trans
+&trans  &trans     &trans  &trans     &trans       &kp RET      &kp LC(T)      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans     &trans  &trans     &trans       &kp LC(F)    &trans         &trans  &trans  &trans  &trans  &trans  &trans
+        &kp LC(A)  &trans  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LS(INS)    &trans  &trans  &trans  &trans  &trans  &trans
+                                      &trans       &trans       &trans         &trans  &trans  &trans
             >;
 
             label = "A";
