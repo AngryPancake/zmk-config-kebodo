@@ -116,6 +116,16 @@
             bindings = <&kp LS(INS)>;
             key-positions = <29 30>;
         };
+
+        n2 {
+            bindings = <&mt AT_SIGN N2>;
+            key-positions = <3 16>;
+        };
+
+        n1 {
+            bindings = <&mt EXCLAMATION N1>;
+            key-positions = <2 15>;
+        };
     };
 
     behaviors {
