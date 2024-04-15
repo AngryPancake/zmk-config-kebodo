@@ -264,9 +264,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans     &mt EXCLAMATION N1  &mt AT_SIGN N2    &mt HASH N3      &mt DOLLAR N4            &mt PERCENT N5              &kp F1           &kp F2       &kp F3   &kp F4   &trans  &trans      &trans
-        &sk LSHFT  &mt CARET N6        &mt AMPERSAND N7  &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0    &kp F5           &kp F6       &kp F7   &kp F8   &trans  &kp RSHIFT
-        &kp LCTRL  &trans              &kp RA(DOT)       &kp RA(COMMA)    &mt UNDERSCORE MINUS     &mt PLUS EQUAL              &kp F9           &kp F10      &kp F11  &kp F12  &trans  &kp RCTRL
+&trans  &trans     &mt EXCLAMATION N1  &mt AT_SIGN N2    &mt HASH N3      &mt DOLLAR N4            &mt PERCENT N5              &kp F1           &kp F2       &kp F3         &kp F4       &kp F5        &trans      &trans
+        &sk LSHFT  &mt CARET N6        &mt AMPERSAND N7  &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0    &kp F6           &kp F7       &kp F8         &kp F9       &kp F10       &kp RSHIFT
+        &kp LCTRL  &kp RA(SLASH)       &kp RA(DOT)       &kp RA(COMMA)    &mt UNDERSCORE MINUS     &mt PLUS EQUAL              &kp F11          &kp F12      &kp RA(COMMA)  &kp RA(DOT)  &kp RA(FSLH)  &kp RCTRL
                                                          &trans           &trans                   &trans                      &lt 1 BACKSPACE  &lt 3 SPACE  &trans
             >;
         };
@@ -332,10 +332,19 @@
 
         E_layer {
             bindings = <
-&trans  &trans  &trans  &kp LC(PG_UP)       &trans  &kp LC(PG_DN)  &kp LC(T)    &trans     &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &kp LA(LEFT_ARROW)  &trans  &kp LA(RIGHT)  &kp LC(R)    &trans     &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans              &trans  &kp LC(W)      &kp LC(W)    &kp LC(N)  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LC(PG_UP)       &trans  &kp LC(PG_DN)  &kp LC(T)    &trans     &trans  &trans  &trans     &trans  &trans  &trans
+        &trans  &trans  &kp LA(LEFT_ARROW)  &trans  &kp LA(RIGHT)  &kp LC(R)    &trans     &trans  &trans  &kp LC(L)  &trans  &trans
+        &trans  &trans  &trans              &trans  &kp LC(W)      &kp LC(W)    &kp LC(N)  &trans  &trans  &trans     &trans  &trans
                                             &trans  &trans         &kp RET      &trans     &trans  &trans
+            >;
+        };
+
+        W_layer {
+            bindings = <
+&trans  &trans  &kp LC(PG_UP)  &trans  &kp LC(PG_DN)  &kp LC(R)  &kp LC(T)    &trans     &trans  &trans  &trans     &trans  &trans  &trans
+        &trans  &kp LA(LEFT)   &trans  &kp LA(RIGHT)  &trans     &trans       &trans     &trans  &trans  &kp LC(L)  &trans  &trans
+        &trans  &trans         &trans  &kp LC(C)      &kp LC(C)  &trans       &kp LC(N)  &trans  &trans  &trans     &trans  &trans
+                                       &trans         &trans     &trans       &trans     &trans  &trans
             >;
         };
     };
