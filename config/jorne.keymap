@@ -234,6 +234,18 @@
 
             label = "CLR_BT_PARAM";
         };
+
+        mo_at: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_tap>;
+
+            label = "NEW_MACRO";
+        };
     };
 
     keymap {
@@ -345,6 +357,15 @@
         &trans         &kp LA(LEFT)   &trans  &kp LA(RIGHT)  &trans     &kp LC(R)    &trans     &trans  &trans  &kp LC(L)  &trans  &trans
         &trans         &trans         &trans  &kp LC(C)      &kp LC(C)  &trans       &kp LC(N)  &trans  &trans  &trans     &trans  &trans
                                               &trans         &trans     &trans       &trans     &trans  &trans
+            >;
+        };
+
+        ATab_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
