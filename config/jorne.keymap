@@ -249,6 +249,13 @@
 
             label = "momentary_release_alt";
         };
+
+        close_term: close_term {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q &kp LC(C) &kp LC(D)>;
+            label = "CLOSE_TERM";
+        };
     };
 
     keymap {
@@ -347,19 +354,19 @@
 
         E_layer {
             bindings = <
-&trans  &kp BACKSPACE  &trans  &kp LC(PG_UP)       &trans  &kp LC(PG_DN)  &kp LC(T)    &trans     &trans  &trans  &trans     &trans  &trans  &trans
-        &trans         &trans  &kp LA(LEFT_ARROW)  &trans  &kp LA(RIGHT)  &kp LC(R)    &trans     &trans  &trans  &kp LC(L)  &trans  &trans
-        &trans         &trans  &trans              &trans  &kp LC(W)      &kp LC(W)    &kp LC(N)  &trans  &trans  &trans     &trans  &trans
-                                                   &trans  &trans         &kp RET      &trans     &trans  &trans
+&trans  &kp BACKSPACE  &trans  &kp LC(PG_UP)       &trans       &kp LC(PG_DN)  &kp LC(T)    &trans     &trans  &trans  &trans     &trans  &trans  &trans
+        &trans         &trans  &kp LA(LEFT_ARROW)  &trans       &kp LA(RIGHT)  &kp LC(R)    &trans     &trans  &trans  &kp LC(L)  &trans  &trans
+        &trans         &trans  &trans              &close_term  &kp LC(W)      &kp LC(W)    &kp LC(N)  &trans  &trans  &trans     &trans  &trans
+                                                   &trans       &trans         &kp RET      &trans     &trans  &trans
             >;
         };
 
         W_layer {
             bindings = <
-&trans  &kp BACKSPACE  &kp LC(PG_UP)  &trans  &kp LC(PG_DN)  &kp LC(R)  &kp LC(T)    &trans     &trans  &trans  &trans     &trans  &trans  &trans
-        &trans         &kp LA(LEFT)   &trans  &kp LA(RIGHT)  &trans     &kp LC(R)    &trans     &trans  &trans  &kp LC(L)  &trans  &trans
-        &trans         &trans         &trans  &kp LC(C)      &kp LC(C)  &trans       &kp LC(N)  &trans  &trans  &trans     &trans  &trans
-                                              &trans         &trans     &trans       &trans     &trans  &trans
+&trans  &kp BACKSPACE  &kp LC(PG_UP)  &trans       &kp LC(PG_DN)  &kp LC(R)  &kp LC(T)    &trans     &trans  &trans  &trans     &trans  &trans  &trans
+        &trans         &kp LA(LEFT)   &trans       &kp LA(RIGHT)  &trans     &kp LC(R)    &trans     &trans  &trans  &kp LC(L)  &trans  &trans
+        &trans         &trans         &close_term  &kp LC(C)      &kp LC(C)  &trans       &kp LC(N)  &trans  &trans  &trans     &trans  &trans
+                                                   &trans         &trans     &trans       &trans     &trans  &trans
             >;
         };
 
