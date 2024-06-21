@@ -141,10 +141,11 @@
         Lmeta: Lmeta {
             compatible = "zmk,behavior-mod-morph";
             label = "LMETA";
-            bindings = <&mt LG(SPACE) LEFT_META>, <&kp TAB>;
+            bindings = <&mt LEFT_META LG(SPACE)>, <&kp TAB>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
     };
 
