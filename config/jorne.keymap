@@ -122,7 +122,7 @@
         tilde_tab: tilde_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "TILDE_TAB";
-            bindings = <&kp GRAVE>, <&kp LS(TAB)>;
+            bindings = <&kp GRAVE>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT|MOD_RGUI|MOD_LGUI)>;
@@ -141,7 +141,7 @@
         Lmeta: Lmeta {
             compatible = "zmk,behavior-mod-morph";
             label = "LMETA";
-            bindings = <&mt LEFT_META LG(SPACE)>, <&kp TAB>;
+            bindings = <&mt LEFT_META LG(SPACE)>, <&kp LS(TAB)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
