@@ -374,8 +374,8 @@
         W_layer {
             bindings = <
 &trans  &kp BACKSPACE  &kp LC(PG_UP)  &trans       &kp LC(PG_DN)  &kp LC(R)  &kp LC(T)    &trans     &trans  &trans  &trans     &trans  &trans  &trans
-        &trans         &kp LA(LEFT)   &trans       &kp LA(RIGHT)  &trans     &kp LC(R)    &trans     &trans  &trans  &kp LC(L)  &trans  &trans
-        &trans         &trans         &close_term  &kp LC(C)      &kp LC(C)  &trans       &kp LC(N)  &trans  &trans  &trans     &trans  &trans
+        &trans         &kp LA(LEFT)   &trans       &kp LA(RIGHT)  &kp LC(R)  &kp LC(R)    &trans     &trans  &trans  &kp LC(L)  &trans  &trans
+        &trans         &trans         &close_term  &kp LC(W)      &kp LC(W)  &trans       &kp LC(N)  &trans  &trans  &trans     &trans  &trans
                                                    &trans         &trans     &trans       &trans     &trans  &trans
             >;
         };
