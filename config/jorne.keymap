@@ -137,6 +137,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <5000>;
         };
+
+        Lmeta: Lmeta {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LMETA";
+            bindings = <&mt LG(SPACE) LEFT_META>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
+        };
     };
 
     macros {
@@ -269,10 +278,10 @@
             //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&mt LGUI LG(SPACE)  &tilde_tab  &kp Q           &lt 8 W          &lt 7 E         &kp R                 &kp T        &kp Y            &kp U                 &kp I         &kp O    &kp P     &kp LBKT             &mt LMETA RBKT
-                    &sk LSHIFT  &lt 6 A         &lt 5 S          &kp D           &mt LSHFT F           &kp G        &kp H            &mt RSHFT J           &kp K         &kp L    &kp SEMI  &mt RSHIFT SQT
-                    &kp LCTRL   &mt LEFT_ALT Z  &mt LEFT_META X  &mt LEFT_GUI C  &kp V                 &kp B        &kp N            &kp M                 &kp COMMA     &kp DOT  &kp FSLH  &mt RCTRL BACKSLASH
-                                                                 &lt 2 TAB       &mt LEFT_SHIFT SPACE  &lt 1 RET    &lt 1 BACKSPACE  &mt LEFT_SHIFT SPACE  &lt 2 DELETE
+&Lmeta  &tilde_tab  &kp Q           &lt 8 W          &lt 7 E         &kp R                 &kp T        &kp Y            &kp U                 &kp I         &kp O    &kp P     &kp LBKT             &mt LMETA RBKT
+        &sk LSHIFT  &lt 6 A         &lt 5 S          &kp D           &mt LSHFT F           &kp G        &kp H            &mt RSHFT J           &kp K         &kp L    &kp SEMI  &mt RSHIFT SQT
+        &kp LCTRL   &mt LEFT_ALT Z  &mt LEFT_META X  &mt LEFT_GUI C  &kp V                 &kp B        &kp N            &kp M                 &kp COMMA     &kp DOT  &kp FSLH  &mt RCTRL BACKSLASH
+                                                     &lt 2 TAB       &mt LEFT_SHIFT SPACE  &lt 1 RET    &lt 1 BACKSPACE  &mt LEFT_SHIFT SPACE  &lt 2 DELETE
             >;
 
             label = "MAIN";
@@ -286,9 +295,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans     &mt EXCLAMATION N1  &mt AT_SIGN N2    &mt HASH N3      &mt DOLLAR N4            &mt PERCENT N5              &mt CARET NUMBER_6  &mt AMPERSAND N7  &mt AMPERSAND N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &mt UNDERSCORE MINUS  &mt PLUS EQUAL
-        &sk LSHFT  &mt CARET N6        &mt AMPERSAND N7  &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0    &kp F1              &kp F2            &kp F3            &kp F4                   &kp F5                    &kp F6
-        &kp LCTRL  &kp RA(SLASH)       &kp RA(DOT)       &kp RA(COMMA)    &mt UNDERSCORE MINUS     &mt PLUS EQUAL              &kp F7              &kp F8            &kp F9            &kp F10                  &kp F11                   &kp F12
+&trans  &trans     &mt EXCLAMATION N1  &mt AT_SIGN N2    &mt HASH N3      &mt DOLLAR N4            &mt PERCENT N5              &mt CARET NUMBER_6  &mt AMPERSAND N7  &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &mt UNDERSCORE MINUS  &mt PLUS EQUAL
+        &sk LSHFT  &mt CARET N6        &mt AMPERSAND N7  &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0    &kp F1              &kp F2            &kp F3           &kp F4                   &kp F5                    &kp F6
+        &kp LCTRL  &kp RA(SLASH)       &kp RA(DOT)       &kp RA(COMMA)    &mt UNDERSCORE MINUS     &mt PLUS EQUAL              &kp F7              &kp F8            &kp F9           &kp F10                  &kp F11                   &kp F12
                                                          &trans           &trans                   &trans                      &trans              &trans            &trans
             >;
         };
