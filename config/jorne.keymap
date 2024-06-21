@@ -250,7 +250,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 9>,
+                <&mo 0>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&kp LEFT_META>,
@@ -296,10 +296,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans     &mt EXCLAMATION N1  &mt AT_SIGN N2    &mt HASH N3      &mt DOLLAR N4            &mt PERCENT N5              &mt CARET NUMBER_6  &mt AMPERSAND N7  &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &mt UNDERSCORE MINUS  &mt PLUS EQUAL
-        &sk LSHFT  &mt CARET N6        &mt AMPERSAND N7  &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0    &kp F1              &kp F2            &kp F3           &kp F4                   &kp F5                    &kp F6
-        &kp LCTRL  &kp RA(SLASH)       &kp RA(DOT)       &kp RA(COMMA)    &mt UNDERSCORE MINUS     &mt PLUS EQUAL              &kp F7              &kp F8            &kp F9           &kp F10                  &kp F11                   &kp F12
-                                                         &trans           &trans                   &trans                      &trans              &trans            &trans
+&trans  &kp BACKSPACE  &mt EXCLAMATION N1  &mt AT_SIGN N2    &mt HASH N3      &mt DOLLAR N4            &mt PERCENT N5              &mt CARET NUMBER_6  &mt AMPERSAND N7  &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &mt UNDERSCORE MINUS  &mt PLUS EQUAL
+        &sk LSHFT      &mt CARET N6        &mt AMPERSAND N7  &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0    &kp F1              &kp F2            &kp F3           &kp F4                   &kp F5                    &kp F6
+        &kp LCTRL      &kp RA(SLASH)       &kp RA(DOT)       &kp RA(COMMA)    &mt UNDERSCORE MINUS     &mt PLUS EQUAL              &kp F7              &kp F8            &kp F9           &kp F10                  &kp F11                   &kp F12
+                                                             &trans           &trans                   &trans                      &trans              &trans            &trans
             >;
         };
 
@@ -377,15 +377,6 @@
         &trans         &kp LA(LEFT)   &trans       &kp LA(RIGHT)  &kp LC(R)  &kp LC(R)    &trans     &trans  &trans  &kp LC(L)  &trans  &trans
         &trans         &trans         &close_term  &kp LC(W)      &kp LC(W)  &trans       &kp LC(N)  &trans  &trans  &trans     &trans  &trans
                                                    &trans         &trans     &trans       &trans     &trans  &trans
-            >;
-        };
-
-        ATab_layer {
-            bindings = <
-&trans  &kp TAB  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
