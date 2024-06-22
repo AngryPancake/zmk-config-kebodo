@@ -113,7 +113,7 @@
         };
 
         minus {
-            bindings = <&kp MINUS>;
+            bindings = <&mt UNDERSCORE MINUS>;
             key-positions = <8 9>;
         };
     };
