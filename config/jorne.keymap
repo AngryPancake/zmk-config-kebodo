@@ -92,11 +92,6 @@
             key-positions = <36 37>;
         };
 
-        slash2 {
-            bindings = <&kp RA(SLASH)>;
-            key-positions = <2 3>;
-        };
-
         softoff {
             bindings = <&soft_off>;
             key-positions = <28 29 30 31>;
