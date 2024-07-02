@@ -156,6 +156,11 @@
             bindings = <&kp RET>;
             key-positions = <21 22 23>;
         };
+
+        bspace2 {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <16 17 18>;
+        };
     };
 
     behaviors {
