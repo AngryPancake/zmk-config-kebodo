@@ -77,12 +77,12 @@
             key-positions = <11 12>;
         };
 
-        pipeR {
-            bindings = <&kp RA(PIPE)>;
+        enter {
+            bindings = <&kp RA(RET)>;
             key-positions = <24 25>;
         };
 
-        pipeR2 {
+        pipe {
             bindings = <&kp RA(PIPE)>;
             key-positions = <36 37>;
         };
@@ -123,7 +123,7 @@
         };
 
         Plus {
-            bindings = <&kp PLUS>;
+            bindings = <&mt EQUAL PLUS>;
             key-positions = <9 10>;
         };
 
