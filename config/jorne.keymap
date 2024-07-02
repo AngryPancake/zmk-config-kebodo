@@ -62,11 +62,6 @@
             key-positions = <18 21>;
         };
 
-        Pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <30 31>;
-        };
-
         LMeta {
             bindings = <&kp LGUI>;
             key-positions = <0 14>;
@@ -113,12 +108,12 @@
         };
 
         LPare {
-            bindings = <&kp LEFT_PARENTHESIS>;
+            bindings = <&mt LEFT_BRACKET LEFT_PARENTHESIS>;
             key-positions = <21 22>;
         };
 
         RPare {
-            bindings = <&kp RIGHT_PARENTHESIS>;
+            bindings = <&mt RIGHT_BRACKET RIGHT_PARENTHESIS>;
             key-positions = <22 23>;
         };
 
