@@ -348,9 +348,9 @@
 
         game {
             bindings = <
-&kp LGUI  &kp TAB         &kp T  &kp Q  &kp W     &kp E      &kp R          &kp Y            &kp U       &kp UP     &kp O      &kp P   &trans  &kp RET
-          &kp LEFT_SHIFT  &kp G  &kp A  &kp S     &kp D      &kp F          &kp H            &kp LEFT    &kp DOWN   &kp RIGHT  &trans  &trans
-          &kp LCTRL       &kp B  &kp Z  &kp X     &kp C      &kp V          &kp N            &kp M       &kp COMMA  &kp DOT    &trans  &trans
+&kp LGUI  &kp TAB         &kp T  &kp Q  &kp W     &kp E      &kp R          &kp Y            &kp U       &kp UP     &kp O      &kp P     &kp LBKT  &kp RET
+          &kp LEFT_SHIFT  &kp G  &kp A  &kp S     &kp D      &kp F          &kp H            &kp LEFT    &kp DOWN   &kp RIGHT  &kp SEMI  &kp SQT
+          &kp LCTRL       &kp B  &kp Z  &kp X     &kp C      &kp V          &kp N            &kp M       &kp COMMA  &kp DOT    &kp FSLH  &kp RBKT
                                         &kp LALT  &kp SPACE  &lt 7 ENTER    &lt 7 BACKSPACE  &kp DELETE  &trans
             >;
         };
