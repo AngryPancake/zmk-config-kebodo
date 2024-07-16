@@ -49,6 +49,7 @@
         grep {
             bindings = <&tp_grep>;
             key-positions = <19 5>;
+            layers = <0 2 1>;
         };
 
         CapsWord {
@@ -154,6 +155,7 @@
         bspace2 {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17 18>;
+            layers = <0 1 2>;
         };
     };
 
