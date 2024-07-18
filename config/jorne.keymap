@@ -188,6 +188,16 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
+        t_tab: t_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "T_TAB";
+            bindings = <&kp T>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT|MOD_RGUI|MOD_LGUI)>;
+            keep-mods = <(MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
     };
 
     macros {
@@ -348,10 +358,10 @@
 
         game {
             bindings = <
-&kp LGUI  &kp TAB         &kp T  &kp Q  &kp W     &kp E      &kp R          &kp Y            &kp U       &kp UP     &kp O      &kp P     &kp LBKT  &kp RET
-          &kp LEFT_SHIFT  &kp G  &kp A  &kp S     &kp D      &kp F          &kp H            &kp LEFT    &kp DOWN   &kp RIGHT  &kp SEMI  &kp SQT
-          &kp LCTRL       &kp B  &kp Z  &kp X     &kp C      &kp V          &kp N            &kp M       &kp COMMA  &kp DOT    &kp FSLH  &kp RBKT
-                                        &kp LALT  &kp SPACE  &lt 7 ENTER    &lt 7 BACKSPACE  &kp DELETE  &trans
+&kp LGUI  &t_tab  &kp TAB    &kp Q  &kp W     &kp E      &kp R          &kp Y            &kp U       &kp UP     &kp O      &kp P     &kp LBKT  &kp RET
+          &kp G   &kp LSHFT  &kp A  &kp S     &kp D      &kp F          &kp H            &kp LEFT    &kp DOWN   &kp RIGHT  &kp SEMI  &kp SQT
+          &kp B   &kp LCTRL  &kp Z  &kp X     &kp C      &kp V          &kp N            &kp M       &kp COMMA  &kp DOT    &kp FSLH  &kp RBKT
+                                    &kp LALT  &kp SPACE  &lt 7 ENTER    &lt 7 BACKSPACE  &kp DELETE  &trans
             >;
         };
 
