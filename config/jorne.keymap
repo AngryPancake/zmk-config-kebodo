@@ -391,5 +391,10 @@
             if-layers = <1 2>;
             then-layer = <3>;
         };
+
+        fn2 {
+            if-layers = <1 8>;
+            then-layer = <3>;
+        };
     };
 };
