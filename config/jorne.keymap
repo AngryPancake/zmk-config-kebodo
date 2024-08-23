@@ -273,7 +273,14 @@
         game_d: game_a_d {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release>, <&kp A>, <&macro_press>, <&kp D>;
+            bindings =
+                <&macro_release>,
+                <&kp A>,
+                <&macro_press>,
+                <&kp D>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp D>;
 
             label = "GAME_A_D";
         };
