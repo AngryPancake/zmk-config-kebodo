@@ -319,11 +319,11 @@
             //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&Lmeta  &tilde_tab  &kp Q           &kp W  &lt 5 E            &kp R        &kp T        &kp Y            &kp U         &kp I               &kp O    &kp P     &kp LBKT             &mt LMETA RBKT
-        &sk LSHIFT  &lt 4 A         &kp S  &kp D              &kp F        &kp G        &kp H            &kp J         &kp K               &kp L    &kp SEMI  &mt RSHIFT SQT
-        &kp LCTRL   &mt LEFT_ALT Z  &kp X  &kp C              &kp V        &kp B        &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH  &mt RCTRL BACKSLASH
-                                           &mt LEFT_META TAB  &lt 2 SPACE  &lt 1 RET    &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
-                         &kp LEFT_META
+&Lmeta  &tilde_tab               &kp Q           &kp W  &lt 5 E    &kp R             &kp T        &kp Y            &kp U         &kp I               &kp O    &kp P     &kp LBKT             &mt LMETA RBKT
+        &sk LSHIFT               &lt 4 A         &kp S  &kp D      &kp F             &kp G        &kp H            &kp J         &kp K               &kp L    &kp SEMI  &mt RSHIFT SQT
+        &kp LCTRL                &mt LEFT_ALT Z  &kp X  &kp C      &kp V             &kp B        &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH  &mt RCTRL BACKSLASH
+                                                        &lt 2 TAB  &mt LSHIFT SPACE  &lt 1 RET    &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
+        &mt LEFT_META LG(SPACE)
             >;
 
             label = "MAIN";
@@ -341,7 +341,7 @@
                &sk LSHFT      &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &mt LSHFT UNDERSCORE
                &kp LCTRL      &kp F1        &kp F2      &kp F3         &kp F4        &kp F5           &kp F6         &kp F7        &kp F8        &kp F9        &kp F10       &mt F12 F11
                                                         &trans         &trans        &kp BACKSPACE    &kp BACKSPACE  &trans        &trans
-                         &kp LEFT_META
+               &kp LEFT_META
             >;
         };
 
@@ -353,11 +353,11 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&trans  &kp BSPC    &kp DEL  &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC      &mt AMPERSAND N7    &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt UNDERSCORE MINUS  &trans
-        &sk LSHIFT  &trans   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END            &kp C_VOL_DN          &kp C_VOL_UP              &mt DOLLAR N4       &mt PERCENT N5   &mt CARET N6             &mt PLUS EQUAL
-        &kp LCTRL   &none    &none      &none     &mybeh     &kp PRINTSCREEN    &kp RA(PERIOD)        &mt RIGHT_PARENTHESIS N0  &mt EXCLAMATION N1  &mt AT_SIGN N2   &mt HASH N3              &trans
-                                        &trans    &trans     &trans             &trans                &trans                    &trans
-                         &kp LEFT_META
+&trans  &kp BSPC       &kp DEL  &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC      &mt AMPERSAND N7    &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt UNDERSCORE MINUS  &trans
+        &sk LSHIFT     &trans   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END            &kp C_VOL_DN          &kp C_VOL_UP              &mt DOLLAR N4       &mt PERCENT N5   &mt CARET N6             &mt PLUS EQUAL
+        &kp LCTRL      &none    &none      &none     &mybeh     &kp PRINTSCREEN    &kp RA(PERIOD)        &mt RIGHT_PARENTHESIS N0  &mt EXCLAMATION N1  &mt AT_SIGN N2   &mt HASH N3              &trans
+                                           &trans    &trans     &trans             &trans                &trans                    &trans
+        &kp LEFT_META
             >;
         };
 
@@ -369,21 +369,21 @@
             //                          |     |     |     |   |     |     |     |
 
             bindings = <
-&sys_reset  &bt_mt 0 0  &none       &none       &bootloader  &none  &out OUT_BLE    &out OUT_BLE  &none  &bootloader  &none       &none       &bt_mt 0 0  &sys_reset
-            &bt_mt 1 1  &none       &none       &none        &none  &out OUT_TOG    &out OUT_TOG  &none  &none        &none       &none       &bt_mt 1 1
-            &bt_mt 2 2  &bt_mt 3 3  &bt_mt 4 4  &none        &none  &out OUT_USB    &out OUT_USB  &none  &none        &bt_mt 4 4  &bt_mt 3 3  &bt_mt 2 2
-                                                &soft_off    &none  &trans          &trans        &none  &soft_off
-                         &kp LEFT_META
+&sys_reset  &bt_mt 0 0     &none       &none       &bootloader  &none      &out OUT_BLE    &out OUT_BLE  &none  &bootloader  &none       &none       &bt_mt 0 0  &sys_reset
+            &bt_mt 1 1     &none       &none       &none        &none      &out OUT_TOG    &out OUT_TOG  &none  &none        &none       &none       &bt_mt 1 1
+            &bt_mt 2 2     &bt_mt 3 3  &bt_mt 4 4  &none        &none      &out OUT_USB    &out OUT_USB  &none  &none        &bt_mt 4 4  &bt_mt 3 3  &bt_mt 2 2
+                                                   &none        &soft_off  &trans          &trans        &none  &soft_off
+            &kp LEFT_META
             >;
         };
 
         a_layer {
             bindings = <
-&trans  &trans     &trans  &trans     &trans       &kp RET      &kp LC(T)      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans     &trans  &trans     &trans       &kp LC(F)    &trans         &trans  &trans  &trans  &trans  &trans  &trans
-        &kp LC(A)  &trans  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LS(INS)    &trans  &trans  &trans  &trans  &trans  &trans
-                                      &trans       &trans       &trans         &trans  &trans  &trans
-                         &kp LEFT_META
+&trans  &trans         &trans  &trans     &trans       &kp RET      &kp LC(T)      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans         &trans  &trans     &trans       &kp LC(F)    &trans         &trans  &trans  &trans  &trans  &trans  &trans
+        &kp LC(A)      &trans  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LS(INS)    &trans  &trans  &trans  &trans  &trans  &trans
+                                          &trans       &trans       &trans         &trans  &trans  &trans
+        &kp LEFT_META
             >;
 
             label = "A";
@@ -395,27 +395,27 @@
         &trans         &trans  &kp LA(LEFT_ARROW)  &trans       &kp LA(RIGHT)  &kp LC(R)    &trans     &trans  &trans  &kp LC(L)  &trans  &trans
         &trans         &trans  &trans              &close_term  &kp LC(W)      &kp LC(W)    &kp LC(N)  &trans  &trans  &trans     &trans  &trans
                                                    &trans       &trans         &kp RET      &trans     &trans  &trans
-                         &kp LEFT_META
+        &kp LEFT_META
             >;
         };
 
         game {
             bindings = <
-&kp LGUI  &t_tab  &kp TAB    &kp Q    &kp W     &kp E      &kp R          &kp Y            &kp U       &kp I      &kp O    &kp P     &kp LBKT  &kp RET
-          &kp G   &kp LSHFT  &game_a  &kp S     &game_d    &kp F          &kp H            &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
-          &kp B   &kp LCTRL  &kp Z    &kp X     &kp C      &kp V          &kp N            &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
-                                      &kp LALT  &kp SPACE  &lt 7 ENTER    &lt 7 BACKSPACE  &kp DELETE  &kp LGUI
-                         &kp LEFT_META
+&kp LGUI  &t_tab        &kp TAB    &kp Q    &kp W           &kp E      &kp R          &kp Y            &kp U       &kp I      &kp O    &kp P     &kp LBKT  &kp RET
+          &kp G         &kp LSHFT  &game_a  &kp S           &game_d    &kp F          &kp H            &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
+          &kp B         &kp LCTRL  &kp Z    &kp X           &kp C      &kp V          &kp N            &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
+                                            &kp LEFT_SHIFT  &kp SPACE  &lt 7 ENTER    &lt 7 BACKSPACE  &kp DELETE  &kp LGUI
+          &kp LEFT_ALT
             >;
         };
 
         GameFn {
             bindings = <
-&kp CAPS  &kp ESCAPE      &kp N9  &kp N1  &kp N2  &kp N2       &kp N3         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none  &none  &none  &none  &none
-          &kp LEFT_SHIFT  &kp N8  &kp N7  &kp N6  &kp N5       &kp N4         &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &none  &none  &none  &none
-          &kp LCTRL       &kp P   &kp J   &kp I   &kp M        &kp LC(F12)    &none                 &none                 &none  &none  &none  &none
-                                          &none   &lt 3 SPACE  &none          &none                 &none                 &none
-                         &kp LEFT_META
+&kp CAPS  &kp ESCAPE      &kp N9  &kp N1  &kp N2  &kp N2     &kp N3         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none  &none  &none  &none  &none
+          &kp LEFT_SHIFT  &kp N8  &kp N7  &kp N6  &kp N5     &kp N4         &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &none  &none  &none  &none
+          &kp LCTRL       &kp P   &kp J   &kp I   &kp M      &kp LC(F12)    &none                 &none                 &none  &none  &none  &none
+                                          &mo 3   &kp SPACE  &none          &none                 &none                 &none
+          &kp LEFT_META
             >;
         };
     };
