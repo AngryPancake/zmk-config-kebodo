@@ -20,3 +20,7 @@ include:
     shield: jorne_right
   - board: nrfmicro_13
     shield: settings_reset
+  - board: nrfmicro_13
+    shield: kebodo_left
+  - board: nrfmicro_13
+    shield: kebodo_right

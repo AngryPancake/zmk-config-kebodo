@@ -164,7 +164,7 @@
             compatible = "zmk,behavior-tri-state";
             label = "TRI-STATE";
             #binding-cells = <0>;
-            bindings = <&kp A>, <&kp B>, <&kt C>;
+            bindings = <&kp LALT>, <&kp TAB>, <&kt LALT>;
         };
 
         tilde_tab: tilde_tab {

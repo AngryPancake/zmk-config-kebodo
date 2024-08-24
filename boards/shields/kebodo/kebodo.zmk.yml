@@ -1,0 +1,14 @@
+file_format: "1"
+id: kebodo
+name: Kebodo
+type: shield
+url: https://github.com/AngryPancakece/
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - underglow
+siblings:
+  - kebodo_left
+  - kebodo_right
