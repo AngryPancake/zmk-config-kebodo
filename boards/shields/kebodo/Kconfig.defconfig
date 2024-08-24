@@ -1,15 +1,15 @@
 
-if SHIELD_JORNE_LEFT
+if SHIELD_KEBODO_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Jorne"
+    default "Kebodo"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_JORNE_LEFT || SHIELD_JORNE_RIGHT
+if SHIELD_KEBODO_LEFT || SHIELD_KEBODO_RIGHT
 
 config ZMK_SPLIT
     default y

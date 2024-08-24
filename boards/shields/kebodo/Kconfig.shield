@@ -1,8 +1,8 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_JORNE_LEFT
+config SHIELD_KEBODO_LEFT
     def_bool $(shields_list_contains,kebodo_left)
 
-config SHIELD_JORNE_RIGHT
+config SHIELD_KEBODO_RIGHT
     def_bool $(shields_list_contains,kebodo_right)
