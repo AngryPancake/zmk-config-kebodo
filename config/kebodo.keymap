@@ -162,7 +162,7 @@
             continue-list = <BSPC EQUAL>;
             ignore-numbers;
         };
-        
+
         altaber: altaber {
             compatible = "zmk,behavior-tri-state";
             label = "ALT Win Switcher";
