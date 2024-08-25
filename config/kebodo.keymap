@@ -155,6 +155,14 @@
     };
 
     behaviors {
+        new_num_word: new_num_word {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-num-word";
+            layers = <1 2 3>;
+            continue-list = <BSPC EQUAL>;
+            ignore-numbers;
+        };
+        
         altaber: altaber {
             compatible = "zmk,behavior-tri-state";
             label = "ALT Win Switcher";
