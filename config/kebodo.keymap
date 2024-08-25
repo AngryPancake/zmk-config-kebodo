@@ -17,9 +17,6 @@
 #define RSE 2
 #define ADJ 3
 
-&num_word {
-  layers = <1 2 3>;
-};
 &lt { quick-tap-ms = <200>; };
 
 / {
@@ -155,12 +152,11 @@
     };
 
     behaviors {
-        new_num_word: new_num_word {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-num-word";
-            layers = <1 2 3>;
-            continue-list = <BSPC EQUAL>;
-            ignore-numbers;
+        nav_word: nav_word {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP>;
+            ignore-modifiers;
         };
 
         altaber: altaber {

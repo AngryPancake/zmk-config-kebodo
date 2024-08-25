@@ -38,8 +38,8 @@ manifest:
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
-    - name: zmk-num-word
-      remote: dhruvinsh
+    - name: zmk-auto-layer
+      remote: urob
       revision: main
   self:
     path: config
