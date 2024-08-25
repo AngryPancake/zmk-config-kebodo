@@ -46,20 +46,9 @@
             key-positions = <6 19>;
         };
 
-        grep {
-            bindings = <&tp_grep>;
-            key-positions = <19 5>;
-            layers = <0 2 1>;
-        };
-
         CapsWord {
             bindings = <&caps_word>;
             key-positions = <18 21>;
-        };
-
-        LMeta {
-            bindings = <&kp LGUI>;
-            key-positions = <0 14>;
         };
 
         Backspace {
