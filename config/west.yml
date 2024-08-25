@@ -40,6 +40,6 @@ manifest:
       revision: main
     - name: zmk-auto-layer
       remote: urob
-      revision: main
+      revision: zero-param
   self:
     path: config
