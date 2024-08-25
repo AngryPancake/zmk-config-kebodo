@@ -1,0 +1,8 @@
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    uses: AngryPancake/zmk/.github/workflows/build-user-config.yml@main
