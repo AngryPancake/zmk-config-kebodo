@@ -18,7 +18,7 @@
 #define ADJ 3
 
 &num_word {
-  layers = <2>;
+  layers = <1 2 3>;
 };
 &lt { quick-tap-ms = <200>; };
 
