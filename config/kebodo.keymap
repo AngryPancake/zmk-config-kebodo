@@ -284,7 +284,7 @@
         &kp LEFT_ALT  &lt 4 A         &kp S           &kp D      &kp F             &kp G           &kp H            &kp J         &kp K               &kp L    &kp SEMI  &mt RSHIFT SQT
         &kp LCTRL     &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C      &kp V             &kp B           &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH  &mt RCTRL BACKSLASH
                                                       &lt 2 TAB  &mt LSHIFT SPACE  &lt 1 RET       &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
-                                                                                   &kp LEFT_GUI                                                                &kp N0
+                                                                                   &kp LEFT_GUI                                                                &nav_word lower
             >;
 
             label = "MAIN";
@@ -302,7 +302,7 @@
                &sk LSHFT      &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &mt LSHFT UNDERSCORE
                &kp LCTRL      &kp F1        &kp F2      &kp F3         &kp F4        &kp F5           &kp F6         &kp F7        &kp F8        &kp F9        &kp F10       &mt F12 F11
                                                         &trans         &trans        &kp BACKSPACE    &kp BACKSPACE  &trans        &trans
-                                                                                     &kp LEFT_GUI                                                              &nav_word
+                                                                                     &kp LEFT_GUI                                                              &nav_word lower
             >;
         };
 
