@@ -276,7 +276,7 @@
         &kp LEFT_ALT             &lt 4 A         &kp S           &kp D      &kp F             &kp G        &kp H            &kp J         &kp K               &kp L    &kp SEMI  &mt RSHIFT SQT
         &kp LCTRL                &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C      &kp V             &kp B        &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH  &mt RCTRL BACKSLASH
                                                                  &lt 2 TAB  &mt LSHIFT SPACE  &lt 1 RET    &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
-        &mt LEFT_META LG(SPACE)
+        &mt LEFT_META LG(SPACE) &kp 0
             >;
 
             label = "MAIN";
@@ -294,7 +294,7 @@
                &sk LSHFT      &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &mt LSHFT UNDERSCORE
                &kp LCTRL      &kp F1        &kp F2      &kp F3         &kp F4        &kp F5           &kp F6         &kp F7        &kp F8        &kp F9        &kp F10       &mt F12 F11
                                                         &trans         &trans        &kp BACKSPACE    &kp BACKSPACE  &trans        &trans
-               &kp LEFT_META
+               &kp LEFT_META  &kp 0
             >;
         };
 
@@ -310,7 +310,7 @@
         &sk LSHIFT     &trans   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END            &kp C_VOL_DN          &kp C_VOL_UP              &mt DOLLAR N4       &mt PERCENT N5   &mt CARET N6             &mt PLUS EQUAL
         &kp LCTRL      &none    &none      &none     &altaber   &kp PRINTSCREEN    &kp RA(PERIOD)        &mt RIGHT_PARENTHESIS N0  &mt EXCLAMATION N1  &mt AT_SIGN N2   &mt HASH N3              &trans
                                            &trans    &trans     &trans             &trans                &trans                    &trans
-        &kp LEFT_META
+        &kp LEFT_META  &kp 0
             >;
         };
 
@@ -326,7 +326,7 @@
             &bt_mt 1 1     &none       &none       &none        &none      &out OUT_TOG    &out OUT_TOG  &none  &none        &none       &none       &bt_mt 1 1
             &bt_mt 2 2     &bt_mt 3 3  &bt_mt 4 4  &none        &none      &out OUT_USB    &out OUT_USB  &none  &none        &bt_mt 4 4  &bt_mt 3 3  &bt_mt 2 2
                                                    &none        &soft_off  &trans          &trans        &none  &soft_off
-            &kp LEFT_META
+            &kp LEFT_META  &kp 0
             >;
         };
 
@@ -336,7 +336,7 @@
         &trans         &trans  &trans     &trans       &kp LC(F)    &trans         &trans  &trans  &trans  &trans  &trans  &trans
         &kp LC(A)      &trans  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LS(INS)    &trans  &trans  &trans  &trans  &trans  &trans
                                           &trans       &trans       &trans         &trans  &trans  &trans
-        &kp LEFT_META
+        &kp LEFT_META  &kp 0
             >;
 
             label = "A";
@@ -348,7 +348,7 @@
         &trans         &trans  &kp LA(LEFT_ARROW)  &trans       &kp LA(RIGHT)  &kp LC(R)    &trans     &trans  &trans  &kp LC(L)  &trans  &trans
         &trans         &trans  &trans              &close_term  &kp LC(W)      &kp LC(W)    &kp LC(N)  &trans  &trans  &trans     &trans  &trans
                                                    &trans       &trans         &kp RET      &trans     &trans  &trans
-        &kp LEFT_META
+        &kp LEFT_META  &kp 0
             >;
         };
 
@@ -358,7 +358,7 @@
           &kp G         &kp LSHFT  &game_a  &kp S           &game_d    &kp F          &kp H            &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
           &kp B         &kp LCTRL  &kp Z    &kp X           &kp C      &kp V          &kp N            &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
                                             &kp LEFT_SHIFT  &kp SPACE  &lt 7 ENTER    &lt 7 BACKSPACE  &kp DELETE  &kp LGUI
-          &kp LEFT_ALT
+          &kp LEFT_ALT  &kp 0
             >;
         };
 
@@ -368,7 +368,7 @@
           &kp LEFT_SHIFT  &kp N8  &kp N7  &kp N6  &kp N5     &kp N4         &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &none  &none  &none  &none
           &kp LCTRL       &kp P   &kp J   &kp I   &kp M      &kp LC(F12)    &none                 &none                 &none  &none  &none  &none
                                           &mo 3   &kp SPACE  &none          &none                 &none                 &none
-          &kp LEFT_META
+          &kp LEFT_META   &kp 0
             >;
         };
     };
