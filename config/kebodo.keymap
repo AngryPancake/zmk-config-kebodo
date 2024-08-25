@@ -10,16 +10,17 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/num_word.dtsi>
 
-&num_word {
-  layers = <2>;
-}
+
 
 #define DEF 0
 #define LWR 1
 #define RSE 2
 #define ADJ 3
 
-
+&num_word {
+  layers = <2>;
+};
+&lt { quick-tap-ms = <200>; };
 
 / {
     combos {
