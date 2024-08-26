@@ -212,6 +212,16 @@
             #binding-cells = <0>;
             bindings = <&mo 2>, <&nav_word 1>;
         };
+
+        sec_th_l: sec_th_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEC_TH_L";
+            bindings = <&mt LSHFT SPACE>, <&lt 2 SPACE>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
     macros {
@@ -290,11 +300,11 @@
             //                       GUI | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&LMeta  &tilde_tab    &kp Q           &kp W           &lt 5 E           &kp R             &kp T        &kp Y            &kp U         &kp I               &kp O    &kp P        &kp LBKT             &mt LMETA RBKT
-        &kp LEFT_ALT  &lt 4 A         &kp S           &kp D             &kp F             &kp G        &kp H            &kp J         &kp K               &kp L    &kp SEMI     &mt RSHIFT SQT
-        &kp LCTRL     &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C             &kp V             &kp B        &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH     &mt RCTRL BACKSLASH
-                                                      &mt LEFT_GUI TAB  &mt LSHIFT SPACE  &lt 1 RET    &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
-                                                                                          &L_added                                                                 &nav_word 1
+&LMeta  &tilde_tab    &kp Q           &kp W           &lt 5 E           &kp R      &kp T        &kp Y            &kp U         &kp I               &kp O    &kp P        &kp LBKT             &mt LMETA RBKT
+        &kp LEFT_ALT  &lt 4 A         &kp S           &kp D             &kp F      &kp G        &kp H            &kp J         &kp K               &kp L    &kp SEMI     &mt RSHIFT SQT
+        &kp LCTRL     &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C             &kp V      &kp B        &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH     &mt RCTRL BACKSLASH
+                                                      &mt LEFT_GUI TAB  &sec_th_l  &lt 1 RET    &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
+                                                                                   &L_added                                                                 &nav_word 1
             >;
 
             label = "MAIN";
