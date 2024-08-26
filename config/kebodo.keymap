@@ -153,7 +153,9 @@
         nav_word: nav_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
+
             // continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 MINUS PLUS EQUAL EXCL AT POUND DLLR PRCNT CARET AMPS STAR LPAR RPAR>;
+
             continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 MINUS PLUS EQUAL>;
             ignore-modifiers;
         };
@@ -202,6 +204,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT|MOD_RGUI|MOD_LGUI)>;
             keep-mods = <(MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
+
+        L_added: L_added {
+            compatible = "zmk,behavior-tap-dance";
+            label = "L_ADDED";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&nav_word>;
         };
     };
 
@@ -281,11 +290,11 @@
             //                       GUI | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&LMeta  &tilde_tab    &kp Q           &kp W           &lt 5 E    &kp R             &kp T           &kp Y            &kp U         &kp I               &kp O    &kp P     &kp LBKT             &mt LMETA RBKT
-        &kp LEFT_ALT  &lt 4 A         &kp S           &kp D      &kp F             &kp G           &kp H            &kp J         &kp K               &kp L    &kp SEMI  &mt RSHIFT SQT
-        &kp LCTRL     &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C      &kp V             &kp B           &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH  &mt RCTRL BACKSLASH
-                                                      &lt 2 TAB  &mt LSHIFT SPACE  &lt 1 RET       &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
-                                                                                   &kp LEFT_GUI                                                                &nav_word 1
+&LMeta  &tilde_tab    &kp Q           &kp W           &lt 5 E           &kp R             &kp T        &kp Y            &kp U         &kp I               &kp O    &kp P        &kp LBKT             &mt LMETA RBKT
+        &kp LEFT_ALT  &lt 4 A         &kp S           &kp D             &kp F             &kp G        &kp H            &kp J         &kp K               &kp L    &kp SEMI     &mt RSHIFT SQT
+        &kp LCTRL     &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C             &kp V             &kp B        &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH     &mt RCTRL BACKSLASH
+                                                      &mt LEFT_GUI TAB  &mt LSHIFT SPACE  &lt 1 RET    &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
+                                                                                          &L_added                                                                 &nav_word 1
             >;
 
             label = "MAIN";
