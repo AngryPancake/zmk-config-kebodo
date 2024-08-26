@@ -210,7 +210,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "L_ADDED";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&nav_word>;
+            bindings = <&mo 2>, <&nav_word 1>;
         };
     };
 
