@@ -345,7 +345,7 @@
         &sk LSHIFT  &trans         &kp LEFT   &kp DOWN  &kp RIGHT  &kp END            &kp C_VOL_DN          &kp C_VOL_UP              &mt DOLLAR N4       &mt PERCENT N5   &mt CARET N6             &mt PLUS EQUAL
         &kp LCTRL   &none          &none      &none     &altaber   &kp PRINTSCREEN    &kp RA(PERIOD)        &mt RIGHT_PARENTHESIS N0  &mt EXCLAMATION N1  &mt AT_SIGN N2   &mt HASH N3              &trans
                                               &trans    &trans     &trans             &trans                &trans                    &trans
-                                                                   &to 1                                                                                                   &kp N0
+                                                                   &to 0                                                                                                   &kp N0
             >;
         };
 
