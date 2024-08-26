@@ -164,7 +164,7 @@
             compatible = "zmk,behavior-tri-state";
             label = "ALT Win Switcher";
             #binding-cells = <0>;
-            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
         };
 
         tilde_tab: tilde_tab {
@@ -221,6 +221,13 @@
             #binding-cells = <0>;
             keep-mods = <(MOD_LGUI)>;
             mods = <(MOD_LGUI)>;
+        };
+
+        td_2L: td_2L {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_2L";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&to 2>;
         };
     };
 
@@ -304,7 +311,7 @@
         &kp LEFT_ALT  &lt 4 A         &kp S           &kp D             &kp F      &kp G        &kp H            &kp J         &kp K               &kp L    &kp SEMI     &mt RSHIFT SQT
         &kp LCTRL     &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C             &kp V      &kp B        &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH     &mt RCTRL BACKSLASH
                                                       &mt LEFT_GUI TAB  &sec_th_l  &lt 1 RET    &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
-                                                                                   &L_added                                                                 &nav_word 1
+                                                                                   &td_2L                                                                   &nav_word 1
             >;
 
             label = "MAIN";
@@ -321,7 +328,7 @@
 &kp BACKSPACE  &kp BACKSPACE  &kp N1        &kp N2      &kp N3         &kp N4        &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS             &mt PLUS EQUAL
                &sk LSHFT      &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &mt LSHFT UNDERSCORE
                &kp LCTRL      &kp F1        &kp F2      &kp F3         &kp F4        &kp F5           &kp F6         &kp F7        &kp F8        &kp F9        &kp F10       &mt F12 F11
-                                                        &trans         &trans        &kp BACKSPACE    &kp BACKSPACE  &trans        &trans
+                                                        &trans         &trans        &trans           &trans         &trans        &trans
                                                                                      &trans                                                                    &nav_word 1
             >;
         };
@@ -334,11 +341,11 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&trans  &kp BSPC    &kp DEL  &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC      &mt AMPERSAND N7    &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt UNDERSCORE MINUS  &trans
-        &sk LSHIFT  &trans   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END            &kp C_VOL_DN          &kp C_VOL_UP              &mt DOLLAR N4       &mt PERCENT N5   &mt CARET N6             &mt PLUS EQUAL
-        &kp LCTRL   &none    &none      &none     &altaber   &kp PRINTSCREEN    &kp RA(PERIOD)        &mt RIGHT_PARENTHESIS N0  &mt EXCLAMATION N1  &mt AT_SIGN N2   &mt HASH N3              &trans
-                                        &trans    &trans     &trans             &trans                &trans                    &trans
-                                                             &trans                                                                                                  &kp N0
+&trans  &altaber    &kp BACKSPACE  &kp PG_UP  &kp UP    &kp PG_DN  &kp HOME           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC      &mt AMPERSAND N7    &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt UNDERSCORE MINUS  &trans
+        &sk LSHIFT  &trans         &kp LEFT   &kp DOWN  &kp RIGHT  &kp END            &kp C_VOL_DN          &kp C_VOL_UP              &mt DOLLAR N4       &mt PERCENT N5   &mt CARET N6             &mt PLUS EQUAL
+        &kp LCTRL   &none          &none      &none     &altaber   &kp PRINTSCREEN    &kp RA(PERIOD)        &mt RIGHT_PARENTHESIS N0  &mt EXCLAMATION N1  &mt AT_SIGN N2   &mt HASH N3              &trans
+                                              &trans    &trans     &trans             &trans                &trans                    &trans
+                                                                   &to 1                                                                                                   &kp N0
             >;
         };
 
