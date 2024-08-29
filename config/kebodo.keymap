@@ -17,8 +17,6 @@
 
 &lt { quick-tap-ms = <200>; };
 
-&mt { flavor = "tap-preferred"; };
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -151,14 +149,14 @@
         };
 
         num_word {
-            bindings = <&nav_word>;
+            bindings = <&num_word 1>;
             key-positions = <40 41>;
             layers = <0>;
         };
     };
 
     behaviors {
-        nav_word: nav_word {
+        num_word: num_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
 
@@ -218,7 +216,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "L_ADDED";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&nav_word 1>;
+            bindings = <&mo 2>, <&num_word 1>;
         };
 
         sec_th_l: sec_th_l {
@@ -319,7 +317,7 @@
         &kp LEFT_ALT  &lt 4 A         &kp S           &kp D             &kp F      &kp G        &kp H            &kp J         &kp K               &kp L    &kp SEMI     &mt RSHIFT SQT
         &kp LCTRL     &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C             &kp V      &kp B        &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH     &mt RCTRL BACKSLASH
                                                       &mt LEFT_GUI TAB  &sec_th_l  &lt 1 RET    &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
-                                                                                   &td_2L                                                                   &nav_word 1
+                                                                                   &td_2L                                                                   &num_word 1
             >;
 
             label = "MAIN";
@@ -337,7 +335,7 @@
                &sk LSHFT      &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &mt LSHFT UNDERSCORE
                &kp LCTRL      &kp F1        &kp F2      &kp F3         &kp F4        &kp F5           &kp F6         &kp F7        &kp F8        &kp F9        &kp F10       &mt F12 F11
                                                         &trans         &trans        &trans           &trans         &trans        &trans
-                                                                                     &trans                                                                    &nav_word 1
+                                                                                     &trans                                                                    &num_word 1
             >;
         };
 
