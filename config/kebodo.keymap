@@ -59,11 +59,6 @@
             key-positions = <11 12>;
         };
 
-        enter {
-            bindings = <&kp RET>;
-            key-positions = <24 25>;
-        };
-
         pipe {
             bindings = <&kp RA(PIPE)>;
             key-positions = <36 37>;
@@ -154,6 +149,18 @@
             bindings = <&num_word 1>;
             key-positions = <40 41>;
             layers = <0>;
+        };
+
+        bspc {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <2 1>;
+            layers = <0 1 2 3 4 5>;
+        };
+
+        enter {
+            bindings = <&kp RET>;
+            key-positions = <11 12>;
+            layers = <0 1 2 3 4 5>;
         };
     };
 
