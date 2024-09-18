@@ -167,6 +167,7 @@
         to0 {
             bindings = <&to 0>;
             key-positions = <1 2>;
+            layers = <5 2>;
         };
     };
 
