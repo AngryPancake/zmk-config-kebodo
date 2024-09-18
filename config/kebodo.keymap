@@ -168,10 +168,14 @@
         num_word: num_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
-
-            // continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 MINUS PLUS EQUAL EXCL AT POUND DLLR PRCNT CARET AMPS STAR LPAR RPAR>;
-
             continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 MINUS PLUS EQUAL>;
+            ignore-modifiers;
+        };
+
+        nav_word: num_word {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            continue-list = <PG_UP PG_DN LEFT UP DOWN RIGHT HOME END LSHIFT LCTRL>;
             ignore-modifiers;
         };
 
@@ -341,7 +345,7 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&trans  &altaber    &kp BACKSPACE  &kp PG_UP       &mt LSHFT UP         &kp PG_DN        &kp HOME           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC      &mt AMPERSAND N7    &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt UNDERSCORE MINUS  &trans
+&nav_word &altaber    &kp BACKSPACE  &kp PG_UP       &mt LSHFT UP         &kp PG_DN        &kp HOME           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC      &mt AMPERSAND N7    &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt UNDERSCORE MINUS  &trans
         &sk LSHIFT  &trans         &mt LCTRL LEFT  &mt LEFT_SHIFT DOWN  &mt LCTRL RIGHT  &kp END            &kp C_VOL_DN          &kp C_VOL_UP              &mt DOLLAR N4       &mt PERCENT N5   &mt CARET N6             &mt PLUS EQUAL
         &kp LCTRL   &none          &none           &none                &none            &kp PRINTSCREEN    &kp RA(PERIOD)        &mt RIGHT_PARENTHESIS N0  &mt EXCLAMATION N1  &mt AT_SIGN N2   &mt HASH N3              &trans
                                                    &trans               &trans           &trans             &trans                &trans                    &trans
