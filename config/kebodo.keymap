@@ -183,7 +183,7 @@
             compatible = "zmk,behavior-tri-state";
             label = "nav cluster smart layer";
             #binding-cells = <0>;
-            bindings = <&to 2>, <&none>, <&num_word 1>;
+            bindings = <&to 2>, <&none>, <&nav_word 2>;
         };
 
         altaber: altaber {
