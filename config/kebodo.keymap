@@ -424,6 +424,18 @@
                                                                    &mo 3                                                                    &kp N0
             >;
         };
+
+        t_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &to 6   &to 0     &trans  &trans  &trans
+                                                &trans                                    &trans
+            >;
+
+            label = "T";
+        };
     };
 
     conditional_layers {
