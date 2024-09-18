@@ -181,7 +181,7 @@
 
         nav_worder: nav_worder {
             compatible = "zmk,behavior-tri-state";
-            label = "ALT Win Switcher";
+            label = "nav cluster smart layer";
             #binding-cells = <0>;
             bindings = <&to 2>, <&none>, <&nav_word 2>;
         };
