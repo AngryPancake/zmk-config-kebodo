@@ -431,7 +431,7 @@
         &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans  &to 6   &to 0     &trans  &trans  &trans
-                                                &trans                                    &trans
+                                                &to 2                                     &trans
             >;
 
             label = "T";
