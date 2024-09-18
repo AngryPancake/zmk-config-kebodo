@@ -240,6 +240,15 @@
             keep-mods = <(MOD_LGUI)>;
             mods = <(MOD_LGUI)>;
         };
+
+        L2: L2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "L2";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -325,11 +334,11 @@
             //                       GUI | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&LMeta  &tilde_tab    &kp Q           &kp W           &lt 5 E           &kp R     &lt 8 T            &kp Y            &kp U         &kp I               &kp O    &kp P        &kp LBKT             &mt LMETA RBKT
-        &kp LEFT_ALT  &lt 4 A         &kp S           &kp D             &kp F     &kp G              &kp H            &kp J         &kp K               &kp L    &kp SEMI     &mt RSHIFT SQT
-        &kp LCTRL     &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C             &kp V     &kp B              &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH     &mt RCTRL BACKSLASH
-                                                      &mt LEFT_GUI TAB  &SFT_SPC  &lt 1 RET          &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
-                                                                                  &lt 2 LG(SPACE)                                                                &num_word 1
+&LMeta  &tilde_tab    &kp Q           &kp W           &lt 5 E           &kp R     &kp T        &kp Y            &kp U         &kp I               &kp O    &kp P        &kp LBKT             &mt LMETA RBKT
+        &kp LEFT_ALT  &lt 4 A         &kp S           &kp D             &kp F     &kp G        &kp H            &kp J         &kp K               &kp L    &kp SEMI     &mt RSHIFT SQT
+        &kp LCTRL     &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C             &kp V     &kp B        &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH     &mt RCTRL BACKSLASH
+                                                      &mt LEFT_GUI TAB  &SFT_SPC  &lt 1 RET    &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
+                                                                                  &L2 2 2                                                                  &num_word 1
             >;
 
             label = "MAIN";
@@ -423,18 +432,6 @@
                                           &kp LEFT_GUI  &kp SPACE  &none          &none                 &none                 &none
                                                                    &mo 3                                                                    &kp N0
             >;
-        };
-
-        t_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &to 6   &to 0     &trans  &trans  &trans
-                                                &to 2                                     &trans
-            >;
-
-            label = "T";
         };
     };
 
