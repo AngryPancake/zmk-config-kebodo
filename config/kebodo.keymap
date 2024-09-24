@@ -170,6 +170,18 @@
             key-positions = <1 2>;
             layers = <5 2>;
         };
+
+        toSwap {
+            bindings = <&to 8>;
+            key-positions = <28 29>;
+            layers = <0>;
+        };
+
+        toMain {
+            bindings = <&to 0>;
+            key-positions = <28 29>;
+            layers = <8>;
+        };
     };
 
     behaviors {
@@ -453,6 +465,16 @@
           &kp LCTRL       &kp P   &kp J   &kp I         &kp M      &kp LC(F12)    &none                 &none                 &none  &none  &none   &none
                                           &kp LEFT_GUI  &kp SPACE  &none          &none                 &none                 &none
                                                                    &mo 3                                                                    &kp N0
+            >;
+        };
+
+        Swap {
+            bindings = <
+&kp RBKT  &kp LBKT  &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+          &kp SQT   &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans
+          &kp BSLH  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans
+                                       &trans     &trans  &trans    &trans  &trans  &trans
+                                                          &trans                                    &trans
             >;
         };
     };
