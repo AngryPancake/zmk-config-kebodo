@@ -71,16 +71,6 @@
             key-positions = <28 29 30 31>;
         };
 
-        Copy {
-            bindings = <&kp LC(INS)>;
-            key-positions = <28 29>;
-        };
-
-        Paste {
-            bindings = <&kp LS(INS)>;
-            key-positions = <29 30>;
-        };
-
         at {
             bindings = <&kp AT_SIGN>;
             key-positions = <2 3>;
