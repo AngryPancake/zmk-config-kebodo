@@ -71,16 +71,6 @@
             key-positions = <28 29 30 31>;
         };
 
-        Copy {
-            bindings = <&kp LC(INS)>;
-            key-positions = <28 29>;
-        };
-
-        Paste {
-            bindings = <&kp LS(INS)>;
-            key-positions = <29 30>;
-        };
-
         at {
             bindings = <&kp AT_SIGN>;
             key-positions = <2 3>;
@@ -169,6 +159,18 @@
             bindings = <&to 0>;
             key-positions = <1 2>;
             layers = <5 2>;
+        };
+
+        toSwap {
+            bindings = <&to 8>;
+            key-positions = <28 29>;
+            layers = <0>;
+        };
+
+        toMain {
+            bindings = <&to 0>;
+            key-positions = <28 29>;
+            layers = <8>;
         };
     };
 
@@ -356,11 +358,11 @@
             //                       GUI | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&LMeta  &tilde_tab    &kp Q           &kp W           &lt 5 E           &kp R     &kp T        &kp Y            &kp U         &kp I               &kp O    &kp P        &kp LBKT             &mt LMETA RBKT
-        &kp LEFT_ALT  &lt 4 A         &kp S           &kp D             &kp F     &kp G        &kp H            &kp J         &kp K               &kp L    &kp SEMI     &mt RSHIFT SQT
-        &kp LCTRL     &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C             &kp V     &kp B        &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH     &mt RCTRL BACKSLASH
-                                                      &mt LEFT_GUI TAB  &SFT_SPC  &lt 1 RET    &lt 1 BACKSPACE  &lt 2 DELETE  &mt LEFT_GUI SPACE
-                                                                                  &L2 2 2                                                                  &num_word 1
+&LMeta  &tilde_tab    &kp Q           &kp W           &lt 5 E             &kp R        &kp T           &kp Y            &kp U         &kp I               &kp O    &kp P        &kp LBKT             &mt LMETA RBKT
+        &kp LEFT_ALT  &lt 4 A         &kp S           &mt LGUI D          &mt LSHFT F  &kp G           &kp H            &mt RSHFT J   &kp K               &kp L    &kp SEMI     &mt RSHIFT SQT
+        &kp LCTRL     &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C               &kp V        &kp B           &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH     &mt RCTRL BACKSLASH
+                                                      &mt LEFT_SHIFT TAB  &lt 1 SPACE  &lt 2 RET       &lt 2 BACKSPACE  &lt 1 DELETE  &mt LEFT_GUI SPACE
+                                                                                       &kp LEFT_GUI                                                                &num_word 1
             >;
 
             label = "MAIN";
@@ -453,6 +455,16 @@
           &kp LCTRL       &kp P   &kp J   &kp I         &kp M      &kp LC(F12)    &none                 &none                 &none  &none  &none   &none
                                           &kp LEFT_GUI  &kp SPACE  &none          &none                 &none                 &none
                                                                    &mo 3                                                                    &kp N0
+            >;
+        };
+
+        Swap {
+            bindings = <
+&kp RBKT  &kp LBKT  &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+          &kp SQT   &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans
+          &kp BSLH  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans
+                                       &trans     &trans  &trans    &trans  &trans  &trans
+                                                          &trans                                    &trans
             >;
         };
     };
