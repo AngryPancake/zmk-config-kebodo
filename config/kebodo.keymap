@@ -240,6 +240,18 @@
             mods = <(MOD_LALT|MOD_RALT|MOD_RGUI|MOD_LGUI)>;
             keep-mods = <(MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
         };
+
+        LGUIHR: LGUIHR {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LGUIHR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <1 14 26 27 15 2 3 16 28 29 17 4 5 18 30 31 19 6 1 2 3 4 5 6 14 15 16 17 18 19 26 27 28 29 30 31>;
+            quick-tap-ms = <170>;
+            require-prior-idle-ms = <170>;
+        };
     };
 
     macros {
@@ -340,7 +352,7 @@
 
             bindings = <
 &LMeta  &tilde_tab  &kp Q           &kp W           &lt 5 E             &kp R        &kp T           &kp Y            &kp U         &kp I               &kp O    &kp P        &kp LBKT             &mt LMETA RBKT
-        &kp LALT    &lt 4 A         &kp S           &mt LGUI D          &mt LSHFT F  &kp G           &kp H            &mt RSHFT J   &mt RGUI K          &kp L    &kp SEMI     &mt RSHIFT SQT
+        &kp LALT    &lt 4 A         &kp S           &LGUIHR LGUI D      &mt LSHFT F  &kp G           &kp H            &mt RSHFT J   &mt RGUI K          &kp L    &kp SEMI     &mt RSHIFT SQT
         &kp LCTRL   &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C               &kp V        &kp B           &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH     &mt RCTRL BACKSLASH
                                                     &mt LEFT_SHIFT TAB  &lt 1 SPACE  &lt 2 RET       &lt 2 BACKSPACE  &lt 1 DELETE  &mt LEFT_GUI SPACE
                                                                                      &kp LEFT_GUI                                                                &num_word 1
