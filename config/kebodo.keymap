@@ -340,7 +340,7 @@
 
             bindings = <
 &LMeta  &tilde_tab  &kp Q           &kp W           &lt 5 E             &kp R        &kp T           &kp Y            &kp U         &kp I               &kp O    &kp P        &kp LBKT             &mt LMETA RBKT
-        &none       &lt 4 A         &kp S           &mt LGUI D          &mt LSHFT F  &kp G           &kp H            &mt RSHFT J   &mt RGUI K          &kp L    &kp SEMI     &mt RSHIFT SQT
+        &kp LALT    &lt 4 A         &kp S           &mt LGUI D          &mt LSHFT F  &kp G           &kp H            &mt RSHFT J   &mt RGUI K          &kp L    &kp SEMI     &mt RSHIFT SQT
         &kp LCTRL   &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C               &kp V        &kp B           &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH     &mt RCTRL BACKSLASH
                                                     &mt LEFT_SHIFT TAB  &lt 1 SPACE  &lt 2 RET       &lt 2 BACKSPACE  &lt 1 DELETE  &mt LEFT_GUI SPACE
                                                                                      &kp LEFT_GUI                                                                &num_word 1
@@ -373,11 +373,11 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&nav_worder  &altaber    &kp BACKSPACE  &kp PG_UP       &lt 5 UP             &kp PG_DN        &kp HOME           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC      &mt AMPERSAND N7    &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt UNDERSCORE MINUS  &trans
-             &sk LSHIFT  &trans         &mt LCTRL LEFT  &mt LEFT_SHIFT DOWN  &mt LCTRL RIGHT  &kp END            &kp C_VOL_DN          &kp C_VOL_UP              &mt DOLLAR N4       &mt PERCENT N5   &mt CARET N6             &mt PLUS EQUAL
-             &kp LCTRL   &to 0          &to 0           &MCR_2               &MCR_1           &kp PRINTSCREEN    &kp RA(PERIOD)        &mt RIGHT_PARENTHESIS N0  &mt EXCLAMATION N1  &mt AT_SIGN N2   &mt HASH N3              &trans
-                                                        &trans               &trans           &trans             &trans                &trans                    &trans
-                                                                                              &to 0                                                                                                   &kp N0
+&nav_worder  &altaber    &kp BACKSPACE  &kp PG_UP  &kp UP_ARROW         &kp PG_DN  &kp HOME           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans  &trans  &trans
+             &sk LSHIFT  &trans         &kp LEFT   &mt LEFT_SHIFT LGUI  &kp RIGHT  &kp END            &kp C_VOL_DN          &kp C_VOL_UP          &trans  &trans  &trans  &trans
+             &kp LCTRL   &trans         &trans     &MCR_2               &MCR_1     &kp PRINTSCREEN    &trans                &trans                &trans  &trans  &trans  &trans
+                                                   &trans               &trans     &trans             &trans                &trans                &trans
+                                                                                   &trans                                                                         &trans
             >;
         };
 
