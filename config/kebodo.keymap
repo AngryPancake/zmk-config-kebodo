@@ -352,7 +352,7 @@
 
             bindings = <
 &LMeta  &tilde_tab  &kp Q           &kp W           &lt 5 E             &kp R        &kp T           &kp Y            &kp U         &kp I               &kp O    &kp P        &kp LBKT             &mt LMETA RBKT
-        &kp LALT    &lt 4 A         &kp S           &LGUIHR LGUI D      &mt LSHFT F  &kp G           &kp H            &mt RSHFT J   &mt RGUI K          &kp L    &kp SEMI     &mt RSHIFT SQT
+        &kp LALT    &lt 4 A         &kp S           &mt LGUI D          &mt LSHFT F  &kp G           &kp H            &mt RSHFT J   &mt RGUI K          &kp L    &kp SEMI     &mt RSHIFT SQT
         &kp LCTRL   &mt LEFT_ALT Z  &mt LEFT_ALT X  &kp C               &kp V        &kp B           &kp N            &kp M         &kp COMMA           &kp DOT  &kp FSLH     &mt RCTRL BACKSLASH
                                                     &mt LEFT_SHIFT TAB  &lt 1 SPACE  &lt 2 RET       &lt 2 BACKSPACE  &lt 1 DELETE  &mt LEFT_GUI SPACE
                                                                                      &kp LEFT_GUI                                                                &num_word 1
