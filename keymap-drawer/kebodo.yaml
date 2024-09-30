@@ -142,7 +142,7 @@ layers:
   - {t: ▽, type: trans}
   fn:
   - '&sys_reset'
-  - ''
+  - OUT BLE
   - ''
   - ''
   - '&bootloader'
@@ -153,7 +153,7 @@ layers:
   - '&bootloader'
   - ''
   - ''
-  - ''
+  - OUT USB
   - '&sys_reset'
   - ''
   - ''
@@ -167,7 +167,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - OUT USB
   - ''
   - ''
   - {t: '&to_bt_param 4', h: '&clr_bt_param 4'}
@@ -178,7 +178,7 @@ layers:
   - {t: '&to_bt_param 4', h: '&clr_bt_param 4'}
   - ''
   - ''
-  - ''
+  - OUT USB
   - '&soft_off'
   - {t: '&soft_off', type: held}
   - {type: held}
