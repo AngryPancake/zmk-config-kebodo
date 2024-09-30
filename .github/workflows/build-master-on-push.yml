@@ -1,3 +1,4 @@
+name: Build FW from master
 on: 
   push:
     branches:
