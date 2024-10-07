@@ -477,12 +477,6 @@ combos:
 - p: [11, 10]
   k: RET
   l: [main, lower, raise, fn, a, e]
-- p: [1, 2]
-  k: {t: main, h: toggle}
-  l: [e, raise]
 - p: [28, 29]
-  k: {t: Swap, h: toggle}
+  k: Meh+ C
   l: [main]
-- p: [28, 29]
-  k: {t: main, h: toggle}
-  l: [Swap]
