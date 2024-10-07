@@ -69,11 +69,6 @@
             key-positions = <36 37>;
         };
 
-        softoff {
-            bindings = <&soft_off>;
-            key-positions = <28 29 30 31>;
-        };
-
         at {
             bindings = <&kp AT_SIGN>;
             key-positions = <2 3>;
