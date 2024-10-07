@@ -441,8 +441,6 @@ combos:
   k: BACKSPACE
 - p: [36, 37]
   k: AGr+ |
-- p: [28, 29, 30, 31]
-  k: '&soft_off'
 - p: [2, 3]
   k: '@'
 - p: [8, 9]
