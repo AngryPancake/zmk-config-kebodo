@@ -153,22 +153,10 @@
             layers = <0 1 2 3 4 5>;
         };
 
-        to0 {
-            bindings = <&to 0>;
-            key-positions = <1 2>;
-            layers = <5 2>;
-        };
-
         toSwap {
-            bindings = <&to 8>;
+            bindings = <&kp LC(LA(LS(C)))>;
             key-positions = <28 29>;
             layers = <0>;
-        };
-
-        toMain {
-            bindings = <&to 0>;
-            key-positions = <28 29>;
-            layers = <8>;
         };
     };
 
