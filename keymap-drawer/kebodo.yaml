@@ -1,7 +1,7 @@
 layers:
   main:
   - {t: Gui+ SPACE, h: LEFT META, s: BACKSPACE}
-  - {t: '`', s: TAB}
+  - '`'
   - Q
   - W
   - {t: E, h: e}
@@ -44,7 +44,7 @@ layers:
   - {t: BACKSPACE, h: raise}
   - {t: DELETE, h: lower}
   - {t: SPACE, h: LEFT GUI}
-  - LEFT GUI
+  - {t: LEFT GUI, s: Sft+ TAB}
   - '&num_word 1'
   lower:
   - BACKSPACE
