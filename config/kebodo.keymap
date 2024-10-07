@@ -158,6 +158,11 @@
             key-positions = <28 29>;
             layers = <0>;
         };
+
+        at2 {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <3 4>;
+        };
     };
 
     behaviors {
