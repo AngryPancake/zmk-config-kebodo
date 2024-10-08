@@ -130,7 +130,7 @@
         };
 
         bspace2 {
-            bindings = <&kp BACKSPACE>;
+            bindings = <&morph_del>;
             key-positions = <17 16>;
             layers = <0 1 2>;
         };
@@ -139,12 +139,6 @@
             bindings = <&num_word 1>;
             key-positions = <39 42>;
             layers = <0>;
-        };
-
-        bspc {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <4 3>;
-            layers = <0 1 2 3 4 5>;
         };
 
         enter {
@@ -252,6 +246,15 @@
             #binding-cells = <0>;
             mods = <(MOD_RGUI|MOD_LGUI)>;
             keep-mods = <(MOD_RGUI|MOD_LGUI)>;
+        };
+
+        morph_del: morph_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_DEL";
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
         };
     };
 
