@@ -466,14 +466,11 @@ combos:
 - p: [22, 23, 21]
   k: RET
 - p: [17, 16]
-  k: BACKSPACE
+  k: {t: BACKSPACE, s: DEL}
   l: [main, lower, raise]
 - p: [39, 42]
   k: '&num_word 1'
   l: [main]
-- p: [4, 3]
-  k: BACKSPACE
-  l: [main, lower, raise, fn, a, e]
 - p: [11, 10]
   k: RET
   l: [main, lower, raise, fn, a, e]
