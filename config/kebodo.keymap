@@ -46,7 +46,7 @@
 
         ins {
             bindings = <&kp INS>;
-            key-positions = <7 20>;
+            key-positions = <12 25>;
         };
 
         slash {
