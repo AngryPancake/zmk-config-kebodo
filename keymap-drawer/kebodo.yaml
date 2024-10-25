@@ -431,7 +431,7 @@ combos:
 - p: [1, 2]
   k: ESCAPE
   l: [main, lower, game, GameFn, fn, a]
-- p: [7, 20]
+- p: [12, 25]
   k: INS
 - p: [6, 19]
   k: AGr+ /
