@@ -343,7 +343,7 @@
         MCR_1: MCR_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LS(F1)) &kp LS(C) &kp O &kp D &kp E &kp N1 &kp LS(W) &kp E &kp W &kp E>;
+            bindings = <&kp LS(LC(F1)) &kp LS(C) &kp O &kp D &kp E &kp N1 &kp LS(W) &kp E &kp W &kp E>;
             label = "MCR_1";
         };
 
