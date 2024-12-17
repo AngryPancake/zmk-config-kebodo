@@ -8,7 +8,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEF 0
@@ -344,14 +343,14 @@
         MCR_1: MCR_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt RIGHT_ALT &kp LS(C) &kp O &kp D &kp E &kp N1 &kp LS(W) &kp E &kp W &kp E &kt RIGHT_ALT>;
+            bindings = <&kp LC(LA(F1)) &kp LS(C) &kp O &kp D &kp E &kp N1 &kp LS(W) &kp E &kp W &kp E>;
             label = "MCR_1";
         };
 
         MCR_2: MCR_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt RIGHT_ALT &kp D &kp I &kp N9 &kp B &kp S &kp LS(D) &kp U &kp N &kt RIGHT_ALT>;
+            bindings = <&kp LC(LA(F1)) &kp D &kp I &kp N9 &kp B &kp S &kp LS(D) &kp U &kp N>;
             label = "MCR_2";
         };
     };
