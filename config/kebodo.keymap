@@ -343,14 +343,14 @@
         MCR_1: MCR_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(F1)) &kp LS(C) &kp O &kp D &kp E &kp N1 &kp LS(W) &kp E &kp W &kp E>;
+            bindings = <&kp LA(LS(F1)) &kp LS(C) &kp O &kp D &kp E &kp N1 &kp LS(W) &kp E &kp W &kp E>;
             label = "MCR_1";
         };
 
         MCR_2: MCR_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(F1)) &kp D &kp I &kp N9 &kp B &kp S &kp LS(D) &kp U &kp N>;
+            bindings = <&kp LC(LS(F1)) &kp D &kp I &kp N9 &kp B &kp S &kp LS(D) &kp U &kp N>;
             label = "MCR_2";
         };
     };
