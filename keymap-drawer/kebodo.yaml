@@ -1,9 +1,9 @@
 layers:
-  main:
+  MAIN:
   - {t: Gui+ SPACE, h: LEFT META, s: BACKSPACE}
   - '`'
   - Q
-  - W
+  - {t: W, h: LCTRL}
   - {t: E, h: e}
   - R
   - T
@@ -15,7 +15,7 @@ layers:
   - '['
   - {t: ']', h: LMETA}
   - LALT
-  - {t: A, h: a}
+  - {t: A, h: LEFT ALT}
   - S
   - {t: D, h: LGUI}
   - {t: F, h: LSHFT}
@@ -24,7 +24,7 @@ layers:
   - {t: J, h: RSHFT}
   - {t: K, h: RGUI}
   - {t: L, h: RCTRL}
-  - ;
+  - {t: ;, h: RIGHT ALT}
   - {t: '''', h: RSHIFT}
   - LCTRL
   - {t: Z, h: LEFT ALT}
@@ -187,7 +187,7 @@ layers:
   - '&soft_off'
   - {t: ▽, type: trans}
   - '0'
-  a:
+  A:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -203,7 +203,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+ F
@@ -425,12 +425,12 @@ layers:
 combos:
 - p: [6, 5, 39]
   k: {t: game, h: toggle}
-  l: [main]
+  l: [MAIN]
 - p: [6, 5, 40]
-  k: {t: main, h: toggle}
+  k: {t: MAIN, h: toggle}
 - p: [1, 2]
   k: ESCAPE
-  l: [main, lower, game, GameFn, fn, a]
+  l: [MAIN, lower, game, GameFn, fn, A]
 - p: [12, 25]
   k: INS
 - p: [6, 19]
@@ -467,15 +467,15 @@ combos:
   k: RET
 - p: [17, 16]
   k: {t: BACKSPACE, s: DEL}
-  l: [main, lower, raise]
+  l: [MAIN, lower, raise]
 - p: [39, 42]
   k: '&num_word 1'
-  l: [main]
+  l: [MAIN]
 - p: [11, 10]
   k: RET
-  l: [main, lower, raise, fn, a, e]
+  l: [MAIN, lower, raise, fn, A, e]
 - p: [28, 29]
   k: Meh+ C
-  l: [main]
+  l: [MAIN]
 - p: [3, 4]
   k: '@'
