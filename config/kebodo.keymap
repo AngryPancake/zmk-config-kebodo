@@ -43,11 +43,6 @@
             layers = <0 1 6 7 3 4>;
         };
 
-        ins {
-            bindings = <&kp INS>;
-            key-positions = <12 25>;
-        };
-
         slash {
             bindings = <&kp RA(SLASH)>;
             key-positions = <6 19>;
@@ -59,13 +54,8 @@
         };
 
         Backspace {
-            bindings = <&kp BACKSPACE>;
+            bindings = <&kp INS>;
             key-positions = <11 12>;
-        };
-
-        pipe {
-            bindings = <&kp RA(PIPE)>;
-            key-positions = <36 37>;
         };
 
         at {
