@@ -1,6 +1,6 @@
 layers:
   MAIN:
-  - {t: Gui+ SPACE, h: LEFT META, s: BACKSPACE}
+  - {t: Gui+SPACE, h: LEFT META, s: BACKSPACE}
   - '`'
   - Q
   - {t: W, h: LCTRL}
@@ -44,7 +44,7 @@ layers:
   - {t: BACKSPACE, h: raise}
   - {t: DELETE, h: lower}
   - {t: SPACE, h: LEFT GUI}
-  - {t: LEFT GUI, s: Sft+ TAB}
+  - {t: LEFT GUI, s: Sft+TAB}
   - '&num_word 1'
   lower:
   - BACKSPACE
@@ -62,16 +62,16 @@ layers:
   - '-'
   - {t: '=', h: +}
   - {t: LSHFT, h: sticky}
-  - Sft+ !
-  - Sft+ @
-  - 'Sft+ #'
-  - Sft+ $
-  - Sft+ %
-  - Sft+ ^
-  - Sft+ &
-  - Sft+ *
-  - Sft+ (
-  - Sft+ )
+  - Sft+!
+  - Sft+@
+  - Sft+#
+  - Sft+$
+  - Sft+%
+  - Sft+^
+  - Sft+&
+  - Sft+*
+  - Sft+(
+  - Sft+)
   - {t: _, h: LSHFT}
   - LCTRL
   - F1
@@ -194,7 +194,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RET
-  - Ctl+ T
+  - Ctl+T
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -206,7 +206,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+ F
+  - Ctl+F
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -214,12 +214,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+ A
+  - Ctl+A
   - {t: ▽, type: trans}
-  - Ctl+ X
-  - Ctl+ INS
-  - Sft+ INS
-  - Sft+ INS
+  - Ctl+X
+  - Ctl+INS
+  - Sft+INS
+  - Sft+INS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -238,10 +238,10 @@ layers:
   - {t: ▽, type: trans}
   - BACKSPACE
   - {t: ▽, type: trans}
-  - Ctl+ PG UP
+  - Ctl+PG UP
   - {type: held}
-  - Ctl+ PG DN
-  - Ctl+ T
+  - Ctl+PG DN
+  - Ctl+T
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -251,23 +251,23 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Alt+ LEFT ARROW
+  - Alt+LEFT ARROW
   - {t: ▽, type: trans}
-  - Alt+ RIGHT
-  - Ctl+ R
+  - Alt+RIGHT
+  - Ctl+R
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+ L
+  - Ctl+L
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&close_term'
-  - Ctl+ W
-  - Ctl+ W
-  - Ctl+ N
+  - Ctl+W
+  - Ctl+W
+  - Ctl+N
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -360,7 +360,7 @@ layers:
   - J
   - I
   - M
-  - Ctl+ F12
+  - Ctl+F12
   - ''
   - ''
   - ''
@@ -431,16 +431,12 @@ combos:
 - p: [1, 2]
   k: ESCAPE
   l: [MAIN, lower, game, GameFn, fn, A]
-- p: [12, 25]
-  k: INS
 - p: [6, 19]
-  k: AGr+ /
+  k: AltGr+/
 - p: [18, 21]
   k: '&caps_word'
 - p: [11, 12]
-  k: BACKSPACE
-- p: [36, 37]
-  k: AGr+ |
+  k: INS
 - p: [2, 3]
   k: '@'
 - p: [8, 9]
@@ -452,17 +448,17 @@ combos:
 - p: [9, 10]
   k: {t: +, h: '='}
 - p: [33, 32]
-  k: AGr+ .
+  k: AltGr+.
 - p: [7, 8]
-  k: AGr+ ?
+  k: AltGr+?
 - p: [20, 21]
-  k: AGr+ ,
+  k: AltGr+,
 - p: [33, 34]
   k: {t: '[', h: '{'}
 - p: [34, 35]
   k: {t: ']', h: '}'}
 - p: [24, 23]
-  k: AGr+ '
+  k: AltGr+'
 - p: [22, 23, 21]
   k: RET
 - p: [17, 16]
@@ -475,7 +471,7 @@ combos:
   k: RET
   l: [MAIN, lower, raise, fn, A, e]
 - p: [28, 29]
-  k: Meh+ C
+  k: Meh+C
   l: [MAIN]
 - p: [3, 4]
   k: '@'
