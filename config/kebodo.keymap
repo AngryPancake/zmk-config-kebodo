@@ -381,11 +381,11 @@
             //                       GUI | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&LMeta  &kp GRAVE  &kp Q             &HR_C LCTRL W   &lt 5 E             &kp R          &kp T        &kp Y            &kp U          &kp I               &kp O          &kp P                      &kp LBKT             &mt LMETA RBKT
-        &kp LALT   &HR_C LEFT_ALT A  &kp S           &HR LGUI D          &HR_S LSHFT F  &kp G        &kp H            &HR_S RSHFT J  &HR RGUI K          &HR_C RCTRL L  &HR_C RIGHT_ALT SEMICOLON  &mt RSHIFT SQT
-        &kp LCTRL  &mt LEFT_ALT Z    &mt LEFT_ALT X  &kp C               &kp V          &kp B        &kp N            &kp M          &kp COMMA           &kp DOT        &kp FSLH                   &mt RCTRL BACKSLASH
-                                                     &mt LEFT_SHIFT TAB  &lt 1 SPACE    &lt 2 RET    &lt 2 BACKSPACE  &lt 1 DELETE   &mt LEFT_GUI SPACE
-                                                                                        &LGUI_TAB                                                                       &num_word 1
+&LMeta  &kp GRAVE  &kp Q             &HR_C LCTRL W  &lt 5 E             &kp R          &kp T        &kp Y            &kp U          &kp I               &kp O          &kp P                      &kp LBKT             &mt LMETA RBKT
+        &kp LALT   &HR_C LEFT_ALT A  &kp S          &HR LGUI D          &HR_S LSHFT F  &kp G        &kp H            &HR_S RSHFT J  &HR RGUI K          &HR_C RCTRL L  &HR_C RIGHT_ALT SEMICOLON  &kp SEMICOLON
+        &kp LCTRL  &HR_C LEFT_ALT Z  &kp X          &kp C               &kp V          &kp B        &kp N            &kp M          &kp COMMA           &kp DOT        &kp FSLH                   &mt RCTRL BACKSLASH
+                                                    &mt LEFT_SHIFT TAB  &lt 1 SPACE    &lt 2 RET    &lt 2 BACKSPACE  &lt 1 DELETE   &mt LEFT_GUI SPACE
+                                                                                       &LGUI_TAB                                                                       &num_word 1
             >;
 
             label = "MAIN";
