@@ -25,10 +25,10 @@ layers:
   - {t: K, h: RGUI}
   - {t: L, h: RCTRL}
   - {t: ;, h: RIGHT ALT}
-  - {t: '''', h: RSHIFT}
+  - ;
   - LCTRL
   - {t: Z, h: LEFT ALT}
-  - {t: X, h: LEFT ALT}
+  - X
   - C
   - V
   - B
