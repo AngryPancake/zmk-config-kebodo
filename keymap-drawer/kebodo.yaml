@@ -25,7 +25,7 @@ layers:
   - {t: K, h: RGUI}
   - {t: L, h: RCTRL}
   - {t: ;, h: RIGHT ALT}
-  - ;
+  - ''''
   - LCTRL
   - {t: Z, h: LEFT ALT}
   - X
