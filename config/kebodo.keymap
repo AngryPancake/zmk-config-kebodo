@@ -15,7 +15,10 @@
 #define RSE 2
 #define ADJ 3
 
-&lt { quick-tap-ms = <200>; };
+&lt {
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <140>;
+};
 
 &mt {
     quick-tap-ms = <200>;
@@ -266,7 +269,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "balanced";
-            quick-tap-ms = <160>;
+            quick-tap-ms = <180>;
             require-prior-idle-ms = <140>;
             hold-while-undecided;
         };
