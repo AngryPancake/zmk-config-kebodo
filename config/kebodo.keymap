@@ -298,7 +298,7 @@
         LT1_DOT: LT1_DOT {
             compatible = "zmk,behavior-hold-tap";
             label = "LT1_DOT";
-            bindings = <&to>, <&dot>;
+            bindings = <&mo>, <&dot>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
