@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - '['
-  - {t: ']', h: LMETA}
+  - {t: \, h: LMETA}
   - LALT
   - {t: A, h: LEFT ALT}
   - S
@@ -37,7 +37,7 @@ layers:
   - ','
   - .
   - /
-  - {t: \, h: RCTRL}
+  - {t: ']', h: RCTRL}
   - {t: TAB, h: LEFT SHIFT}
   - {t: SPACE, h: lower}
   - {t: RET, h: raise}
