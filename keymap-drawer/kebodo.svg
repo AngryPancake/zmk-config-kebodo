@@ -322,14 +322,14 @@ path.combo {
 </a></g>
 <g transform="translate(559, 212) rotate(-15.0)" class="key keypos-42">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">DELETE</text>
+<text x="0" y="0" class="key tap">AltGr+.</text>
 <a href="#lower">
 <text x="0" y="24" class="key hold layer-activator">lower</text>
-</a></g>
+</a><text x="0" y="-24" class="key shifted">AltGr+,</text>
+</g>
 <g transform="translate(617, 204)" class="key keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">AltGr+.</text>
-<text x="0" y="-24" class="key shifted">AltGr+,</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 78%">BACKSPACE</tspan></text>
 </g>
 <g transform="translate(220, 204)" class="key keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

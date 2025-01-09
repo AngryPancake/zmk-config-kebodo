@@ -42,8 +42,8 @@ layers:
   - {t: SPACE, h: lower}
   - {t: RET, h: raise}
   - {t: BACKSPACE, h: raise}
-  - {t: DELETE, h: lower}
-  - {t: AltGr+., s: 'AltGr+,'}
+  - {t: AltGr+., h: lower, s: 'AltGr+,'}
+  - BACKSPACE
   - {t: LEFT GUI, s: Sft+TAB}
   - '&num_word 1'
   lower:
