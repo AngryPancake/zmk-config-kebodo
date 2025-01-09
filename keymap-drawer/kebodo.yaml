@@ -448,11 +448,11 @@ combos:
 - p: [9, 10]
   k: {t: +, h: '='}
 - p: [33, 32]
-  k: AltGr+.
+  k: AltGr+,
 - p: [7, 8]
   k: AltGr+?
 - p: [20, 21]
-  k: AltGr+,
+  k: AltGr+.
 - p: [33, 34]
   k: {t: '[', h: '{'}
 - p: [34, 35]
@@ -468,7 +468,7 @@ combos:
   k: '&num_word 1'
   l: [MAIN]
 - p: [11, 10]
-  k: RET
+  k: AltGr+?
   l: [MAIN, lower, raise, fn, A, e]
 - p: [28, 29]
   k: Meh+C
