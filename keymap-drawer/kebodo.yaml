@@ -44,7 +44,7 @@ layers:
   - {t: BACKSPACE, h: raise}
   - {t: AltGr+., h: lower, s: 'AltGr+,'}
   - DELETE
-  - {t: LEFT GUI, s: Sft+TAB}
+  - LGUI
   - '&num_word 1'
   lower:
   - BACKSPACE
