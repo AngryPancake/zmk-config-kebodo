@@ -43,7 +43,7 @@ layers:
   - {t: RET, h: raise}
   - {t: BACKSPACE, h: raise}
   - {t: AltGr+., h: lower, s: 'AltGr+,'}
-  - BACKSPACE
+  - DELETE
   - {t: LEFT GUI, s: Sft+TAB}
   - '&num_word 1'
   lower:
