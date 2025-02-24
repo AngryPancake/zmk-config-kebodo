@@ -310,7 +310,7 @@
         tp_plus_equal: tp_plus_equal {
             compatible = "zmk,behavior-mod-morph";
             label = "TP_PLUS_EQUAL";
-            bindings = <&kp PLUS>, <&kp EQUAL>;
+            bindings = <&kp KP_EQUAL>, <&kp PLUS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
