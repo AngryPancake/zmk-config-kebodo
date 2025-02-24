@@ -37,7 +37,7 @@ layers:
   - ','
   - .
   - /
-  - {t: ']', h: RCTRL}
+  - ']'
   - {t: TAB, h: LEFT SHIFT}
   - {t: SPACE, h: lower}
   - {t: RET, h: raise}

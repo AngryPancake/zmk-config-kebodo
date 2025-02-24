@@ -297,7 +297,6 @@ path.combo {
 <g transform="translate(812, 161)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">]</text>
-<text x="0" y="24" class="key hold">RCTRL</text>
 </g>
 <g transform="translate(279, 204)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
