@@ -125,7 +125,7 @@ layers:
   - {t: ▽, type: trans}
   - '&MCR_2'
   - '&MCR_1'
-  - PRINTSCREEN
+  - {t: PRINTSCREEN, h: Ctl+PRINTSCREEN}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -265,7 +265,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&close_term'
-  - Ctl+W
+  - '&close'
   - Ctl+W
   - Ctl+N
   - {t: ▽, type: trans}
