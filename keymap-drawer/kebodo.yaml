@@ -43,7 +43,7 @@ layers:
   - {t: RET, h: raise}
   - {t: BACKSPACE, h: raise}
   - {t: DELETE, h: lower}
-  - '&num_word'
+  - '&num_word 1'
   - LGUI
   - '&num_word 1'
   lower:
