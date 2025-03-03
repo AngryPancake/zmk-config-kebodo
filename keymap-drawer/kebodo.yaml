@@ -26,7 +26,7 @@ layers:
   - {t: L, h: RCTRL}
   - {t: ;, h: RIGHT ALT}
   - ''''
-  - {t: ., h: Swap}
+  - {t: ., h: LCTRL}
   - {t: Z, h: LEFT ALT}
   - X
   - C
@@ -402,7 +402,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: \, type: held}
+  - \
   - /
   - .
   - ','
