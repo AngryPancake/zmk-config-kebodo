@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: kebodo}
 layers:
   MAIN:
   - {t: Gui+SPACE, h: LEFT META, s: BACKSPACE}
@@ -122,7 +123,7 @@ layers:
   - {t: ▽, type: trans}
   - LCTRL
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&diskdecr'
   - '&MCR_2'
   - '&MCR_1'
   - {t: PRINTSCREEN, h: Ctl+PRINTSCREEN}
