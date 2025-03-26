@@ -254,7 +254,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "balanced";
-            quick-tap-ms = <160>;
             require-prior-idle-ms = <140>;
         };
 
@@ -266,7 +265,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "balanced";
-            quick-tap-ms = <180>;
             require-prior-idle-ms = <140>;
             hold-while-undecided;
         };
@@ -279,7 +277,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "tap-preferred";
-            quick-tap-ms = <160>;
             require-prior-idle-ms = <140>;
             hold-while-undecided;
         };
@@ -330,7 +327,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "tap-preferred";
-            quick-tap-ms = <160>;
             require-prior-idle-ms = <140>;
         };
 
