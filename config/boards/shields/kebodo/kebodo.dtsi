@@ -20,12 +20,11 @@
     transform = <&five_column_transform>;
 };
 
-
 / {
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
-        zmk,matrix-transform = &default_transform;
+        zmk,physical-layout = &joric_jorne_full_layout;
     };
 
     default_transform: keymap_transform_0 {
