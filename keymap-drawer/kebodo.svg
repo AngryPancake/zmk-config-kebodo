@@ -2192,6 +2192,10 @@ path.combo {
 <rect rx="6" ry="6" x="210" y="18" width="28" height="26" class="combo"/>
 <text x="224" y="32" class="combo tap">@</text>
 </g>
+<g class="combo combopos-18">
+<rect rx="6" ry="6" x="154" y="29" width="28" height="26" class="combo"/>
+<text x="168" y="42" class="combo tap">ESCAPE</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 2299)" class="layer-GameFn">
@@ -2203,7 +2207,7 @@ path.combo {
 </g>
 <g transform="translate(84, 49)" class="key keypos-1">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">ESCAPE</text>
+<text x="0" y="0" class="key tap">0</text>
 </g>
 <g transform="translate(140, 49)" class="key keypos-2">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -2460,6 +2464,10 @@ path.combo {
 <g class="combo combopos-17">
 <rect rx="6" ry="6" x="210" y="18" width="28" height="26" class="combo"/>
 <text x="224" y="32" class="combo tap">@</text>
+</g>
+<g class="combo combopos-18">
+<rect rx="6" ry="6" x="154" y="29" width="28" height="26" class="combo"/>
+<text x="168" y="42" class="combo tap">ESCAPE</text>
 </g>
 </g>
 </g>

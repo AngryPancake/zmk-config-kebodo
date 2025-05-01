@@ -331,7 +331,7 @@ layers:
   - '0'
   GameFn:
   - CAPS
-  - ESCAPE
+  - '0'
   - '9'
   - '1'
   - '2'
@@ -476,3 +476,6 @@ combos:
   l: [MAIN]
 - p: [3, 4]
   k: '@'
+- p: [2, 3]
+  k: ESCAPE
+  l: [game, GameFn]
