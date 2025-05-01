@@ -8,6 +8,19 @@
 
 #include "kebodo-layouts.dtsi"
 
+&joric_jorne_full_layout {
+    transform = <&jorne_transform>;
+};
+
+&foostan_corne_6col_layout {
+    transform = <&crkbd_transform>;
+};
+
+&foostan_corne_5col_layout {
+    transform = <&five_column_transform>;
+};
+
+
 / {
     chosen {
         zephyr,display = &oled;
