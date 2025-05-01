@@ -9,7 +9,7 @@
 #include "kebodo-layouts.dtsi"
 
 &joric_jorne_full_layout {
-    transform = <&jorne_transform>;
+    transform = <&default_transform>;
 };
 
 &foostan_corne_6col_layout {
