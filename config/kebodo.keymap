@@ -146,6 +146,12 @@
             bindings = <&kp AT_SIGN>;
             key-positions = <3 4>;
         };
+
+        esc2 {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 3>;
+            layers = <6 7>;
+        };
     };
 
     behaviors {
@@ -444,7 +450,7 @@
         compatible = "zmk,keymap";
 
         main {
-/* 
+            /* 
          ╭───────────────────────────────────╮                ╭───────────────────────────────────╮        
   ╭──────╯  ~  |  Q  |  W󰘴 |  E  |  R  |  T  │                │  Y  |  U  |  I  |  O  |  P  |  [  ╰───────╮
   │          |  A󰘵 |  S  |  D󰘳 |  F󰘶 |  G  │                │  H  |  J󰘶 |  K󰘳 |  L󰘴 |  ;󰘵 |  '     󰘳 \  │
@@ -452,6 +458,7 @@
          ╰─────────────────╮ GUI |  󰌒  | 󱁐  | 󰌑  │    │ 󰁮  | 󰹾  |    ╭───────────────────────╯
                            ╰───────────────────────╯    ╰─────────────────╯
 */
+
             bindings = <
 &LMeta  &kp GRAVE      &kp Q             &HR_C LCTRL W  &lt 5 E             &kp R              &kp T              &kp Y                  &kp U               &kp I        &kp O          &kp P                      &kp LBKT           &mt LMETA BACKSLASH
         &LMeta         &HR_A LEFT_ALT A  &kp S          &HR LGUI D          &HR_S LSHFT F      &kp G              &kp H                  &HR_S RSHFT J       &HR RGUI K   &HR_C RCTRL L  &HR_A RIGHT_ALT SEMICOLON  &kp SQT
@@ -464,7 +471,7 @@
         };
 
         lower {
-/* 
+            /* 
          ╭───────────────────────────────────╮                ╭────────────────────────────────────╮        
   ╭──────╯  󰁮  |  1  |  2  |  3  |  4  |  5  │                │  6  |  7  |  8  |  9  |  0  |  -   ╰───────╮
   │  󰁮     CTR |  !  |  @  |  #  |  $  |  %  │                │  ^  |  &  |  *  |  (  |  )  |  _       +=  │
@@ -472,6 +479,7 @@
          ╰─────────────────╮     |     |  󱎘  |     │    │     |  󱎘  |     ╭────────────────────────╯
                            ╰───────────────────────╯    ╰─────────────────╯
 */
+
             bindings = <
 &kp BACKSPACE  &kp BACKSPACE  &kp N1        &kp N2      &kp N3         &kp N4        &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS             &mt PLUS EQUAL
                &sk LSHFT      &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &mt LSHFT UNDERSCORE
@@ -482,7 +490,7 @@
         };
 
         raise {
-/* 
+            /* 
          ╭───────────────────────────────────╮                ╭───────────────────────────────────╮        
   ╭──────╯    |  󰁮  | PG |    | PG |  󰈙 │                │  󰃞  |  󰃠  |     |     |     |     ╰───────╮
   │         󰘶  |     |    |    |    |  󰈙 │                │    |    |     |     |     |             │
@@ -490,6 +498,7 @@
          ╰─────────────────╮     |     |     |  󱎘  │    │  󱎘  |     |     ╭───────────────────────╯
                            ╰───────────────────────╯    ╰─────────────────╯
 */
+
             bindings = <
 &nav_worder  &altaber    &kp BACKSPACE  &kp PG_UP  &kp UP_ARROW             &kp PG_DN  &kp HOME                           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans  &trans  &trans
              &sk LSHIFT  &trans         &kp LEFT   &mt LEFT_GUI DOWN_ARROW  &kp RIGHT  &kp END                            &kp C_VOL_DN          &kp C_VOL_UP          &trans  &trans  &trans  &trans
@@ -500,7 +509,7 @@
         };
 
         fn {
-/* 
+            /* 
          ╭───────────────────────────────────╮                ╭───────────────────────────────────╮        
   ╭──────╯  󰕓  |     |     |    |     |  0 │                │  0 |     |    |     |     |  󰕓  ╰───────╮
   │  󰑓         |     |     |     |     |  1 │                │  1 |     |     |     |     |         󰑓   │
@@ -508,6 +517,7 @@
          ╰─────────────────╮    |    |  󱎘  |  󱎘  │    │  󱎘  |  󱎘  |    ╭───────────────────────╯
                            ╰───────────────────────╯    ╰─────────────────╯
 */
+
             bindings = <
 &sys_reset  &out OUT_BLE  &none  &none  &bootloader  &none        &bt_sel 0 0    &bt_sel 0 0  &none        &bootloader  &none  &none   &out OUT_USB  &sys_reset
             &none         &none  &none  &none        &none        &bt_sel 1 1    &bt_sel 1 1  &none        &none        &none  &none   &none
@@ -540,7 +550,7 @@
         };
 
         game {
-/* 
+            /* 
          ╭───────────────────────────────────╮                ╭───────────────────────────────────╮        
   ╭──────╯  T  |  󰌒  |  Q  |  W  |  E  |  R  │                │     |     |     |     |     |     ╰───────╮
   │  󰘳      G  |  󰘶  |  S  |  D  |  D  |  F  │                │     |     |     |     |     |             │
@@ -548,6 +558,7 @@
          ╰─────────────────╮  󰘵  |  󰘶  |  󱁐  |  󰌑  │    │     |     |     ╭───────────────────────╯
                            ╰───────────────────────╯    ╰─────────────────╯
 */
+
             bindings = <
 &kp LGUI  &t_tab  &kp TAB    &kp Q    &kp W           &kp E      &kp R          &kp Y            &kp U       &kp I      &kp O    &kp P     &kp LBKT  &kp RET
           &kp G   &kp LSHFT  &game_a  &kp S           &game_d    &kp F          &kp H            &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
@@ -558,7 +569,7 @@
         };
 
         GameFn {
-/* 
+            /* 
          ╭───────────────────────────────────╮                ╭───────────────────────────────────╮        
   ╭──────╯  󱊷  |  9  |  1  |  2  |  3  |  3  │                │     |     |     |     |     |     ╰───────╮
   │  󰁮      󰘶  |  8  |  7  |  6  |  5  |  4  │                │     |     |     |     |     |             │
@@ -566,12 +577,13 @@
          ╰─────────────────╮    |     |     |  󱎘  │    │  󱎘  |     |     ╭───────────────────────╯
                            ╰───────────────────────╯    ╰─────────────────╯
 */
+
             bindings = <
-&kp CAPS  &kp ESCAPE      &kp N9  &kp N1  &kp N2        &kp N2     &kp N3         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none  &none  &none   &none  &none
+&kp CAPS  &kp N0          &kp N9  &kp N1  &kp N2        &kp N2     &kp N3         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none  &none  &none   &none  &none
           &kp LEFT_SHIFT  &kp N8  &kp N7  &kp N6        &kp N5     &kp N4         &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &none  &none  &none   &none
           &kp LCTRL       &kp P   &kp J   &kp I         &kp M      &kp K          &none                 &none                 &none  &none  &none   &none
                                           &kp LEFT_GUI  &kp SPACE  &none          &none                 &none                 &none
-                                                                   &kp LC(F12)                                                      &kp N0
+                                                                   &kp LC(F12)                                                              &kp N0
             >;
         };
 
@@ -595,7 +607,6 @@
         };
     };
 };
-
 
 /* 
          ╭───────────────────────────────────╮                ╭───────────────────────────────────╮        
