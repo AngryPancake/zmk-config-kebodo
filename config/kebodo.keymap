@@ -351,6 +351,18 @@
             require-prior-idle-ms = <140>;
             flavor = "tap-preferred";
         };
+
+        beh_s_slack: beh_s_slack {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BEH_S_SLACK";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "balanced";
+            require-prior-idle-ms = <140>;
+            quick-tap-ms = <(-1)>;
+        };
     };
 
     macros {
@@ -595,6 +607,18 @@
                                        &trans     &trans  &trans    &trans  &trans  &trans
                                                           &trans                                    &trans
             >;
+        };
+
+        s_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &kp LC(R)    &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &kp LC(F)    &trans         &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &kp LC(INS)  &kp LS(INS)    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans       &trans         &trans  &trans  &trans
+                                                     &trans                                         &trans
+            >;
+
+            label = "s_layer";
         };
     };
 
