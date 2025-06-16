@@ -572,11 +572,11 @@
 */
 
             bindings = <
-&kp LGUI  &t_tab  &kp TAB    &kp Q    &kp W           &kp E      &kp R          &kp Y            &kp U       &kp I      &kp O    &kp P     &kp LBKT  &kp RET
-          &kp G   &kp LSHFT  &game_a  &kp S           &game_d    &kp F          &kp H            &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
-          &kp B   &kp LCTRL  &kp Z    &kp X           &kp C      &kp V          &kp N            &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
-                                      &kp LEFT_SHIFT  &kp SPACE  &lt 7 ENTER    &lt 7 BACKSPACE  &kp DELETE  &kp LGUI
-                                                                 &kp LALT                                                        &kp N0
+&kp LGUI  &t_tab  &kp TAB    &kp Q    &kp W           &kp E      &kp R                &kp Y            &kp U       &kp I      &kp O    &kp P     &kp LBKT  &kp RET
+          &kp G   &kp LSHFT  &game_a  &kp S           &game_d    &kp F                &kp H            &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
+          &kp B   &kp LCTRL  &kp Z    &kp X           &kp C      &kp V                &kp N            &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
+                                      &kp LEFT_SHIFT  &kp SPACE  &thumb_lt 7 ENTER    &lt 7 BACKSPACE  &kp DELETE  &kp LGUI
+                                                                 &kp LALT                                                              &kp N0
             >;
         };
 
