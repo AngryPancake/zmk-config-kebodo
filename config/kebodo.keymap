@@ -27,7 +27,7 @@
         compatible = "zmk,combos";
 
         game_mod_on {
-            bindings = <&to 7>;
+            bindings = <&to 6>;
             key-positions = <6 5 39>;
             layers = <0>;
         };
@@ -40,7 +40,7 @@
         Esc {
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
-            layers = <0 1 7 8 3 4>;
+            layers = <0 1 6 7 3>;
         };
 
         slash {
@@ -133,7 +133,7 @@
         Question2 {
             bindings = <&kp RA(QUESTION)>;
             key-positions = <11 10>;
-            layers = <0 1 2 3 4 5>;
+            layers = <0 1 2 3 4>;
         };
 
         toSwap {
@@ -150,7 +150,7 @@
         esc2 {
             bindings = <&kp ESCAPE>;
             key-positions = <2 3>;
-            layers = <7 8>;
+            layers = <6 7>;
         };
     };
 
@@ -472,7 +472,7 @@
 */
 
             bindings = <
-&LMeta  &kp GRAVE      &kp Q             &HR_C LCTRL W  &lt 5 E             &kp R              &kp T              &kp Y                  &kp U               &lt 6 I            &kp O          &kp P                      &kp LBKT           &mt LMETA BACKSLASH
+&LMeta  &kp GRAVE      &kp Q             &HR_C LCTRL W  &lt 4 E             &kp R              &kp T              &kp Y                  &kp U               &lt 5 I            &kp O          &kp P                      &kp LBKT           &mt LMETA BACKSLASH
         &LMeta         &HR_A LEFT_ALT A  &kp S          &HR LGUI D          &HR_S LSHFT F      &kp G              &kp H                  &HR_S RSHFT J       &HR RGUI K         &HR_C RCTRL L  &HR_A RIGHT_ALT SEMICOLON  &kp SQT
         &mt LCTRL DOT  &HR_A LEFT_ALT Z  &HR_C LCTRL X  &HR_C LCTRL C       &kp V              &kp B              &kp N                  &kp M               &HR_C LCTRL COMMA  &kp DOT        &kp FSLH                   &kp RIGHT_BRACKET
                                                         &mt LEFT_SHIFT TAB  &thumb_lt 1 SPACE  &thumb_lt 2 RET    &thumb_lt 2 BACKSPACE  &thumb_lt 1 DELETE  &num_word 1
@@ -482,7 +482,7 @@
             label = "MAIN";
         };
 
-        lower {
+        lwr {
             /* 
          ╭───────────────────────────────────╮                ╭────────────────────────────────────╮        
   ╭──────╯  󰁮  |  1  |  2  |  3  |  4  |  5  │                │  6  |  7  |  8  |  9  |  0  |  -   ╰───────╮
@@ -499,9 +499,11 @@
                                                         &trans         &trans        &trans           &trans         &trans        &trans
                                                                                      &trans                                                                    &num_word 1
             >;
+
+            label = "LWR";
         };
 
-        raise {
+        rse {
             /* 
          ╭───────────────────────────────────╮                ╭───────────────────────────────────╮        
   ╭──────╯    |  󰁮  | PG |    | PG |  󰈙 │                │  󰃞  |  󰃠  |     |     |     |     ╰───────╮
@@ -518,6 +520,8 @@
                                                    &trans                   &trans     &trans                             &trans                &trans                &trans
                                                                                        &trans                                                                                         &trans
             >;
+
+            label = "RSE";
         };
 
         fn {
@@ -537,18 +541,8 @@
                                                  &soft_off    &soft_off    &trans         &trans       &soft_off    &soft_off
                                                                            &trans                                                                &kp N0
             >;
-        };
 
-        a_layer {
-            bindings = <
-&trans  &trans     &trans  &trans     &trans       &kp RET      &kp LC(T)      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans     &trans  &trans     &trans       &kp LC(F)    &trans         &trans  &trans  &trans  &trans  &trans  &trans
-        &kp LC(A)  &trans  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LS(INS)    &trans  &trans  &trans  &trans  &trans  &trans
-                                      &trans       &trans       &trans         &trans  &trans  &trans
-                                                                &trans                                         &kp N0
-            >;
-
-            label = "A";
+            label = "FN";
         };
 
         e_layer {
@@ -559,9 +553,11 @@
                                                    &trans       &trans         &kp RET        &trans     &trans  &trans
                                                                                &close_term                                          &kp 0
             >;
+
+            label = "E_LAYER";
         };
 
-        I_layer {
+        i_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp LC(T)  &kp LC(PG_UP)  &trans  &kp LC(PG_DN)  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans    &kp LC(R)  &kp LA(LEFT)   &trans  &kp LA(RIGHT)  &trans  &trans
@@ -570,7 +566,7 @@
                                                 &trans                                                     &trans
             >;
 
-            label = "I_layer";
+            label = "I_LAYER";
         };
 
         game {
@@ -587,12 +583,14 @@
 &kp LGUI  &t_tab  &kp TAB    &kp Q    &kp W           &kp E      &kp R                &kp Y            &kp U       &kp I      &kp O    &kp P     &kp LBKT  &kp RET
           &kp G   &kp LSHFT  &game_a  &kp S           &game_d    &kp F                &kp H            &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
           &kp B   &kp LCTRL  &kp Z    &kp X           &kp C      &kp V                &kp N            &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
-                                      &kp LEFT_SHIFT  &kp SPACE  &thumb_lt 8 ENTER    &lt 8 BACKSPACE  &kp DELETE  &kp LGUI
+                                      &kp LEFT_SHIFT  &kp SPACE  &thumb_lt 7 ENTER    &lt 7 BACKSPACE  &kp DELETE  &kp LGUI
                                                                  &kp LALT                                                              &kp N0
             >;
+
+            label = "GAME";
         };
 
-        GameFn {
+        game_fn {
             /* 
          ╭───────────────────────────────────╮                ╭───────────────────────────────────╮        
   ╭──────╯  󱊷  |  9  |  1  |  2  |  3  |  3  │                │     |     |     |     |     |     ╰───────╮
@@ -609,28 +607,8 @@
                                           &kp LEFT_GUI  &thumb_lt 3 SPACE  &none          &none                 &none                 &none
                                                                            &kp LC(F12)                                                              &kp N0
             >;
-        };
 
-        Swap {
-            bindings = <
-&kp RBKT  &kp LBKT  &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-          &kp SQT   &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans
-          &kp BSLH  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans
-                                       &trans     &trans  &trans    &trans  &trans  &trans
-                                                          &trans                                    &trans
-            >;
-        };
-
-        s_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &kp LC(R)    &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &kp LC(F)    &trans         &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &kp LC(INS)  &kp LS(INS)    &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans       &trans         &trans  &trans  &trans
-                                                     &trans                                         &trans
-            >;
-
-            label = "s_layer";
+            label = "GAME_FN";
         };
     };
 
