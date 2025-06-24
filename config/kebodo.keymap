@@ -29,7 +29,7 @@
         game_mod_on {
             bindings = <&to 6>;
             key-positions = <6 5 39>;
-            layers = <0>;
+            layers = <0 6>;
         };
 
         game_mod_off {
@@ -183,19 +183,9 @@
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
         };
 
-        tilde_tab: tilde_tab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "TILDE_TAB";
-            bindings = <&kp GRAVE>, <&kp TAB>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT|MOD_RGUI|MOD_LGUI)>;
-            keep-mods = <(MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
-        };
-
-        bt_sel: bt_sel {
+        bt_select: bt_select {
             compatible = "zmk,behavior-hold-tap";
-            label = "tap:select,hold:clear";
+            label = "BT_SELECT";
             bindings = <&clr_bt_param>, <&to_bt_param>;
 
             #binding-cells = <2>;
@@ -219,28 +209,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT|MOD_RGUI|MOD_LGUI)>;
             keep-mods = <(MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
-        };
-
-        LGUIHR: LGUIHR {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LGUIHR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <1 14 26 27 15 2 3 16 28 29 17 4 5 18 30 31 19 6 1 2 3 4 5 6 14 15 16 17 18 19 26 27 28 29 30 31>;
-            quick-tap-ms = <170>;
-            require-prior-idle-ms = <170>;
-        };
-
-        LGUI_TAB: LGUI_TAB {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LGUI_TAB";
-            bindings = <&kp LEFT_GUI>, <&kp LS(TAB)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RGUI|MOD_LGUI)>;
-            keep-mods = <(MOD_RGUI|MOD_LGUI)>;
         };
 
         morph_del: morph_del {
@@ -290,26 +258,6 @@
             quick-tap-ms = <(-1)>;
         };
 
-        dot: dot {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT";
-            bindings = <&kp RA(PERIOD)>, <&kp RA(COMMA)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        LT1_DOT: LT1_DOT {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT1_DOT";
-            bindings = <&mo>, <&dot>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            flavor = "balanced";
-            hold-while-undecided;
-        };
-
         tp_plus_equal: tp_plus_equal {
             compatible = "zmk,behavior-mod-morph";
             label = "TP_PLUS_EQUAL";
@@ -350,18 +298,6 @@
             quick-tap-ms = <220>;
             require-prior-idle-ms = <140>;
             flavor = "tap-preferred";
-        };
-
-        beh_s_slack: beh_s_slack {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BEH_S_SLACK";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            flavor = "balanced";
-            require-prior-idle-ms = <140>;
-            quick-tap-ms = <(-1)>;
         };
     };
 
@@ -535,11 +471,11 @@
 */
 
             bindings = <
-&sys_reset  &out OUT_BLE  &none  &studio_unlock  &bootloader  &none        &bt_sel 0 0    &bt_sel 0 0  &none        &bootloader  &studio_unlock  &none   &out OUT_USB  &sys_reset
-            &none         &none  &none           &none        &none        &bt_sel 1 1    &bt_sel 1 1  &none        &none        &none           &none   &none
-            &out OUT_USB  &none  &none           &bt_sel 4 4  &bt_sel 3 3  &bt_sel 2 2    &bt_sel 2 2  &bt_sel 3 3  &bt_sel 4 4  &none           &none   &out OUT_USB
-                                                 &soft_off    &soft_off    &trans         &trans       &soft_off    &soft_off
-                                                                           &trans                                                                &kp N0
+&sys_reset  &out OUT_BLE  &none  &studio_unlock  &bootloader     &none           &bt_select 0 0    &bt_select 0 0  &none           &bootloader     &studio_unlock  &none   &out OUT_USB  &sys_reset
+            &none         &none  &none           &none           &none           &bt_select 1 1    &bt_select 1 1  &none           &none           &none           &none   &none
+            &out OUT_USB  &none  &none           &bt_select 4 4  &bt_select 3 3  &bt_select 2 2    &bt_select 2 2  &bt_select 3 3  &bt_select 4 4  &none           &none   &out OUT_USB
+                                                 &soft_off       &soft_off       &trans            &trans          &soft_off       &soft_off
+                                                                                 &trans                                                                            &kp N0
             >;
 
             label = "FN";
