@@ -546,6 +546,18 @@
 
             label = "GAME_FN";
         };
+
+        s_term {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans     &trans         &trans         &trans             &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans     &kp LS(LC(F))  &trans         &trans             &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &kp LC(C)  &kp LC(INS)    &kp LS(INS)    &trans             &trans  &trans  &trans  &trans  &trans
+                                &trans     &trans         &trans         &kp LA(BACKSPACE)  &trans  &trans
+                                                          &trans                                                    &trans
+            >;
+
+            label = "S_TERM";
+        };
     };
 
     conditional_layers {
