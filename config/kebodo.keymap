@@ -299,6 +299,14 @@
             require-prior-idle-ms = <140>;
             flavor = "tap-preferred";
         };
+
+        tapd_sl_p: tapd_sl_p {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPD_SL_P";
+            #binding-cells = <0>;
+            tapping-term-ms = <2000>;
+            bindings = <&type_sl_p>, <&type_sl_priority>;
+        };
     };
 
     macros {
@@ -447,6 +455,20 @@
             #binding-cells = <0>;
             bindings = <&kp RS(LS(F1)) &kp S &kp T &kp A &kp T &kp U &kp S &kp SPACE>;
             label = "TYPE_STATUS";
+        };
+
+        type_sl_p: type_sl_p {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RS(LS(F1)) &kp DOT &kp DOT &kp P>;
+            label = "TYPE_SL_P";
+        };
+
+        type_sl_priority: type_sl_priority {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp I &kp O &kp R &kp I &kp T &kp Y &kp SPACE &kp LS(P) &kp N1>;
+            label = "TYPE_SL_PRIORITY";
         };
     };
 
@@ -617,7 +639,7 @@
 
         s_slack {
             bindings = <
-&trans  &trans  &type_sl_vc  &trans  &trans       &type_sl_vf  &type_sl_vc    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &type_sl_vc  &trans  &tapd_sl_p   &type_sl_vf  &type_sl_vc    &trans  &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &type_sl_a   &none   &type_sl_ip  &trans       &trans         &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &trans       &trans  &type_sl_c   &trans       &trans         &trans  &trans  &trans  &trans  &trans  &trans
                                      &trans       &trans       &trans         &trans  &trans  &trans
