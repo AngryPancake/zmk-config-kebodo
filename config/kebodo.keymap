@@ -403,8 +403,22 @@
         type_sl_ip: type_sl_ip {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(F1)) &kp DOT &kp DOT &kp I &kp P>;
+            bindings = <&kp LS(LC(F1)) &kp DOT &kp DOT &kp I &kp P &kp SPACE>;
             label = "TYPE_SL_IP";
+        };
+
+        type_sl_vf: type_sl_vf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(F1)) &kp DOT &kp DOT &kp V &kp F &kp SPACE>;
+            label = "TYPE_SL_VF";
+        };
+
+        type_sl_vc: type_sl_vc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(F1)) &kp DOT &kp DOT &kp V &kp C &kp SPACE &kp D &kp O &kp N &kp E>;
+            label = "TYPE_SL_VC";
         };
     };
 
