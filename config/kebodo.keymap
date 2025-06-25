@@ -392,6 +392,20 @@
             bindings = <&kp LC(W) &kp F13>;
             label = "CLOSE";
         };
+
+        type_sl_a: type_sl_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp DOT &kp A>;
+            label = "TYPE_SL_A";
+        };
+
+        type_sl_ip: type_sl_ip {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(F13) &kp DOT &kp DOT &kp I &kp P>;
+            label = "TYPE_SL_IP";
+        };
     };
 
     keymap {
@@ -549,11 +563,11 @@
 
         s_term {
             bindings = <
-&trans  &trans  &trans  &trans  &trans     &trans       &trans         &trans             &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans     &kp LC(F)    &trans         &trans             &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &kp LC(C)  &kp LC(INS)  &kp LS(INS)    &trans             &trans  &trans  &trans  &trans  &trans
-                                &trans     &trans       &trans         &kp LA(BACKSPACE)  &trans  &trans
-                                                        &trans                                                    &trans
+&trans  &trans  &trans  &trans  &trans     &trans                      &kp LC(T)      &trans             &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &none   &trans     &HR_S LEFT_SHIFT LC(LS(H))  &trans         &trans             &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &kp LC(C)  &kp LC(INS)                 &kp LS(INS)    &trans             &trans  &trans  &trans  &trans  &trans
+                                &trans     &trans                      &trans         &kp LA(BACKSPACE)  &trans  &trans
+                                                                       &trans                                                    &trans
             >;
 
             label = "S_TERM";
