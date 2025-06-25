@@ -427,6 +427,27 @@
             bindings = <&kp RS(LS(F1)) &kp DOT &kp DOT &kp C &kp SPACE>;
             label = "TYPE_SL_C";
         };
+
+        type_systemctl: type_systemctl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(F1)) &kp S &kp Y &kp S &kp T &kp E &kp M &kp C &kp T &kp L &kp SPACE>;
+            label = "TYPE_SYSTEMCTL";
+        };
+
+        type_user: type_user {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RS(LS(F1)) &kp MINUS &kp MINUS &kp U &kp S &kp E &kp R &kp SPACE>;
+            label = "TYPE_USER";
+        };
+
+        type_status: type_status {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RS(LS(F1)) &kp S &kp T &kp A &kp T &kp U &kp S &kp SPACE>;
+            label = "TYPE_STATUS";
+        };
     };
 
     keymap {
