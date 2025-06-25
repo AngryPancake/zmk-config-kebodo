@@ -396,14 +396,14 @@
         type_sl_a: type_sl_a {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DOT &kp DOT &kp A>;
+            bindings = <&kp LS(LC(F1)) &kp PERIOD &kp DOT &kp A>;
             label = "TYPE_SL_A";
         };
 
         type_sl_ip: type_sl_ip {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(F13) &kp DOT &kp DOT &kp I &kp P>;
+            bindings = <&kp LS(LC(F1)) &kp DOT &kp DOT &kp I &kp P>;
             label = "TYPE_SL_IP";
         };
     };
