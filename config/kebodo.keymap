@@ -420,6 +420,13 @@
             bindings = <&kp LS(LC(F1)) &kp DOT &kp DOT &kp V &kp C &kp SPACE &kp D &kp O &kp N &kp E>;
             label = "TYPE_SL_VC";
         };
+
+        type_sl_c: type_sl_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RS(LS(F1)) &kp DOT &kp DOT &kp C &kp SPACE>;
+            label = "TYPE_SL_C";
+        };
     };
 
     keymap {
@@ -585,6 +592,18 @@
             >;
 
             label = "S_TERM";
+        };
+
+        s_slack {
+            bindings = <
+&trans  &trans  &type_sl_vc  &trans  &trans       &type_sl_vf  &type_sl_vc    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &type_sl_a   &none   &type_sl_ip  &trans       &trans         &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans       &trans  &type_sl_c   &trans       &trans         &trans  &trans  &trans  &trans  &trans  &trans
+                                     &trans       &trans       &trans         &trans  &trans  &trans
+                                                               &trans                                         &trans
+            >;
+
+            label = "S_SLACK";
         };
     };
 
