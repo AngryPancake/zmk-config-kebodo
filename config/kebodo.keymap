@@ -318,6 +318,7 @@
             btc { sequence = <C L E A R>; bindings = <&bt BT_CLR>; };
             boot { sequence = <B O O T>; bindings = <&bootloader>; };
             reset { sequence = <R E S E T>; bindings = <&sys_reset>; };
+            game { sequence = <T SPACE>; bindings = <&game_mod_on>; };
         };
     };
 
