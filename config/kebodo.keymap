@@ -307,18 +307,55 @@
             tapping-term-ms = <2000>;
             bindings = <&type_sl_p>, <&type_sl_priority>;
         };
+
         leader1: leader1 {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            usb { sequence = <U S B>; bindings = <&out OUT_USB>; };
-            ble { sequence = <B L E>; bindings = <&out OUT_BLE>; };
-            bt0 { sequence = <B N0>; bindings = <&bt BT_SEL 0>; };
-            bt1 { sequence = <B N1>; bindings = <&bt BT_SEL 1>; };
-            bt2 { sequence = <B N2>; bindings = <&bt BT_SEL 2>; };
-            btc { sequence = <C L E A R>; bindings = <&bt BT_CLR>; };
-            boot { sequence = <B O O T>; bindings = <&bootloader>; };
-            reset { sequence = <R E S E T>; bindings = <&sys_reset>; };
-            game { sequence = <T SPACE>; bindings = <&to 6>; };
+
+            usb {
+                sequence = <U S B>;
+                bindings = <&out OUT_USB>;
+            };
+
+            ble {
+                sequence = <B L E>;
+                bindings = <&out OUT_BLE>;
+            };
+
+            bt0 {
+                sequence = <B N0>;
+                bindings = <&bt BT_SEL 0>;
+            };
+
+            bt1 {
+                sequence = <B N1>;
+                bindings = <&bt BT_SEL 1>;
+            };
+
+            bt2 {
+                sequence = <B N2>;
+                bindings = <&bt BT_SEL 2>;
+            };
+
+            btc {
+                sequence = <C L E A R>;
+                bindings = <&bt BT_CLR>;
+            };
+
+            boot {
+                sequence = <B O O T>;
+                bindings = <&bootloader>;
+            };
+
+            reset {
+                sequence = <R E S E T>;
+                bindings = <&sys_reset>;
+            };
+
+            game {
+                sequence = <T SPACE>;
+                bindings = <&to 6>;
+            };
         };
     };
 
@@ -541,11 +578,11 @@
 */
 
             bindings = <
-&nav_worder  &altaber    &kp BACKSPACE  &kp PG_UP  &kp UP_ARROW             &kp PG_DN  &kp HOME                           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans  &trans  &trans
-             &sk LSHIFT  &trans         &kp LEFT   &mt LEFT_GUI DOWN_ARROW  &kp RIGHT  &kp END                            &kp C_VOL_DN          &kp C_VOL_UP          &trans  &trans  &trans  &trans
-             &kp LCTRL   &trans         &none      &MCR_2                   &MCR_1     &mt LC(PRINTSCREEN) PRINTSCREEN    &trans                &trans                &trans  &trans  &trans  &trans
-                                                   &trans                   &trans     &trans                             &trans                &trans                &trans
-                                                                                       &trans                                                                                         &trans
+&nav_worder  &altaber    &kp BACKSPACE  &kp PG_UP  &kp UP_ARROW             &kp PG_DN  &kp HOME                           &kp C_BRIGHTNESS_DEC             &kp C_BRIGHTNESS_INC  &trans     &trans  &trans  &trans  &trans
+             &sk LSHIFT  &trans         &kp LEFT   &mt LEFT_GUI DOWN_ARROW  &kp RIGHT  &kp END                            &kp C_VOL_DN                     &kp C_VOL_UP          &kp RG(L)  &trans  &trans  &trans
+             &kp LCTRL   &trans         &none      &MCR_2                   &MCR_1     &mt LC(PRINTSCREEN) PRINTSCREEN    &mt LC(PRINTSCREEN) PRINTSCREEN  &MCR_1                &MCR_2     &trans  &trans  &trans
+                                                   &trans                   &trans     &trans                             &trans                           &trans                &trans
+                                                                                       &trans                                                                                                       &trans
             >;
 
             label = "RSE";
