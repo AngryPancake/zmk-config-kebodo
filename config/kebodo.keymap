@@ -691,7 +691,7 @@
             bindings = <
 &trans  &trans  &type_sl_vc  &trans  &tapd_sl_p   &type_sl_vf  &type_sl_vc    &trans             &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &type_sl_a   &none   &type_sl_ip  &trans       &trans         &trans             &trans  &trans  &trans  &trans  &trans
-        &trans  &trans       &trans  &type_sl_c   &trans       &trans         &trans             &trans  &trans  &trans  &trans  &trans
+        &trans  &trans       &trans  &type_sl_c   &kp LC(C)    &kp LC(V)      &trans             &trans  &trans  &trans  &trans  &trans
                                      &trans       &trans       &trans         &kp LC(BACKSPACE)  &trans  &trans
                                                                &trans                                                    &trans
             >;
