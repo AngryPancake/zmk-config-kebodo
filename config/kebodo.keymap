@@ -517,7 +517,7 @@
         type_sl_priority: type_sl_priority {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp R &kp I &kp O &kp R &kp I &kp T &kp Y &kp SPACE &kp LS(P) &kp N1>;
+            bindings = <&kp PERIOD &kp DOT &kp P &kp R &kp I &kp O &kp R &kp I &kp T &kp Y &kp SPACE &kp LS(P) &kp N1>;
             label = "TYPE_SL_PRIORITY";
         };
     };
@@ -689,11 +689,11 @@
 
         s_slack {
             bindings = <
-&trans  &trans  &type_sl_vc  &trans  &tapd_sl_p   &type_sl_vf  &type_sl_vc    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &type_sl_a   &none   &type_sl_ip  &trans       &trans         &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans       &trans  &type_sl_c   &trans       &trans         &trans  &trans  &trans  &trans  &trans  &trans
-                                     &trans       &trans       &trans         &trans  &trans  &trans
-                                                               &trans                                         &trans
+&trans  &trans  &type_sl_vc  &trans  &tapd_sl_p   &type_sl_vf  &type_sl_vc    &trans             &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &type_sl_a   &none   &type_sl_ip  &trans       &trans         &trans             &trans  &trans  &trans  &trans  &trans
+        &trans  &trans       &trans  &type_sl_c   &trans       &trans         &trans             &trans  &trans  &trans  &trans  &trans
+                                     &trans       &trans       &trans         &kp LC(BACKSPACE)  &trans  &trans
+                                                               &trans                                                    &trans
             >;
 
             label = "S_SLACK";
