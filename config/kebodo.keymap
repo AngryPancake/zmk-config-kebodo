@@ -59,13 +59,14 @@
         };
 
         at {
-            bindings = <&kp AT_SIGN>;
+            bindings = <&at_esc_morph>;
             key-positions = <2 3>;
         };
 
         minus {
             bindings = <&tp_minus_underscore>;
             key-positions = <8 9>;
+            layers = <0>;
         };
 
         LPare {
@@ -81,6 +82,7 @@
         Plus {
             bindings = <&tp_plus_equal>;
             key-positions = <9 10>;
+            layers = <0>;
         };
 
         Comma {
@@ -151,6 +153,18 @@
             bindings = <&kp ESCAPE>;
             key-positions = <2 3>;
             layers = <6 7>;
+        };
+
+        underscore_low {
+            bindings = <&kp UNDER>;
+            key-positions = <8 9>;
+            layers = <1 2>;
+        };
+
+        plus_low {
+            bindings = <&kp PLUS>;
+            key-positions = <9 10>;
+            layers = <1 2>;
         };
     };
 
@@ -356,6 +370,15 @@
                 sequence = <T SPACE>;
                 bindings = <&to 6>;
             };
+        };
+
+        at_esc_morph: at_esc_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "AT_ESC_MORPH";
+            bindings = <&kp AT>, <&kp ESC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
