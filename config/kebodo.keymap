@@ -580,11 +580,11 @@
 */
 
             bindings = <
-&kp BACKSPACE  &kp BACKSPACE  &kp N1        &kp N2      &kp N3         &kp N4        &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS             &mt PLUS EQUAL
-               &sk LSHFT      &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &mt LSHFT UNDERSCORE
-               &kp LCTRL      &kp F1        &kp F2      &kp F3         &kp F4        &kp F5           &kp F6         &kp F7        &mt F8 COMMA  &mt F9 DOT    &kp F10       &mt F12 F11
-                                                        &trans         &trans        &trans           &trans         &trans        &trans
-                                                                                     &trans                                                                    &num_word 1
+&kp BACKSPACE  &kp N0     &kp N1        &kp N2      &kp N3         &kp N4        &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS             &mt PLUS EQUAL
+               &sk LSHFT  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &mt LSHFT UNDERSCORE
+               &kp LCTRL  &kp F1        &kp F2      &kp F3         &kp F4        &kp F5           &kp F6         &kp F7        &mt F8 COMMA  &mt F9 DOT    &kp F10       &mt F12 F11
+                                                    &trans         &trans        &trans           &trans         &trans        &trans
+                                                                                 &trans                                                                    &num_word 1
             >;
 
             label = "LWR";
@@ -601,11 +601,11 @@
 */
 
             bindings = <
-&nav_worder  &altaber    &kp BACKSPACE  &kp PG_UP  &kp UP_ARROW             &kp PG_DN  &kp HOME                           &kp C_BRIGHTNESS_DEC             &kp C_BRIGHTNESS_INC  &trans     &trans   &trans  &trans  &trans
-             &sk LSHIFT  &trans         &kp LEFT   &mt LEFT_GUI DOWN_ARROW  &kp RIGHT  &kp END                            &kp C_VOL_DN                     &kp C_VOL_UP          &kp RG(L)  &kp RET  &trans  &trans
-             &kp LCTRL   &trans         &none      &MCR_2                   &MCR_1     &mt LC(PRINTSCREEN) PRINTSCREEN    &mt LC(PRINTSCREEN) PRINTSCREEN  &MCR_1                &MCR_2     &trans   &trans  &trans
-                                                   &trans                   &trans     &trans                             &trans                           &trans                &trans
-                                                                                       &trans                                                                                                        &trans
+&nav_worder  &altaber    &kp BACKSPACE  &kp PG_UP  &kp UP_ARROW             &kp PG_DN  &kp HOME                           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans     &trans   &trans  &trans  &trans
+             &sk LSHIFT  &trans         &kp LEFT   &mt LEFT_GUI DOWN_ARROW  &kp RIGHT  &kp END                            &kp C_VOL_DN          &kp C_VOL_UP          &kp RG(L)  &kp RET  &trans  &trans
+             &kp LCTRL   &trans         &none      &MCR_2                   &MCR_1     &mt LC(PRINTSCREEN) PRINTSCREEN    &kp C_PREVIOUS        &kp LC(C_NEXT)        &MCR_2     &trans   &trans  &trans
+                                                   &trans                   &trans     &trans                             &trans                &trans                &trans
+                                                                                       &trans                                                                                             &trans
             >;
 
             label = "RSE";
