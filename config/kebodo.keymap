@@ -303,7 +303,7 @@
         tapd_sl_p: tapd_sl_p {
             compatible = "zmk,behavior-tda";
             label = "TAPD_SL_P";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             tapping-term-ms = <2000>;
             bindings = <&type_sl_p>, <&type_sl_priority>;
         };
