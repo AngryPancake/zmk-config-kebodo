@@ -300,12 +300,12 @@
             flavor = "tap-preferred";
         };
 
-        tapd_sl_p: tapd_sl_p {
+        tda_ab: tda_ab {
             compatible = "zmk,behavior-tda";
-            label = "TAPD_SL_P";
-            #binding-cells = <1>;
+            label = "TDA_AB";
+            #binding-cells = <0>;
             tapping-term-ms = <2000>;
-            bindings = <&type_sl_p>, <&type_sl_priority>;
+            bindings = <&kp A>, <&kp B>;
         };
     };
 
@@ -528,11 +528,11 @@
 */
 
             bindings = <
-&tapd_sl_p  &altaber    &kp BACKSPACE  &kp PG_UP  &kp UP_ARROW             &kp PG_DN  &kp HOME                           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans  &trans  &trans
-            &sk LSHIFT  &trans         &kp LEFT   &mt LEFT_GUI DOWN_ARROW  &kp RIGHT  &kp END                            &kp C_VOL_DN          &kp C_VOL_UP          &trans  &trans  &trans  &trans
-            &kp LCTRL   &trans         &none      &MCR_2                   &MCR_1     &mt LC(PRINTSCREEN) PRINTSCREEN    &trans                &trans                &trans  &trans  &trans  &trans
-                                                  &trans                   &trans     &trans                             &trans                &trans                &trans
-                                                                                      &trans                                                                                         &trans
+&tda_ab  &altaber    &kp BACKSPACE  &kp PG_UP  &kp UP_ARROW             &kp PG_DN  &kp HOME                           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans  &trans  &trans
+         &sk LSHIFT  &trans         &kp LEFT   &mt LEFT_GUI DOWN_ARROW  &kp RIGHT  &kp END                            &kp C_VOL_DN          &kp C_VOL_UP          &trans  &trans  &trans  &trans
+         &kp LCTRL   &trans         &none      &MCR_2                   &MCR_1     &mt LC(PRINTSCREEN) PRINTSCREEN    &trans                &trans                &trans  &trans  &trans  &trans
+                                               &trans                   &trans     &trans                             &trans                &trans                &trans
+                                                                                   &trans                                                                                         &trans
             >;
 
             label = "RSE";
@@ -639,7 +639,7 @@
 
         s_slack {
             bindings = <
-&trans  &trans  &type_sl_vc  &trans  &tapd_sl_p   &type_sl_vf  &type_sl_vc    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &type_sl_vc  &trans  &tda_ab      &type_sl_vf  &type_sl_vc    &trans  &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &type_sl_a   &none   &type_sl_ip  &trans       &trans         &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &trans       &trans  &type_sl_c   &trans       &trans         &trans  &trans  &trans  &trans  &trans  &trans
                                      &trans       &trans       &trans         &trans  &trans  &trans
