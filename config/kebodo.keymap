@@ -532,7 +532,7 @@
             &sk LSHIFT  &trans         &kp LEFT   &mt LEFT_GUI DOWN_ARROW  &kp RIGHT  &kp END                            &kp C_VOL_DN          &kp C_VOL_UP          &trans  &trans  &trans  &trans
             &kp LCTRL   &trans         &none      &MCR_2                   &MCR_1     &mt LC(PRINTSCREEN) PRINTSCREEN    &trans                &trans                &trans  &trans  &trans  &trans
                                                   &trans                   &trans     &trans                             &trans                &trans                &trans
-                                                                                      &tapd_sl_p                                                                                     &trans
+                                                                                      &trans                                                                                         &trans
             >;
 
             label = "RSE";
