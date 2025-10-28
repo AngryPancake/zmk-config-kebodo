@@ -125,7 +125,7 @@
         };
 
         num_word {
-            bindings = <&num_word 1>;
+            bindings = <&num_word 10>;
             key-positions = <39 42>;
             layers = <0>;
         };
@@ -489,8 +489,8 @@
 &LMeta  &kp GRAVE      &kp Q             &HR_C LCTRL W  &lt 4 E             &kp R               &kp T              &kp Y                  &kp U                &lt 5 I            &kp O          &kp P                      &kp LBKT           &mt LMETA BACKSLASH
         &LMeta         &HR_A LEFT_ALT A  &kp S          &HR LGUI D          &HR_S LSHFT F       &kp G              &kp H                  &HR_S RSHFT J        &HR RGUI K         &HR_C RCTRL L  &HR_A RIGHT_ALT SEMICOLON  &kp SQT
         &mt LCTRL DOT  &HR_A LEFT_ALT Z  &HR_C LCTRL X  &HR_C LCTRL C       &kp V               &kp B              &kp N                  &kp M                &HR_C LCTRL COMMA  &kp DOT        &kp FSLH                   &kp RIGHT_BRACKET
-                                                        &mt LEFT_SHIFT TAB  &thumb_lt 10 SPACE  &thumb_lt 2 RET    &thumb_lt 2 BACKSPACE  &thumb_lt 10 DELETE  &num_word 1
-                                                                                                &kp LGUI                                                                                         &num_word 1
+                                                        &mt LEFT_SHIFT TAB  &thumb_lt 10 SPACE  &thumb_lt 2 RET    &thumb_lt 2 BACKSPACE  &thumb_lt 10 DELETE  &num_word 10
+                                                                                                &kp LGUI                                                                                         &num_word 10
             >;
 
             label = "MAIN";
@@ -511,7 +511,7 @@
                &sk LSHFT  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &mt LSHFT UNDERSCORE
                &kp LCTRL  &kp F1        &kp F2      &kp F3         &kp F4        &kp F5           &kp F6         &kp F7        &mt F8 COMMA  &mt F9 DOT    &kp F10       &mt F12 F11
                                                     &trans         &trans        &trans           &trans         &trans        &trans
-                                                                                 &trans                                                                    &num_word 1
+                                                                                 &trans                                                                    &num_word 10
             >;
 
             label = "LWR";
@@ -656,7 +656,7 @@
                &sk LSHFT  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5        &kp N6      &kp N7      &kp N8        &kp N9      &kp N0       &kp MINUS
                &kp LCTRL  &kp F1      &kp F2      &kp F3      &kp F4      &kp F5        &kp F6      &kp F7      &mt F8 COMMA  &mt F9 DOT  &kp F10      &mt F12 F11
                                                   &trans      &trans      &trans        &trans      &trans      &trans
-                                                                          &trans                                                          &num_word 1
+                                                                          &trans                                                          &num_word 10
             >;
         };
     };
