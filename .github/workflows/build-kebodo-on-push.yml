@@ -1,8 +1,9 @@
+name: Build FW from fork
 on: 
   push:
     branches:
-      - kebodo
+      - master
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: AngryPancake/zmk/.github/workflows/build-user-config.yml@disable-usb-sof

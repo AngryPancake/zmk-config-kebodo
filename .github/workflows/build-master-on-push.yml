@@ -1,8 +1,5 @@
-name: Build FW from master
-on: 
-  push:
-    branches:
-      - master
+name: Build FW from oficial master
+on: [pull_request, workflow_dispatch]
 
 jobs:
   build:
