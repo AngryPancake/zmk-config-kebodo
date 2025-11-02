@@ -46,5 +46,8 @@ manifest:
     - name: zmk-behavior-tda
       remote: AngryPancake
       revision: main
+    - name: zmk-behavior-send-string
+      remote: AngryPancake
+      revision: main
   self:
     path: config
