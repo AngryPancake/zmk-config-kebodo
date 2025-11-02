@@ -23,6 +23,121 @@
 };
 
 / {
+    charmap_us: character_map_us {
+        compatible = "zmk,character-map";
+        behavior = <&kp>;
+        /* минимальная тестовая map — можно расширить */
+        map = <0x08 BACKSPACE>
+            , <0x0A RETURN>
+            , <0x0B TAB>
+            , <0x20 SPACE>
+            , <0x21 EXCLAMATION>
+            , <0x22 DOUBLE_QUOTES>
+            , <0x23 HASH>
+            , <0x24 DOLLAR>
+            , <0x25 PERCENT>
+            , <0x26 AMPERSAND>
+            , <0x27 APOSTROPHE>
+            , <0x28 LEFT_PARENTHESIS>
+            , <0x29 RIGHT_PARENTHESIS>
+            , <0x2A ASTERISK>
+            , <0x2B PLUS>
+            , <0x2C COMMA>
+            , <0x2D MINUS>
+            , <0x2E PERIOD>
+            , <0x2F SLASH>
+            , <0x30 N0>
+            , <0x31 N1>
+            , <0x32 N2>
+            , <0x33 N3>
+            , <0x34 N4>
+            , <0x35 N5>
+            , <0x36 N6>
+            , <0x37 N7>
+            , <0x38 N8>
+            , <0x39 N9>
+            , <0x3A COLON>
+            , <0x3B SEMICOLON>
+            , <0x3C LESS_THAN>
+            , <0x3D EQUAL>
+            , <0x3E GREATER_THAN>
+            , <0x3F QUESTION>
+            , <0x40 AT_SIGN>
+            , <0x41 LS(A)>
+            , <0x42 LS(B)>
+            , <0x43 LS(C)>
+            , <0x44 LS(D)>
+            , <0x45 LS(E)>
+            , <0x46 LS(F)>
+            , <0x47 LS(G)>
+            , <0x48 LS(H)>
+            , <0x49 LS(I)>
+            , <0x4A LS(J)>
+            , <0x4B LS(K)>
+            , <0x4C LS(L)>
+            , <0x4D LS(M)>
+            , <0x4E LS(N)>
+            , <0x4F LS(O)>
+            , <0x50 LS(P)>
+            , <0x51 LS(Q)>
+            , <0x52 LS(R)>
+            , <0x53 LS(S)>
+            , <0x54 LS(T)>
+            , <0x55 LS(U)>
+            , <0x56 LS(V)>
+            , <0x57 LS(W)>
+            , <0x58 LS(X)>
+            , <0x59 LS(Y)>
+            , <0x5A LS(Z)>
+            , <0x5B LEFT_BRACKET>
+            , <0x5C BACKSLASH>
+            , <0x5D RIGHT_BRACKET>
+            , <0x5E CARET>
+            , <0x5F UNDERSCORE>
+            , <0x60 GRAVE>
+            , <0x61 A>
+            , <0x62 B>
+            , <0x63 C>
+            , <0x64 D>
+            , <0x65 E>
+            , <0x66 F>
+            , <0x67 G>
+            , <0x68 H>
+            , <0x69 I>
+            , <0x6A J>
+            , <0x6B K>
+            , <0x6C L>
+            , <0x6D M>
+            , <0x6E N>
+            , <0x6F O>
+            , <0x70 P>
+            , <0x71 Q>
+            , <0x72 R>
+            , <0x73 S>
+            , <0x74 T>
+            , <0x75 U>
+            , <0x76 V>
+            , <0x77 W>
+            , <0x78 X>
+            , <0x79 Y>
+            , <0x7A Z>
+            , <0x7B LEFT_BRACE>
+            , <0x7C PIPE>
+            , <0x7D RIGHT_BRACE>
+            , <0x7E TILDE>
+            , <0x7F DELETE>
+            , <0x0D RET> 
+            ;
+    };
+};
+
+/ {
+    chosen {
+        zmk,charmap = &charmap_us;
+    };
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
 
@@ -316,6 +431,14 @@
 
             tapping-term-ms = <2000>;
         };
+        sendstring: sendstring {
+            compatible = "zmk,behavior-send-string";
+            label = "SENDSTRING";
+            #binding-cells = <0>;
+            // charmap = <&charmap_us>;
+            text = "systemc\x0B";
+            // bindings = <&kp A &kp B>;
+        };
     };
 
     macros {
@@ -479,6 +602,12 @@
             bindings = <&kp R &kp I &kp O &kp R &kp I &kp T &kp Y &kp SPACE &kp LS(P) &kp N1>;
             label = "TYPE_SL_PRIORITY";
         };
+        to_usb: usb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4 &out OUT_USB>;
+            label = "USB";
+        };
     };
 
     keymap {
@@ -498,7 +627,7 @@
 &LMeta  &kp GRAVE      &kp Q             &HR_C LCTRL W  &lt 4 E             &kp R               &kp T              &kp Y                  &kp U                &lt 5 I            &kp O          &kp P                      &kp LBKT           &mt LMETA BACKSLASH
         &LMeta         &HR_A LEFT_ALT A  &kp S          &HR LGUI D          &HR_S LSHFT F       &kp G              &kp H                  &HR_S RSHFT J        &HR RGUI K         &HR_C RCTRL L  &HR_A RIGHT_ALT SEMICOLON  &kp SQT
         &mt LCTRL DOT  &HR_A LEFT_ALT Z  &HR_C LCTRL X  &HR_C LCTRL C       &kp V               &kp B              &kp N                  &kp M                &HR_C LCTRL COMMA  &kp DOT        &kp FSLH                   &kp RIGHT_BRACKET
-                                                        &mt LEFT_SHIFT TAB  &thumb_lt 10 SPACE  &thumb_lt 2 RET    &thumb_lt 2 BACKSPACE  &thumb_lt 10 DELETE  &num_word 10
+                                                        &mt LEFT_SHIFT TAB  &thumb_lt 1 SPACE   &thumb_lt 2 RET    &thumb_lt 2 BACKSPACE  &thumb_lt 10 DELETE  &num_word 10
                                                                                                 &kp LGUI                                                                                         &num_word 10
             >;
 
@@ -537,7 +666,7 @@
 */
 
             bindings = <
-&tda_ab  &altaber    &kp BACKSPACE  &kp PG_UP  &kp UP_ARROW             &kp PG_DN  &kp HOME                           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans  &trans  &trans
+&sendstring  &altaber    &kp BACKSPACE  &kp PG_UP  &kp UP_ARROW             &kp PG_DN  &kp HOME                           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans  &trans  &trans
          &sk LSHIFT  &trans         &kp LEFT   &mt LEFT_GUI DOWN_ARROW  &kp RIGHT  &kp END                            &kp C_VOL_DN          &kp C_VOL_UP          &trans  &trans  &trans  &trans
          &kp LCTRL   &trans         &none      &MCR_2                   &MCR_1     &mt LC(PRINTSCREEN) PRINTSCREEN    &trans                &trans                &trans  &trans  &trans  &trans
                                                &trans                   &trans     &trans                             &trans                &trans                &trans
@@ -560,7 +689,7 @@
             bindings = <
 &sys_reset  &out OUT_BLE  &none  &studio_unlock  &bootloader     &none           &bt_select 0 0    &bt_select 0 0  &none           &bootloader     &studio_unlock  &none   &out OUT_USB  &sys_reset
             &none         &none  &none           &none           &none           &bt_select 1 1    &bt_select 1 1  &none           &none           &none           &none   &none
-            &out OUT_USB  &none  &none           &bt_select 4 4  &bt_select 3 3  &bt_select 2 2    &bt_select 2 2  &bt_select 3 3  &bt_select 4 4  &none           &none   &out OUT_USB
+            &to_usb  &none  &none           &bt_select 4 4  &bt_select 3 3  &bt_select 2 2    &bt_select 2 2  &bt_select 3 3  &bt_select 4 4  &none           &none   &out OUT_USB
                                                  &soft_off       &soft_off       &trans            &trans          &soft_off       &soft_off
                                                                                  &trans                                                                            &kp N0
             >;
