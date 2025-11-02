@@ -10,7 +10,7 @@ manifest:
       url-base: https://github.com/AngryPancake
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: AngryPancake
       revision: main
       import: app/west.yml
     - name: zmk-tri-state
