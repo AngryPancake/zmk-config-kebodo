@@ -9,9 +9,13 @@ manifest:
     - name: AngryPancake
       url-base: https://github.com/AngryPancake
   projects:
+    # - name: zmk
+    #   remote: AngryPancake
+    #   revision: disable-usb-sof
+    #   import: app/west.yml
     - name: zmk
-      remote: AngryPancake
-      revision: disable-usb-sof
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
     - name: zmk-tri-state
       remote: dhruvinsh
