@@ -16,9 +16,6 @@ manifest:
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
-    - name: zmk-auto-layer
-      remote: urob
-      revision: main
     - name: zmk-behavior-tda
       remote: AngryPancake
       revision: main
