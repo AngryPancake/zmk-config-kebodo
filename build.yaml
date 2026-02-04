@@ -6,10 +6,10 @@ include:
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   # - board: nrfmicro_13
-  - board: nrfmicro
+  - board: nrfmicro/nrf52840
     shield: kebodo_right
   # - board: nrfmicro_13
-  - board: nrfmicro
+  - board: nrfmicro/nrf52840
     shield: settings_reset
   # - board: nice_nano_v2
   - board: nice_nano
